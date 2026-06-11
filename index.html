@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pereira Consulting | Specialist tax advisory for multinationals</title>
+<meta name="description" content="Pereira Consulting: independent, partner-led tax advisory for multinationals operating into and out of Australia. Transfer pricing, Pillar Two, international tax, governance and disputes.">
+<meta property="og:title" content="Pereira Consulting | Specialist tax advisory for multinationals">
+<meta property="og:description" content="Independent, partner-led tax advisory for multinationals operating into and out of Australia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.pereiraconsulting.com/">
+<link rel="canonical" href="https://www.pereiraconsulting.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Pereira Consulting",
+  "description": "Independent tax advisory for multinational enterprises operating into and out of Australia.",
+  "url": "https://www.pereiraconsulting.com",
+  "email": "neil@pereiraconsulting.com",
+  "telephone": "+61414354586",
+  "founder": {"@type": "Person", "name": "Neil Pereira", "jobTitle": "Managing Director"},
+  "areaServed": ["Sydney", "Melbourne", "Singapore", "United States", "United Kingdom"]
+}
+</script>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Serif:ital@1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   PEREIRA CONSULTING · HOMEPAGE V5 · "COASTLINE VIVID"
+   v4 structure, dynamic palette: vivid cyan (old site), bright
+   gold flowing to coral (coast photo), tinted bento, duotone
+   covers, coloured glows, living mesh, gradient progress bar.
+   ============================================================ */
+:root{
+  --paper:#FFFFFF;
+  --sand:#F7F2E7;
+  --card:#FFFFFF;
+  --line:rgba(10,29,63,.10);
+  --line-soft:rgba(10,29,63,.06);
+  --ink:#0A1D3F;
+  --body-c:#41506E;
+  --dim:#7A86A0;
+  --navy:#0A1D3F;
+  --blue:#0A66D6;
+  --cyan:#00B4D8;
+  --gold:#F2A33C;
+  --coral:#F0735A;
+  --grad-display:linear-gradient(94deg,#0A66D6 0%,#00B4D8 48%,#F2A33C 100%);
+  --grad-cool:linear-gradient(96deg,#0A66D6,#00B4D8);
+  --grad-warm:linear-gradient(96deg,#F2A33C,#F0735A);
+  --r-lg:24px;
+  --r-md:18px;
+  --disp:"Bricolage Grotesque",sans-serif;
+  --body-f:"Inter Tight",system-ui,sans-serif;
+  --serif-i:"Instrument Serif",serif;
+  --mono:"JetBrains Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body-f);font-weight:300;font-size:16px;
+  background:var(--paper);color:var(--body-c);line-height:1.65;
+  overflow-x:hidden;
+}
+::selection{background:var(--cyan);color:#fff}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1220px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+.skip{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 18px;z-index:400;font-family:var(--mono);font-size:12px}
+.skip:focus{left:0}
+
+/* scroll progress */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad-display);z-index:300;border-radius:0 3px 3px 0}
+
+h1,h2,h3{font-family:var(--disp);color:var(--ink);font-weight:500;line-height:1.06;letter-spacing:-.02em}
+h2{font-size:clamp(34px,4.3vw,56px)}
+.serif{font-family:var(--serif-i);font-style:italic;font-weight:400;letter-spacing:0}
+.gtext{background:var(--grad-display);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kicker{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#5E6F92;
+  border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:rgba(255,255,255,.75);
+  backdrop-filter:blur(8px);
+}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,180,216,.55)}70%{box-shadow:0 0 0 9px rgba(0,180,216,0)}100%{box-shadow:0 0 0 0 rgba(0,180,216,0)}}
+.lead{font-size:17.5px;color:var(--body-c);max-width:56ch;margin-top:20px}
+section{padding:120px 0;position:relative}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;
+  font-family:var(--body-f);font-weight:500;font-size:15px;
+  padding:16px 30px;border-radius:999px;transition:transform .3s,box-shadow .3s,background .3s,border-color .3s,filter .3s;
+}
+.btn-p{
+  background:var(--grad-warm);color:#33170A;
+  box-shadow:0 12px 30px rgba(240,115,90,.35),inset 0 1px 0 rgba(255,255,255,.5);
+}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 20px 46px rgba(240,115,90,.48);filter:saturate(1.1)}
+.btn-c{
+  background:var(--grad-cool);color:#fff;
+  box-shadow:0 12px 30px rgba(0,180,216,.35),inset 0 1px 0 rgba(255,255,255,.3);
+}
+.btn-c:hover{transform:translateY(-3px);box-shadow:0 20px 46px rgba(0,180,216,.48);filter:saturate(1.1)}
+.btn-n{background:var(--navy);color:#fff;box-shadow:0 10px 26px rgba(10,29,63,.3)}
+.btn-n:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(10,29,63,.4)}
+.btn-g{background:rgba(255,255,255,.8);border:1px solid var(--line);color:var(--ink);backdrop-filter:blur(8px)}
+.btn-g:hover{transform:translateY(-3px);border-color:rgba(0,180,216,.5);background:#fff;box-shadow:0 14px 34px rgba(0,180,216,.18)}
+.alink{
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+  font-weight:500;font-size:15px;color:var(--blue);transition:gap .3s,color .3s;
+}
+.alink:hover{gap:14px;color:var(--cyan)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ================= NAV ================= */
+.navwrap{position:fixed;top:18px;left:0;right:0;z-index:200;padding:0 28px}
+nav{
+  max-width:1180px;margin:0 auto;height:62px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:999px;
+  backdrop-filter:blur(20px);padding:0 12px 0 26px;
+  box-shadow:0 14px 40px rgba(10,29,63,.12);
+}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{height:42px;width:auto;display:block}
+footer .logo img{height:52px}
+.nav-l{display:flex;align-items:center;gap:4px}
+.nav-l a{
+  font-size:14px;font-weight:400;color:var(--body-c);text-decoration:none;
+  padding:9px 15px;border-radius:999px;transition:color .25s,background .25s;
+}
+.nav-l a:hover{color:var(--blue);background:rgba(0,180,216,.08)}
+.nav-cta .btn{padding:11px 22px;font-size:14px}
+.nav-toggle{display:none}
+@media (max-width:1060px){
+  .nav-l{display:none}
+  .nav-toggle{
+    display:block;background:rgba(0,180,216,.08);border:1px solid var(--line);color:var(--ink);
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    padding:10px 18px;border-radius:999px;cursor:pointer;
+  }
+  .navwrap.open .nav-l{
+    display:flex;flex-direction:column;align-items:stretch;gap:4px;
+    position:absolute;top:74px;left:28px;right:28px;
+    background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:24px;
+    padding:18px;backdrop-filter:blur(24px);box-shadow:0 24px 60px rgba(10,29,63,.18);
+  }
+}
+
+/* ================= HERO ================= */
+.hero{padding:180px 0 100px;position:relative;overflow:hidden;background:var(--paper)}
+.mesh{position:absolute;inset:0;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(8px)}
+.b1{width:1000px;height:1000px;left:-300px;top:-440px;background:radial-gradient(circle,rgba(0,180,216,.34),transparent 62%);animation:drift1 16s ease-in-out infinite alternate}
+.b2{width:880px;height:880px;right:-280px;top:-160px;background:radial-gradient(circle,rgba(242,163,60,.32),transparent 62%);animation:drift2 19s ease-in-out infinite alternate}
+.b3{width:560px;height:560px;right:18%;bottom:-300px;background:radial-gradient(circle,rgba(240,115,90,.2),transparent 65%);animation:drift1 22s ease-in-out infinite alternate-reverse}
+@keyframes drift1{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,40px) scale(1.06)}}
+@keyframes drift2{from{transform:translate(0,0) scale(1)}to{transform:translate(-70px,30px) scale(1.05)}}
+.hgrid{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(10,29,63,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,29,63,.05) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 75% 60% at 50% 28%,#000 25%,transparent 75%);
+  mask-image:radial-gradient(ellipse 75% 60% at 50% 28%,#000 25%,transparent 75%);
+}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(46px,5.6vw,74px);margin-top:26px;max-width:14ch;font-weight:600}
+.hero h1 .serif{font-size:1.04em}
+.hero-sub{font-size:18.5px;max-width:46ch;margin-top:26px}
+.hero-act{display:flex;align-items:center;gap:16px;margin-top:40px;flex-wrap:wrap}
+.hero-proof{display:flex;gap:36px;margin-top:52px;flex-wrap:wrap}
+.hp .v{font-family:var(--disp);font-weight:600;font-size:24px}
+.hp:nth-child(1) .v{color:var(--blue)}
+.hp:nth-child(2) .v{color:var(--ink)}
+.hp:nth-child(3) .v{color:var(--gold)}
+.hp .k{font-size:12.5px;color:var(--dim);margin-top:2px}
+.st{opacity:0;transform:translateY(30px);animation:up 1s cubic-bezier(.16,1,.3,1) forwards}
+.st1{animation-delay:.05s}.st2{animation-delay:.18s}.st3{animation-delay:.3s}.st4{animation-delay:.42s}.st5{animation-delay:.56s}
+@keyframes up{to{opacity:1;transform:none}}
+
+/* photo + floating stack */
+.stack{position:relative;height:560px}
+.stack .photo{
+  position:absolute;inset:24px 0 24px 36px;border-radius:28px;overflow:hidden;
+  box-shadow:0 40px 90px rgba(10,29,63,.3);
+}
+.stack .photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.15)}
+.stack .photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(200deg,rgba(0,180,216,.08) 30%,rgba(10,29,63,.32));
+}
+.fcard{
+  position:absolute;border-radius:var(--r-md);
+  background:rgba(255,255,255,.94);
+  border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(14px);
+  box-shadow:0 26px 60px rgba(10,29,63,.25);
+  padding:20px;
+}
+.fcard .fc-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:14px}
+.fcard .fc-t{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.badge{
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
+  padding:4px 10px;border-radius:999px;white-space:nowrap;
+}
+.badge.live{color:#fff;background:var(--grad-cool);box-shadow:0 3px 10px rgba(0,180,216,.4)}
+.badge.navy{color:#fff;background:var(--navy)}
+.badge.warm{color:#33170A;background:var(--grad-warm);box-shadow:0 3px 10px rgba(240,115,90,.4)}
+.fc1{width:280px;left:-6px;top:30px;animation:float1 8s ease-in-out infinite;z-index:3}
+.fc1 .big{font-family:var(--disp);font-weight:600;font-size:34px;color:var(--ink);letter-spacing:-.02em}
+.fc1 .sub{font-size:12px;color:var(--dim);margin-top:2px}
+.fc1 .rowz{margin-top:14px;display:flex;flex-direction:column;gap:7px}
+.fc1 .rz{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--body-c)}
+.fc1 .rz b{font-family:var(--mono);font-weight:400;font-size:10.5px}
+.fc1 .ok{color:#00919c}.fc1 .no{color:var(--coral)}
+.fc2{width:250px;right:-8px;top:120px;animation:float2 9s ease-in-out infinite;z-index:3}
+.hm{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+.hm i{display:block;aspect-ratio:1;border-radius:5px;background:rgba(0,180,216,.14)}
+.hm i.g{background:rgba(0,180,216,.6)}
+.hm i.y{background:rgba(242,163,60,.65)}
+.hm i.r{background:rgba(240,115,90,.7)}
+.fc2 .leg{display:flex;gap:12px;margin-top:12px;font-size:10.5px;color:var(--dim)}
+.fc2 .leg span{display:flex;align-items:center;gap:5px}
+.fc2 .leg i{width:8px;height:8px;border-radius:3px;display:inline-block}
+.fc3{width:230px;left:14px;bottom:26px;animation:float3 7s ease-in-out infinite;z-index:3}
+.fc3 .big{font-family:var(--disp);font-weight:600;font-size:42px;letter-spacing:-.02em}
+.fc3 .bar{height:8px;border-radius:999px;background:rgba(10,29,63,.08);margin-top:14px;overflow:hidden}
+.fc3 .bar i{display:block;height:100%;width:62%;border-radius:999px;background:var(--grad-display)}
+.fc3 .sub{font-size:12px;color:var(--dim);margin-top:9px}
+@keyframes float1{0%,100%{transform:translateY(0) rotate(-1.4deg)}50%{transform:translateY(-15px) rotate(-1.4deg)}}
+@keyframes float2{0%,100%{transform:translateY(0) rotate(1.4deg)}50%{transform:translateY(-19px) rotate(1.4deg)}}
+@keyframes float3{0%,100%{transform:translateY(0) rotate(.8deg)}50%{transform:translateY(-11px) rotate(.8deg)}}
+
+/* ================= MARQUEE ================= */
+.marq{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:22px 0;overflow:hidden;position:relative;background:#fff}
+.marq::before,.marq::after{content:"";position:absolute;top:0;bottom:0;width:160px;z-index:3;pointer-events:none}
+.marq::before{left:0;background:linear-gradient(90deg,#fff,transparent)}
+.marq::after{right:0;background:linear-gradient(-90deg,#fff,transparent)}
+.marq-track{display:flex;gap:54px;width:max-content;animation:slide 36s linear infinite}
+.marq-track span{
+  font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  display:flex;align-items:center;gap:54px;white-space:nowrap;font-weight:500;
+}
+.marq-track span::after{content:"·";color:var(--gold)}
+.marq-track span:nth-child(4n+1){color:var(--blue)}
+.marq-track span:nth-child(4n+2){color:#1f9a76}
+.marq-track span:nth-child(4n+3){color:var(--gold)}
+.marq-track span:nth-child(4n+4){color:var(--coral)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ================= BENTO ================= */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:64px}
+.cell{
+  border-radius:var(--r-lg);border:1px solid var(--line-soft);
+  background:var(--card);
+  padding:34px;position:relative;overflow:hidden;
+  box-shadow:0 6px 24px rgba(10,29,63,.05);
+  transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s,box-shadow .35s;
+}
+.cell h3{font-size:23px;font-weight:600;margin:14px 0 10px}
+.cell p{font-size:14.5px;color:var(--body-c)}
+.cell .ic{
+  width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+}
+.c-p2{
+  grid-column:span 7;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;
+  background:
+    radial-gradient(ellipse 80% 60% at 88% -10%,rgba(0,180,216,.55),transparent 60%),
+    radial-gradient(ellipse 55% 48% at 2% 112%,rgba(242,163,60,.5),transparent 60%),
+    radial-gradient(ellipse 40% 40% at 60% 120%,rgba(240,115,90,.3),transparent 60%),
+    var(--navy);
+  border:none;color:#B9C4D8;
+}
+.c-p2:hover{transform:translateY(-6px);box-shadow:0 34px 70px rgba(10,29,63,.4)}
+.c-p2 h3,.c-p2 .p2i .v{color:#fff}
+.c-p2 p{color:#ABB7CD}
+.c-p2 .bignum{
+  font-family:var(--disp);font-weight:600;font-size:clamp(72px,8vw,120px);line-height:1;letter-spacing:-.03em;
+  background:linear-gradient(94deg,#3FD4F2,#F2A33C 80%);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.c-p2 .p2row{display:flex;gap:40px;margin-top:26px;flex-wrap:wrap}
+.c-p2 .p2i .v{font-family:var(--disp);font-weight:600;font-size:24px}
+.c-p2 .p2i .k{font-size:12.5px;color:#8696B2;margin-top:2px}
+.c-p2 h3{font-size:30px;margin-top:24px}
+.c-p2 p{max-width:48ch}
+.c-p2 .alink{margin-top:22px;color:#3FD4F2}
+.c-ct{grid-column:span 5;background:#EFF5FE}
+.c-ct .ic{background:#D9E7FB;color:var(--blue)}
+.c-ct:hover{transform:translateY(-6px);border-color:rgba(10,102,214,.4);box-shadow:0 26px 56px rgba(10,102,214,.16)}
+.c-tp{grid-column:span 5;background:#E8F8FB}
+.c-tp .ic{background:#CDEFF6;color:#0193b1}
+.c-tp:hover{transform:translateY(-6px);border-color:rgba(0,180,216,.45);box-shadow:0 26px 56px rgba(0,180,216,.18)}
+.c-it{grid-column:span 4;background:#fff}
+.c-it .ic{background:#E8F8FB;color:#0193b1}
+.c-it:hover{transform:translateY(-6px);border-color:rgba(0,180,216,.4);box-shadow:0 26px 56px rgba(10,29,63,.12)}
+.c-gv{grid-column:span 4;background:#FDF0EC}
+.c-gv .ic{background:#FADBD2;color:#c2543d}
+.c-gv:hover{transform:translateY(-6px);border-color:rgba(240,115,90,.45);box-shadow:0 26px 56px rgba(240,115,90,.18)}
+.c-al{grid-column:span 4;display:flex;flex-direction:column;justify-content:center;background:#FBF2DF}
+.c-al:hover{transform:translateY(-6px);border-color:rgba(242,163,60,.5);box-shadow:0 26px 56px rgba(242,163,60,.2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{
+  font-size:12px;color:var(--ink);border:1px solid rgba(10,29,63,.12);border-radius:999px;
+  padding:6px 13px;background:#fff;
+}
+.bars{display:flex;align-items:flex-end;gap:7px;height:54px;margin-top:18px}
+.bars i{flex:1;border-radius:5px 5px 0 0;background:rgba(0,180,216,.3)}
+.bars i:nth-child(3){background:var(--cyan)}
+.bars i:nth-child(6){background:var(--gold)}
+
+/* ================= TOOLS ================= */
+.tools{background:linear-gradient(180deg,#FAF6EC,#F5EFE0);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.tools-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.browser{
+  margin-top:56px;border-radius:var(--r-lg);overflow:hidden;position:relative;
+  border:1px solid var(--line);
+  background:#fff;box-shadow:0 0 0 6px rgba(0,180,216,.07),0 44px 100px rgba(10,29,63,.2);
+}
+.bbar{
+  display:flex;align-items:center;gap:16px;padding:14px 20px;
+  background:#F2EFE8;border-bottom:1px solid var(--line-soft);
+}
+.dots{display:flex;gap:7px}
+.dots i{width:11px;height:11px;border-radius:50%;display:block}
+.dots i:nth-child(1){background:#FF5F57}.dots i:nth-child(2){background:#FEBC2E}.dots i:nth-child(3){background:#28C840}
+.url{
+  flex:1;max-width:520px;margin:0 auto;text-align:center;
+  font-family:var(--mono);font-size:11px;color:var(--dim);
+  background:#fff;border:1px solid var(--line-soft);border-radius:8px;padding:7px 16px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.bbar .badge{flex-shrink:0}
+.frame{position:relative;height:540px;background:#fff}
+.frame iframe{width:100%;height:100%;border:0;pointer-events:none}
+.frame .veil{
+  position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:34px;
+  background:linear-gradient(180deg,transparent 55%,rgba(10,29,63,.4));
+  opacity:0;transition:opacity .35s;
+}
+.browser:hover .veil{opacity:1}
+.veil .btn{pointer-events:auto}
+.tool-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:18px}
+.tcard{
+  border-radius:var(--r-md);border:1px solid var(--line-soft);padding:24px;
+  background:#fff;text-decoration:none;display:flex;flex-direction:column;gap:12px;
+  box-shadow:0 6px 24px rgba(10,29,63,.05);
+  transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s,box-shadow .35s;
+}
+a.tcard:hover{transform:translateY(-6px);border-color:rgba(0,180,216,.5);box-shadow:0 26px 56px rgba(0,180,216,.2)}
+.tcard .th{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tcard h3{font-size:16.5px;font-weight:600}
+.tcard p{font-size:13px;color:var(--dim)}
+.tcard .prev{height:64px;border-radius:10px;overflow:hidden;position:relative;border:1px solid var(--line-soft)}
+.prev.hm2{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;padding:8px;background:var(--sand)}
+.prev.hm2 i{border-radius:4px;background:rgba(0,180,216,.16)}
+.prev.hm2 i.g{background:rgba(0,180,216,.6)}
+.prev.hm2 i.y{background:rgba(242,163,60,.65)}
+.prev.hm2 i.r{background:rgba(240,115,90,.7)}
+.prev.zones{display:flex;flex-direction:column;gap:4px;padding:8px;background:var(--sand)}
+.prev.zones i{flex:1;border-radius:4px}
+.prev.zones i:nth-child(1){background:rgba(0,180,216,.6);width:92%}
+.prev.zones i:nth-child(2){background:rgba(242,163,60,.65);width:70%}
+.prev.zones i:nth-child(3){background:rgba(240,115,90,.7);width:42%}
+.prev.world{background:var(--sand);display:grid;grid-template-columns:repeat(14,1fr);gap:3px;padding:8px}
+.prev.world i{aspect-ratio:1;border-radius:50%;background:rgba(10,29,63,.1)}
+.prev.world i.on{background:var(--cyan)}
+.prev.pe{display:flex;align-items:center;justify-content:center;border-style:dashed;border-color:rgba(242,163,60,.55);background:rgba(242,163,60,.08)}
+.prev.pe span{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c07f1d}
+.tnote{margin-top:26px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);text-align:center}
+
+/* ================= LIFECYCLE ================= */
+.lc-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:80px;align-items:center}
+.lc-stages{display:flex;gap:8px;margin-top:34px;flex-wrap:wrap}
+.stage{
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:999px;padding:8px 14px;color:var(--body-c);
+  background:#fff;
+}
+.stage.hot{border-color:transparent;color:#fff;background:var(--grad-cool);box-shadow:0 6px 16px rgba(0,180,216,.3)}
+.lc-left p.lcp{margin-top:24px;font-size:16.5px;max-width:50ch}
+.lc-left .alink{margin-top:30px}
+.diag{
+  position:relative;border-radius:var(--r-lg);padding:1.5px;
+  background:linear-gradient(160deg,#00B4D8,#0A66D6 35%,#F2A33C 75%,#F0735A);
+}
+.diag-in{
+  border-radius:calc(var(--r-lg) - 1.5px);
+  background:#fff;
+  padding:40px;box-shadow:0 30px 70px rgba(10,29,63,.14);
+}
+.diag-in .dh{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.diag-in h3{font-size:24px;font-weight:600}
+.diag-in .dsub{font-size:13px;color:var(--dim);margin-top:6px}
+.dsteps{margin:28px 0;display:flex;flex-direction:column;gap:10px}
+.dstep{
+  display:flex;align-items:center;gap:16px;
+  border:1px solid var(--line-soft);border-radius:14px;padding:13px 18px;background:#F8F7F3;
+  transition:border-color .3s,background .3s;
+}
+.dstep:hover{border-color:rgba(0,180,216,.4);background:#fff}
+.dstep .n{
+  width:26px;height:26px;border-radius:8px;background:var(--grad-cool);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:10px;flex-shrink:0;
+}
+.dstep .t{flex:1;font-size:14px;color:var(--ink)}
+.dstep .d{font-family:var(--mono);font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
+.dfoot{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.dfoot .amt{
+  font-family:var(--disp);font-weight:600;font-size:38px;letter-spacing:-.02em;
+  background:var(--grad-cool);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.dfoot .per{font-size:12px;color:var(--dim);margin-top:2px}
+
+/* ================= INSIGHTS ================= */
+.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.icard{
+  border-radius:var(--r-md);border:1px solid var(--line-soft);overflow:hidden;text-decoration:none;
+  background:#fff;box-shadow:0 6px 24px rgba(10,29,63,.05);
+  transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s,box-shadow .35s;
+  display:flex;flex-direction:column;
+}
+.icard:hover{transform:translateY(-6px);box-shadow:0 26px 56px rgba(10,29,63,.16)}
+.icard:nth-child(1):hover{border-color:rgba(0,180,216,.5)}
+.icard:nth-child(2):hover{border-color:rgba(242,163,60,.5)}
+.icard:nth-child(3):hover{border-color:rgba(240,115,90,.5)}
+.icover{height:150px;position:relative;overflow:hidden;background-size:cover}
+.icover.v1{background-image:linear-gradient(200deg,rgba(0,180,216,.45),rgba(10,29,63,.65)),url("assets/harbour.jpg");background-position:center 70%;background-blend-mode:normal}
+.icover.v2{background-image:linear-gradient(200deg,rgba(242,163,60,.4),rgba(10,29,63,.65)),url("assets/coast.jpg");background-position:center 40%}
+.icover.v3{background-image:linear-gradient(200deg,rgba(240,115,90,.4),rgba(10,29,63,.7)),url("assets/harbour.jpg");background-position:center 20%}
+.icover::after{
+  content:"THE STRATEGIC BRIEF";position:absolute;left:18px;bottom:14px;
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.26em;color:rgba(255,255,255,.9);
+}
+.ibody{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.ibody .idate{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.ibody h3{font-size:18px;font-weight:600;line-height:1.3}
+.ibody p{font-size:13.5px;color:var(--dim);flex:1}
+.ibody .alink{font-size:13.5px}
+.ins-foot{text-align:center;margin-top:42px}
+
+/* ================= ABOUT ================= */
+.about{background:linear-gradient(180deg,#FFFFFF,var(--sand));border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.ab-grid{display:grid;grid-template-columns:.74fr 1.26fr;gap:80px;align-items:center}
+.avatar{position:relative;border-radius:var(--r-lg);padding:1.5px;background:linear-gradient(160deg,#00B4D8,#0A66D6 40%,#F2A33C 80%,#F0735A)}
+.avatar .img{
+  border-radius:calc(var(--r-lg) - 1.5px);aspect-ratio:4/5;overflow:hidden;position:relative;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 18%,rgba(0,180,216,.3),transparent 65%),
+    radial-gradient(ellipse 60% 40% at 80% 80%,rgba(242,163,60,.25),transparent 60%),
+    linear-gradient(170deg,#FDFBF7,#F0E8D8);
+  display:flex;align-items:flex-end;justify-content:center;
+}
+.avatar .img img{width:88%;display:block;filter:drop-shadow(0 20px 40px rgba(10,29,63,.3))}
+.avatar .tag{
+  position:absolute;bottom:18px;left:18px;right:18px;z-index:3;
+  background:rgba(255,255,255,.94);border:1px solid var(--line-soft);border-radius:14px;
+  backdrop-filter:blur(12px);padding:13px 18px;display:flex;justify-content:space-between;align-items:center;
+  box-shadow:0 14px 34px rgba(10,29,63,.18);
+}
+.avatar .tag .nm{font-family:var(--disp);font-weight:600;font-size:15px;color:var(--ink)}
+.avatar .tag .rl{font-size:11.5px;color:var(--dim)}
+.ab-right h2{margin-top:16px}
+.ab-right .quote{
+  font-family:var(--serif-i);font-size:21px;color:var(--ink);line-height:1.5;
+  border-left:3px solid;border-image:linear-gradient(180deg,#00B4D8,#F2A33C) 1;
+  padding-left:24px;margin-top:28px;max-width:54ch;
+}
+.ab-right p.bio{margin-top:24px;font-size:16px;max-width:58ch}
+.ab-right p.bio strong{color:var(--ink);font-weight:500}
+.creds{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.cred{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:500;color:var(--ink);
+  border:1px solid var(--line);border-radius:999px;padding:9px 18px;background:#fff;
+}
+.cred:nth-child(1) i{background:var(--cyan)}
+.cred:nth-child(2) i{background:var(--blue)}
+.cred:nth-child(3) i{background:var(--gold)}
+.cred:nth-child(4) i{background:var(--coral)}
+.cred i{width:7px;height:7px;border-radius:50%;display:inline-block}
+
+/* ================= CTA ================= */
+.cta-shell{
+  border-radius:32px;position:relative;overflow:hidden;
+  background-image:linear-gradient(110deg,rgba(6,16,36,.93) 25%,rgba(10,29,63,.66)),url("assets/coast.jpg");
+  background-size:cover;background-position:center 60%;
+  padding:100px 40px;text-align:center;
+  box-shadow:0 50px 110px rgba(10,29,63,.32);
+}
+.cta-shell::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 60% 50% at 50% -10%,rgba(0,180,216,.25),transparent 60%);
+}
+.cta-shell h2{font-size:clamp(34px,4.4vw,58px);max-width:20ch;margin:22px auto 0;position:relative;color:#fff;z-index:2}
+.cta-shell h2 .serif{background:linear-gradient(94deg,#3FD4F2,#F2A33C);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta-shell .kicker{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#C8D2E4;position:relative;z-index:2}
+.cta-shell .csub{font-size:17px;color:#C0CADD;margin-top:20px;position:relative;z-index:2}
+.cta-act{display:flex;justify-content:center;gap:16px;margin-top:40px;flex-wrap:wrap;position:relative;z-index:2}
+.cta-act .btn-g{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff}
+.cta-act .btn-g:hover{background:rgba(255,255,255,.24)}
+.cta-meta{margin-top:34px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#9FACC4;position:relative;z-index:2}
+.cta-meta a{color:#C8D2E4;text-decoration:none;transition:color .3s}
+.cta-meta a:hover{color:#3FD4F2}
+
+/* ================= FOOTER ================= */
+footer{padding:80px 0 40px;background:var(--paper)}
+.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:44px;padding-bottom:54px;border-bottom:1px solid var(--line-soft)}
+.f-brand p{font-size:13.5px;color:var(--dim);margin-top:16px;max-width:27ch}
+.f-col h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:500;margin-bottom:18px}
+.f-col:nth-child(2) h4{color:var(--blue)}
+.f-col:nth-child(3) h4{color:#0193b1}
+.f-col:nth-child(4) h4{color:#c07f1d}
+.f-col:nth-child(5) h4{color:#c2543d}
+.f-col a{display:block;font-size:13.5px;color:var(--body-c);text-decoration:none;padding:5px 0;transition:color .25s}
+.f-col a:hover{color:var(--ink)}
+.f-bot{
+  padding-top:28px;display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;align-items:baseline;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+}
+.f-bot .liab{font-family:var(--serif-i);font-size:13px;letter-spacing:0;text-transform:none;color:var(--body-c)}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1060px){
+  section{padding:84px 0}
+  .hero{padding:150px 0 70px}
+  .hero-grid{grid-template-columns:1fr;gap:60px}
+  .stack{height:470px;max-width:560px;margin:0 auto}
+  .lc-grid,.ab-grid{grid-template-columns:1fr;gap:56px}
+  .bento{grid-template-columns:1fr 1fr}
+  .c-p2{grid-column:span 2}
+  .c-ct,.c-tp{grid-column:span 1}
+  .c-it,.c-gv,.c-al{grid-column:span 2}
+  .tool-row{grid-template-columns:1fr 1fr}
+  .ins-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .frame{height:430px}
+}
+@media (max-width:640px){
+  .bento{grid-template-columns:1fr}
+  .c-p2,.c-ct,.c-tp,.c-it,.c-gv,.c-al{grid-column:span 1}
+  .tool-row{grid-template-columns:1fr}
+  .stack{height:440px}
+  .stack .photo{inset:18px 0}
+  .fc1{width:240px;left:-4px}
+  .fc2{width:225px;right:-4px}
+  .fc3{width:210px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv,.st{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="prog" aria-hidden="true"></div>
+
+<div class="navwrap" id="navwrap">
+  <nav aria-label="Main navigation">
+    <a class="logo" href="#top" aria-label="Pereira Consulting home">
+      <img src="assets/pereira-logo.png" alt="Pereira Consulting · International Tax">
+    </a>
+    <div class="nav-l" id="navlinks">
+      <a href="#services">Services</a>
+      <a href="#tools">Tools</a>
+      <a href="/Lifecycle/">Lifecycle</a>
+      <a href="#insights">Insights</a>
+      <a href="#about">About</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks" onclick="document.getElementById('navwrap').classList.toggle('open');this.setAttribute('aria-expanded',document.getElementById('navwrap').classList.contains('open'))">Menu</button>
+      <span class="nav-cta"><a class="btn btn-p" href="#contact">Talk to Neil</a></span>
+    </div>
+  </nav>
+</div>
+
+<header class="hero" id="top">
+  <div class="mesh" aria-hidden="true">
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  </div>
+  <div class="hgrid" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker st st1"><span class="dot"></span>Independent tax counsel · Sydney · Melbourne · Singapore · USA · UK</span>
+      <h1 class="st st2">Specialist tax advisory for <span class="serif gtext">multinationals.</span></h1>
+      <p class="hero-sub st st3">Pillar Two, transfer pricing and complex international structures, advised at partner level on every engagement, from day one.</p>
+      <div class="hero-act st st4">
+        <a class="btn btn-p" href="#contact">Discuss your position</a>
+        <a class="btn btn-c" href="#tools">Try the free tools</a>
+      </div>
+      <div class="hero-proof st st5">
+        <div class="hp"><div class="v" data-count="25" data-suffix="+">0+</div><div class="k">Years' experience</div></div>
+        <div class="hp"><div class="v">Big Four</div><div class="k">Background</div></div>
+        <div class="hp"><div class="v" data-count="100" data-suffix="%">0%</div><div class="k">Independent</div></div>
+      </div>
+    </div>
+    <div class="stack st st4" aria-hidden="true">
+      <div class="photo"><img src="assets/harbour.jpg" alt=""></div>
+      <div class="fcard fc1">
+        <div class="fc-h"><span class="fc-t">TSH Calculator</span><span class="badge live">Live</span></div>
+        <div class="big">3 of 5</div>
+        <div class="sub">jurisdictions qualify for safe harbour</div>
+        <div class="rowz">
+          <div class="rz"><span>Australia</span><b class="ok">DE MINIMIS &check;</b></div>
+          <div class="rz"><span>Singapore</span><b class="ok">ETR TEST &check;</b></div>
+          <div class="rz"><span>Ireland</span><b class="no">FULL GLOBE</b></div>
+        </div>
+      </div>
+      <div class="fcard fc2">
+        <div class="fc-h"><span class="fc-t">TP Risk Heatmap</span><span class="badge navy">CbCR</span></div>
+        <div class="hm">
+          <i class="g"></i><i class="g"></i><i></i><i class="y"></i><i class="g"></i><i></i>
+          <i></i><i class="g"></i><i class="y"></i><i></i><i class="r"></i><i class="g"></i>
+          <i class="y"></i><i></i><i class="g"></i><i class="g"></i><i></i><i class="y"></i>
+        </div>
+        <div class="leg">
+          <span><i style="background:rgba(0,180,216,.65)"></i>Low</span>
+          <span><i style="background:rgba(242,163,60,.7)"></i>Review</span>
+          <span><i style="background:rgba(240,115,90,.75)"></i>High</span>
+        </div>
+      </div>
+      <div class="fcard fc3">
+        <div class="fc-h"><span class="fc-t">Global minimum tax</span></div>
+        <div class="big gtext">15%</div>
+        <div class="bar"><i></i></div>
+        <div class="sub">40+ jurisdictions implementing</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true">
+  <div class="marq-track">
+    <span>Pillar Two</span><span>Transfer Pricing</span><span>GloBE Calculations</span><span>QDMTT</span><span>Local Files</span><span>CbCR</span><span>Thin Capitalisation</span><span>Tax Governance</span><span>ATO Disputes</span><span>Anti-Hybrids</span>
+    <span>Pillar Two</span><span>Transfer Pricing</span><span>GloBE Calculations</span><span>QDMTT</span><span>Local Files</span><span>CbCR</span><span>Thin Capitalisation</span><span>Tax Governance</span><span>ATO Disputes</span><span>Anti-Hybrids</span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- SERVICES BENTO -->
+<section id="services" aria-label="Services">
+  <div class="wrap">
+    <span class="kicker rv"><span class="dot"></span>What we do</span>
+    <h2 class="rv" style="margin-top:22px">Big Four depth.<br><span class="serif gtext">Boutique attention.</span></h2>
+    <p class="lead rv">Direct access to senior expertise. No layers, no juniors: every engagement is led personally by Neil, fixed-fee, from day one.</p>
+    <div class="bento">
+      <div class="cell c-p2 rv">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <span class="bignum" data-count="15" data-suffix="%">0%</span>
+            <span class="badge warm">Featured</span>
+          </div>
+          <h3>Pillar Two: from model to mandate</h3>
+          <p>The global minimum tax is now a reality. Whether you are assessing exposure, implementing compliance frameworks or optimising your structure, you need guidance that bridges policy and practice. GIR, QDMTT, Transitional Safe Harbour, GloBE calculations, multi-jurisdiction filings.</p>
+        </div>
+        <div>
+          <div class="p2row">
+            <div class="p2i"><div class="v">&euro;750m</div><div class="k">In-scope revenue threshold</div></div>
+            <div class="p2i"><div class="v" data-count="40" data-suffix="+">0+</div><div class="k">Jurisdictions implementing</div></div>
+          </div>
+          <a class="alink" href="#contact">Discuss your Pillar Two position &rarr;</a>
+        </div>
+      </div>
+      <div class="cell c-ct rv">
+        <div class="ic">&#127963;</div>
+        <h3>Corporate Tax</h3>
+        <p>Optimise your global position, manage effective tax rates and keep compliance and governance defensible across jurisdictions.</p>
+      </div>
+      <div class="cell c-tp rv">
+        <div class="ic">&#8644;</div>
+        <h3>Transfer Pricing</h3>
+        <p>Defensible policies aligned with OECD guidelines. Benchmarking and Subdivision 815-B compliant global documentation.</p>
+        <div class="bars"><i style="height:38%"></i><i style="height:62%"></i><i style="height:88%"></i><i style="height:46%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:54%"></i></div>
+      </div>
+      <div class="cell c-it rv">
+        <div class="ic">&#127758;</div>
+        <h3>International Tax</h3>
+        <p>BEPS, anti-hybrids, thin capitalisation and cross-border structuring with confidence and clarity.</p>
+      </div>
+      <div class="cell c-gv rv">
+        <div class="ic">&#9878;</div>
+        <h3>Governance &amp; Disputes</h3>
+        <p>Justified Trust readiness, controls testing, and steady hands through ATO reviews, audits and objections.</p>
+      </div>
+      <div class="cell c-al rv">
+        <h3 style="margin-top:0">Also on the bench</h3>
+        <div class="chips">
+          <span class="chip">Compliance</span><span class="chip">Employment taxes</span><span class="chip">State taxes</span><span class="chip">GST</span><span class="chip">M&amp;A / ACA</span><span class="chip">Tax losses</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools" id="tools" aria-label="Tools">
+  <div class="wrap">
+    <div class="tools-head">
+      <div>
+        <span class="kicker rv"><span class="dot"></span>Free tools, real answers</span>
+        <h2 class="rv" style="margin-top:22px">Don't take our word for it.<br><span class="serif gtext">Run your own numbers.</span></h2>
+      </div>
+      <p class="lead rv" style="max-width:38ch">Five calculators built by the practice. This one below is live on this page; go ahead and use it.</p>
+    </div>
+    <div class="browser rv">
+      <div class="bbar">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="url">pillar-two-transitional-safe-harbour-calculator&hellip;run.app</div>
+        <span class="badge live">Live tool</span>
+      </div>
+      <div class="frame">
+        <iframe src="https://pillar-two-transitional-safe-harbour-calculator-301601367493.us-west1.run.app/" title="Pillar Two Transitional Safe Harbour Calculator (preview)" loading="lazy"></iframe>
+        <div class="veil">
+          <a class="btn btn-c" href="https://pillar-two-transitional-safe-harbour-calculator-301601367493.us-west1.run.app/" target="_blank" rel="noopener">Open the full calculator &nearr;</a>
+        </div>
+      </div>
+    </div>
+    <div class="tool-row">
+      <a class="tcard rv" href="https://studio--studio-6565411328-39858.us-central1.hosted.app/" target="_blank" rel="noopener">
+        <div class="th"><h3>TP Risk Heatmap</h3><span class="badge live">Live</span></div>
+        <div class="prev hm2">
+          <i class="g"></i><i></i><i class="y"></i><i class="g"></i><i></i><i class="r"></i><i class="g"></i><i class="y"></i>
+          <i></i><i class="g"></i><i class="g"></i><i class="y"></i><i></i><i class="g"></i><i></i><i class="g"></i>
+        </div>
+        <p>Drop in your CbCR file, get an instant risk profile. 100% in-browser; nothing is uploaded.</p>
+      </a>
+      <a class="tcard rv" href="https://intangible-value-creation-risk-heatmap-301601367493.us-west1.run.app/" target="_blank" rel="noopener">
+        <div class="th"><h3>Intangible Value Risk</h3><span class="badge live">Live</span></div>
+        <div class="prev zones"><i></i><i></i><i></i></div>
+        <p>Intangibles arrangements mapped against ATO risk-zone guidance.</p>
+      </a>
+      <a class="tcard rv" href="https://digital-services-tax-heatmap-v2-301601367493.us-west1.run.app/" target="_blank" rel="noopener">
+        <div class="th"><h3>Digital Services Tax</h3><span class="badge live">Live</span></div>
+        <div class="prev world">
+          <i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i>
+          <i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i>
+        </div>
+        <p>DST exposure under Pillar One and local regimes across your footprint.</p>
+      </a>
+      <div class="tcard rv" aria-label="PE Assessment Tool, in build">
+        <div class="th"><h3>PE Assessment</h3><span class="badge warm">In build</span></div>
+        <div class="prev pe"><span>Coming soon</span></div>
+        <p>Permanent establishment risk from your current activities and presence.</p>
+      </div>
+    </div>
+    <p class="tnote rv">Pereira Consulting proprietary tools · Indicative only, not advice</p>
+  </div>
+</section>
+
+<!-- LIFECYCLE -->
+<section id="lifecycle" aria-label="Lifecycle Advisory">
+  <div class="wrap lc-grid">
+    <div class="lc-left">
+      <span class="kicker rv"><span class="dot"></span>Lifecycle Advisory</span>
+      <h2 class="rv" style="margin-top:22px">Your company won't stay at one stage. <span class="serif gtext">Neither should your adviser.</span></h2>
+      <p class="lcp rv">From the founders' agreement to the prospectus and every trigger in between: one tax partner who orchestrates the lawyers, auditors and corporate finance advisers around you.</p>
+      <div class="lc-stages rv">
+        <span class="stage">01 Founder</span>
+        <span class="stage">02 Seed &rarr; A</span>
+        <span class="stage hot">03 Scale-up</span>
+        <span class="stage hot">04 Pre-IPO</span>
+        <span class="stage hot">05 IPO</span>
+        <span class="stage hot">06 Mature</span>
+      </div>
+      <a class="alink rv" href="/Lifecycle/">Find your stage on the curve &rarr;</a>
+    </div>
+    <div class="diag rv">
+      <div class="diag-in">
+        <div class="dh">
+          <div>
+            <h3>The Lifecycle Diagnostic</h3>
+            <div class="dsub">Six-monthly · fixed-fee · written to the board</div>
+          </div>
+          <span class="badge navy">V.2026</span>
+        </div>
+        <div class="dsteps">
+          <div class="dstep"><span class="n">01</span><span class="t">Intake: cap table, FS, group chart</span><span class="d">30 min</span></div>
+          <div class="dstep"><span class="n">02</span><span class="t">Stage placement &amp; risk scan</span><span class="d">5 days</span></div>
+          <div class="dstep"><span class="n">03</span><span class="t">Trigger horizon projection</span><span class="d">2 days</span></div>
+          <div class="dstep"><span class="n">04</span><span class="t">Debrief &amp; prioritised moves</span><span class="d">60 min</span></div>
+        </div>
+        <div class="dfoot">
+          <div>
+            <div class="amt">A$5,000</div>
+            <div class="per">per diagnostic · twice yearly</div>
+          </div>
+          <a class="btn btn-n" href="/Lifecycle/#diagnostic">Book your diagnostic</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights" aria-label="Insights" style="padding-top:30px">
+  <div class="wrap">
+    <span class="kicker rv"><span class="dot"></span>Insights</span>
+    <h2 class="rv" style="margin-top:22px">The Strategic <span class="serif gtext">Brief.</span></h2>
+    <p class="lead rv">A weekly brief on the tax developments that matter to multinationals operating into and out of Australia.</p>
+    <div class="ins-grid">
+      <a class="icard rv" href="briefs/strategic-brief-2026-06-05.html">
+        <div class="icover v1"></div>
+        <div class="ibody">
+          <span class="idate">Edition · 05 Jun 2026</span>
+          <h3>Trade, base reform and the minimum tax converge.</h3>
+          <p>The US opens a sixty-economy tariff front naming Australia, the CGT Bill clears the House, and the Pillar Two filing machinery locks in with 25 days to the first GIR.</p>
+          <span class="alink">Read the brief &rarr;</span>
+        </div>
+      </a>
+      <a class="icard rv" href="briefs/strategic-brief-2026-05-29.html">
+        <div class="icover v2"></div>
+        <div class="ibody">
+          <span class="idate">Edition · 29 May 2026</span>
+          <h3>Australia's biggest structural tax reform in a generation is on the legislative track.</h3>
+          <p>The CGT and negative gearing Bills land in Parliament, the OECD consolidates its Pillar Two commentary, and France endorses central GIR filing.</p>
+          <span class="alink">Read the brief &rarr;</span>
+        </div>
+      </a>
+      <a class="icard rv" href="mailto:neil@pereiraconsulting.com?subject=Please%20send%20me%20the%2022%20May%20Strategic%20Brief">
+        <div class="icover v3"></div>
+        <div class="ibody">
+          <span class="idate">Edition · 22 May 2026</span>
+          <h3>The Pillar Two penalty architecture interlocks across borders.</h3>
+          <p>The OECD common understanding on GIR filing relief, the G7's Side-by-Side endorsement, and a nine-week Australian compliance window.</p>
+          <span class="alink">Read the brief &rarr;</span>
+        </div>
+      </a>
+    </div>
+    <div class="ins-foot rv">
+      <a class="btn btn-g" href="mailto:neil@pereiraconsulting.com?subject=Subscribe%20me%20to%20The%20Strategic%20Brief">Subscribe to the weekly brief</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about" aria-label="About Neil Pereira">
+  <div class="wrap ab-grid">
+    <div class="avatar rv">
+      <div class="img">
+        <img src="assets/neil-portrait.png" alt="Neil Pereira, Managing Director of Pereira Consulting">
+      </div>
+      <div class="tag">
+        <span class="nm">Neil Pereira</span>
+        <span class="rl">Managing Director</span>
+      </div>
+    </div>
+    <div class="ab-right">
+      <span class="kicker rv"><span class="dot"></span>About</span>
+      <h2 class="rv">The depth of a Big Four specialist. <span class="serif gtext">The attention of one adviser.</span></h2>
+      <p class="quote rv">"Every engagement is led directly by me: no handing off to junior staff and no surprise fees."</p>
+      <p class="bio rv">My experience combining <strong>deep technical expertise</strong> with a genuine investment in understanding my clients and their operations allows me to identify value-add opportunities that tax optimise their business, bring forward savings and realise synergies.</p>
+      <div class="creds rv">
+        <span class="cred"><i></i>Chartered Tax Adviser</span>
+        <span class="cred"><i></i>Registered Tax Agent</span>
+        <span class="cred"><i></i>Lawyer</span>
+        <span class="cred"><i></i>25+ years</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" aria-label="Contact">
+  <div class="wrap">
+    <div class="cta-shell rv">
+      <span class="kicker"><span class="dot"></span>Contact</span>
+      <h2>Discuss your position with <span class="serif">Neil directly.</span></h2>
+      <p class="csub">A 30-minute scoping call costs nothing and tells you exactly where you stand.</p>
+      <div class="cta-act">
+        <a class="btn btn-p" href="mailto:neil@pereiraconsulting.com?subject=Scoping%20call%20request">Book a scoping call</a>
+        <a class="btn btn-g" href="https://www.linkedin.com/in/pereiraneil">Connect on LinkedIn</a>
+      </div>
+      <p class="cta-meta"><a href="mailto:neil@pereiraconsulting.com">neil@pereiraconsulting.com</a> &nbsp;·&nbsp; <a href="tel:+61414354586">+61 414 354 586</a> &nbsp;·&nbsp; Sydney · Melbourne · Singapore · USA · UK</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="logo" href="#top" aria-label="Pereira Consulting home"><img src="assets/pereira-logo.png" alt="Pereira Consulting · International Tax"></a>
+        <p>Specialist tax advisory for multinational enterprises operating into and out of Australia.</p>
+      </div>
+      <div class="f-col">
+        <h4>Services</h4>
+        <a href="#services">Corporate Tax</a>
+        <a href="#services">International Tax</a>
+        <a href="#services">Transfer Pricing</a>
+        <a href="#services">Pillar Two</a>
+      </div>
+      <div class="f-col">
+        <h4>Lifecycle</h4>
+        <a href="/Lifecycle/">The curve</a>
+        <a href="/Lifecycle/">Trigger events</a>
+        <a href="/Lifecycle/#diagnostic">The Diagnostic</a>
+      </div>
+      <div class="f-col">
+        <h4>Tools</h4>
+        <a href="https://pillar-two-transitional-safe-harbour-calculator-301601367493.us-west1.run.app/" target="_blank" rel="noopener">TSH Calculator</a>
+        <a href="https://studio--studio-6565411328-39858.us-central1.hosted.app/" target="_blank" rel="noopener">TP Risk Heatmap</a>
+        <a href="https://intangible-value-creation-risk-heatmap-301601367493.us-west1.run.app/" target="_blank" rel="noopener">Intangible Value Risk</a>
+        <a href="https://digital-services-tax-heatmap-v2-301601367493.us-west1.run.app/" target="_blank" rel="noopener">Digital Services Tax</a>
+      </div>
+      <div class="f-col">
+        <h4>Connect</h4>
+        <a href="mailto:neil@pereiraconsulting.com">Email</a>
+        <a href="tel:+61414354586">+61 414 354 586</a>
+        <a href="https://www.linkedin.com/in/pereiraneil">LinkedIn</a>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span class="liab">Liability limited by a scheme approved under Professional Standards Legislation.</span>
+      <span>&copy; 2026 Pereira Consulting · ABN 77 633 565 107 · Sydney · Melbourne · Singapore · USA · UK</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cio = new IntersectionObserver((es)=>{es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseInt(el.dataset.count,10), suf=el.dataset.suffix||'';
+  const t0=performance.now(), dur=1400;
+  const tick=(t)=>{const p=Math.min((t-t0)/dur,1);const eased=1-Math.pow(1-p,3);
+    el.textContent=Math.round(end*eased)+suf;
+    if(p<1) requestAnimationFrame(tick);};
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=end+suf;}
+  else requestAnimationFrame(tick);
+  cio.unobserve(el);
+})},{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+document.querySelectorAll('.nav-l a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navwrap').classList.remove('open')));
+// scroll progress
+const prog=document.getElementById('prog');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+},{passive:true});
+</script>
+</body>
+</html>
