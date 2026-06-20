@@ -422,7 +422,7 @@ a.tcard:hover{transform:translateY(-6px);border-color:rgba(0,180,216,.5);box-sha
 .dfoot .per{font-size:12px;color:var(--dim);margin-top:2px}
 
 /* ================= INSIGHTS ================= */
-.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.ins-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
 .icard{
   border-radius:var(--r-md);border:1px solid var(--line-soft);overflow:hidden;text-decoration:none;
   background:#fff;box-shadow:0 6px 24px rgba(10,29,63,.05);
@@ -433,10 +433,12 @@ a.tcard:hover{transform:translateY(-6px);border-color:rgba(0,180,216,.5);box-sha
 .icard:nth-child(1):hover{border-color:rgba(0,180,216,.5)}
 .icard:nth-child(2):hover{border-color:rgba(242,163,60,.5)}
 .icard:nth-child(3):hover{border-color:rgba(240,115,90,.5)}
+.icard:nth-child(4):hover{border-color:rgba(31,58,110,.5)}
 .icover{height:150px;position:relative;overflow:hidden;background-size:cover}
 .icover.v1{background-image:linear-gradient(200deg,rgba(0,180,216,.45),rgba(10,29,63,.65)),url("assets/harbour.jpg");background-position:center 70%;background-blend-mode:normal}
 .icover.v2{background-image:linear-gradient(200deg,rgba(242,163,60,.4),rgba(10,29,63,.65)),url("assets/coast.jpg");background-position:center 40%}
 .icover.v3{background-image:linear-gradient(200deg,rgba(240,115,90,.4),rgba(10,29,63,.7)),url("assets/harbour.jpg");background-position:center 20%}
+.icover.v4{background-image:linear-gradient(200deg,rgba(10,29,63,.55),rgba(0,180,216,.5)),url("assets/coast.jpg");background-position:center 75%}
 .icover::after{
   content:"THE STRATEGIC BRIEF";position:absolute;left:18px;bottom:14px;
   font-family:var(--mono);font-size:8.5px;letter-spacing:.26em;color:rgba(255,255,255,.9);
@@ -810,33 +812,44 @@ footer{padding:80px 0 40px;background:var(--paper)}
     <h2 class="rv" style="margin-top:22px">The Strategic <span class="serif gtext">Brief.</span></h2>
     <p class="lead rv">A weekly brief on the tax developments that matter to multinationals operating into and out of Australia.</p>
     <div class="ins-grid">
-      <a class="icard rv" href="briefs/strategic-brief-2026-06-05.html">
+<!-- BRIEFS:auto -->
+      <a class="icard rv" href="briefs/strategic-brief-2026-06-19.html">
         <div class="icover v1"></div>
         <div class="ibody">
-          <span class="idate">Edition · 05 Jun 2026</span>
+          <span class="idate">Edition &middot; 19 Jun 2026</span>
+          <h3>Eleven days to 30 June, and the rulebook is still being written in flight.</h3>
+          <p>Eleven days to 30 June: the OECD issues an eleventh-hour rulebook to keep the first GloBE Information Returns lodgeable, reopens the transfer pricing of intra-group services for the first time in a decade, and Australia's filing window opens under PCG 2025/4 even as a 1 July royalty penalty looms unlegislated.</p>
+          <span class="alink">Read the brief &rarr;</span>
+        </div>
+      </a>
+      <a class="icard rv" href="briefs/strategic-brief-2026-06-12.html">
+        <div class="icover v2"></div>
+        <div class="ibody">
+          <span class="idate">Edition &middot; 12 Jun 2026</span>
+          <h3>The design debate is over. The lodgement window is open.</h3>
+          <p>Eighteen days to 30 June: Australia's first public country-by-country reports and the United Kingdom's first Pillar Two filings land on that date, with the first GloBE Information Return and minimum tax returns effectively extended to 30 July; the High Court closes the door on S.N.A Group; and Washington restates the price of the side-by-side bargain.</p>
+          <span class="alink">Read the brief &rarr;</span>
+        </div>
+      </a>
+      <a class="icard rv" href="briefs/strategic-brief-2026-06-05.html">
+        <div class="icover v3"></div>
+        <div class="ibody">
+          <span class="idate">Edition &middot; 05 Jun 2026</span>
           <h3>Trade, base reform and the minimum tax converge.</h3>
-          <p>The US opens a sixty-economy tariff front naming Australia, the CGT Bill clears the House, and the Pillar Two filing machinery locks in with 25 days to the first GIR.</p>
+          <p>The United States opens a sixty-economy tariff front that now names Australia, the CGT and negative gearing Bill clears the House, and the Pillar Two filing machinery locks into place with twenty-five days to the first GIR.</p>
           <span class="alink">Read the brief &rarr;</span>
         </div>
       </a>
       <a class="icard rv" href="briefs/strategic-brief-2026-05-29.html">
-        <div class="icover v2"></div>
+        <div class="icover v4"></div>
         <div class="ibody">
-          <span class="idate">Edition · 29 May 2026</span>
-          <h3>Australia's biggest structural tax reform in a generation is on the legislative track.</h3>
-          <p>The CGT and negative gearing Bills land in Parliament, the OECD consolidates its Pillar Two commentary, and France endorses central GIR filing.</p>
+          <span class="idate">Edition &middot; 29 May 2026</span>
+          <h3>Australia's biggest structural tax reform in a generation is now on the legislative track.</h3>
+          <p>The CGT and negative gearing Bills landed in Parliament on 28 May. The OECD has consolidated its Pillar Two commentary, France has endorsed central GIR filing, and the ATO has signalled the closure of its Diverted Profits Tax specialist team. Thirty-two days to the first GIR lodgement.</p>
           <span class="alink">Read the brief &rarr;</span>
         </div>
       </a>
-      <a class="icard rv" href="mailto:neil@pereiraconsulting.com?subject=Please%20send%20me%20the%2022%20May%20Strategic%20Brief">
-        <div class="icover v3"></div>
-        <div class="ibody">
-          <span class="idate">Edition · 22 May 2026</span>
-          <h3>The Pillar Two penalty architecture interlocks across borders.</h3>
-          <p>The OECD common understanding on GIR filing relief, the G7's Side-by-Side endorsement, and a nine-week Australian compliance window.</p>
-          <span class="alink">Read the brief &rarr;</span>
-        </div>
-      </a>
+    
     </div>
     <div class="ins-foot rv">
       <a class="btn btn-g" href="mailto:neil@pereiraconsulting.com?subject=Subscribe%20me%20to%20The%20Strategic%20Brief">Subscribe to the weekly brief</a>
