@@ -41,3 +41,5 @@ Remove the Canva DNS records for www and @ when adding these. Propagation is usu
 ## Rollback
 
 Re-publish the Canva site and restore the previous DNS records. Nothing in this repo needs to change.
+
+Automated Strategic Brief publishing authenticates via an SSH deploy key (no token expiry).
