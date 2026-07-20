@@ -1,0 +1,772 @@
+<!--
+  Pereira Consulting · The Strategic Brief
+  Outlook-safe newsletter template - V4 design rebuilt for native Outlook (.oft).
+
+  Design source:  v4-combined.jsx + brand.jsx + brief-data.jsx
+  Compatibility:  Outlook 2016 / 2019 / 2021 / 365 (Windows + Mac), Apple Mail, Gmail, mobile.
+
+  How to use (one-time setup):
+    1. Drop this HTML file and `header-banner-clean.png` in the same folder.
+    2. Open the HTML in a browser (Chrome / Edge).
+    3. CTRL+A then CTRL+C to copy the rendered email.
+    4. In Outlook: New Email → click in the body → CTRL+V to paste.
+    5. File → Save As → choose "Outlook Template (*.oft)".
+       Save as: Strategic_Brief.oft
+
+  Each week:
+    Outlook ribbon → Home → New Items → More Items → Choose Form
+    → User Templates in File System → Strategic_Brief.oft → Open
+    → edit headlines, KPIs, diary, commentary inline; send.
+
+  Editing rules:
+    - Replace any [PLACEHOLDER] text. Do not delete table rows or cells -
+      copy a row, then edit, to preserve column widths.
+    - To swap the banner image, right-click the image in Outlook → Change Picture.
+    - Keep the email at 680px wide. Outlook clips wider content.
+-->
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>The Strategic Brief - Pereira Consulting</title>
+<!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<style>
+  /* Most rules are inlined per-element; this block only covers things Outlook honours
+     in <head> - line-height resets, spam-trigger guards, link color overrides. */
+  body, table, td, p, a, h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; }
+  body { margin: 0; padding: 0; background: #2a2d33; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+  table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { border: 0; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+  a { color: #1f3a6e; text-decoration: underline; }
+  /* Outlook-specific: stop Outlook from inserting default 1.5 line spacing */
+  p, h1, h2, h3 { mso-line-height-rule: exactly; }
+</style>
+</head>
+<body style="margin:0; padding:0; background:#2a2d33; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;">
+
+<!-- Outer wrapper (full-bleed dark grey, 28px top/bottom padding) -->
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#2a2d33" style="background:#2a2d33;">
+<tr><td align="center" style="padding:28px 0 28px 0;">
+
+<!-- =================================================================
+     EMAIL CONTAINER · 680px
+     ================================================================= -->
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="680" bgcolor="#ffffff" style="width:680px; max-width:680px; background:#ffffff; border-collapse:collapse;" class="email-shell">
+
+  <!-- ============== BANNER ============== -->
+  <tr>
+    <td align="center" valign="top" style="line-height:0; font-size:0; background:#ffffff;">
+      <img src="/assets/brief-banner.png" alt="Pereira Consulting · The Strategic Brief" width="680" style="display:block; width:100%; max-width:680px; height:auto; border:0;" />
+    </td>
+  </tr>
+
+  <!-- ============== TAGLINE STRIP ============== -->
+  <tr>
+    <td align="center" valign="middle" style="background:#ffffff; border-top:1px solid #d9dde3; border-bottom:1px solid #d9dde3; padding:14px 28px; font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#1f3a6e; font-weight:600;">
+      <span style="color:#1f3a6e;">Strategy</span>
+      <span style="color:#c2934a; padding:0 12px; opacity:0.7;">|</span>
+      <span style="color:#1f3a6e;">Advice</span>
+      <span style="color:#c2934a; padding:0 12px; opacity:0.7;">|</span>
+      <span style="color:#1f3a6e;">Expertise</span>
+    </td>
+  </tr>
+
+  <!-- ============== LEDE - meta line + display headline + subtitle ============== -->
+  <tr>
+    <td style="padding:32px 28px 8px 28px; background:#ffffff;">
+
+      <!-- Meta row: publication / issue number / date -->
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse; margin-bottom:18px;">
+        <tr>
+          <td align="left" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.8px; text-transform:uppercase; color:#1f3a6e; font-weight:600;">
+            The Strategic Brief
+          </td>
+          <td align="center" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.8px; text-transform:uppercase; color:#5b6473;">
+            Vol. 04 &#183; Issue 29
+          </td>
+          <td align="right" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.8px; text-transform:uppercase; color:#5b6473;">
+            17 July 2026
+          </td>
+        </tr>
+      </table>
+
+      <!-- Display headline (Georgia, italic accent on a key phrase) -->
+      <h1 style="font-family:Georgia,'Times New Roman',serif; font-size:34px; line-height:1.08; font-weight:400; color:#15264a; letter-spacing:-0.5px; margin:0 0 16px 0; mso-line-height-rule:exactly;">
+        The world's first real data on the global minimum tax lands the same week the United Kingdom writes the US side-by-side deal into law, and Canberra puts a number on the <em style="font-style:italic; color:#1f3a6e;">end of the bucket company</em>.
+      </h1>
+
+      <p style="font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:1.6; color:#1a1d24; margin:0 0 0 0; max-width:580px; mso-line-height-rule:exactly;">
+        The OECD&#39;s first empirical read finds Pillar Two raised EUR 79 to 109 billion in year one without deterring investment; the United Kingdom becomes the first major economy to legislate the side-by-side package; and Australia&#39;s trust minimum tax design puts corporate beneficiaries at an effective 42.9 per cent.
+      </p>
+    </td>
+  </tr>
+
+  <!-- ============== KPI STRIP - 4 columns, navy bg ============== -->
+  <tr>
+    <td style="padding:0 28px 0 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#1f3a6e" style="background:#1f3a6e; border-collapse:collapse; margin-top:26px;">
+        <tr>
+          <!-- KPI 1 -->
+          <td valign="top" width="25%" style="padding:18px 16px; border-right:1px solid #3a548a; vertical-align:top;">
+            <div style="font-family:Arial,Helvetica,sans-serif; color:#ffffff; font-size:30px; line-height:1; font-weight:700; letter-spacing:-0.6px;">
+              EUR 79-109bn <span style="font-size:13px; color:#c2934a; margin-left:4px; font-weight:500;"></span>
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1.8px; text-transform:uppercase; color:#b8c0d0; margin-top:8px; line-height:1.4;">
+              OECD estimate of Pillar Two revenue in its first year (2024)
+            </div>
+          </td>
+          <!-- KPI 2 -->
+          <td valign="top" width="25%" style="padding:18px 16px; border-right:1px solid #3a548a; vertical-align:top;">
+            <div style="font-family:Arial,Helvetica,sans-serif; color:#ffffff; font-size:30px; line-height:1; font-weight:700; letter-spacing:-0.6px;">
+              42.9% <span style="font-size:13px; color:#c2934a; margin-left:4px; font-weight:500;"></span>
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1.8px; text-transform:uppercase; color:#b8c0d0; margin-top:8px; line-height:1.4;">
+              Effective rate on trust income routed to a corporate beneficiary
+            </div>
+          </td>
+          <!-- KPI 3 -->
+          <td valign="top" width="25%" style="padding:18px 16px; border-right:1px solid #3a548a; vertical-align:top;">
+            <div style="font-family:Arial,Helvetica,sans-serif; color:#ffffff; font-size:30px; line-height:1; font-weight:700; letter-spacing:-0.6px;">
+              7 Sep
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1.8px; text-transform:uppercase; color:#b8c0d0; margin-top:8px; line-height:1.4;">
+              UK side-by-side draft: technical consultation closes
+            </div>
+          </td>
+          <!-- KPI 4 -->
+          <td valign="top" width="25%" style="padding:18px 16px; vertical-align:top;">
+            <div style="font-family:Arial,Helvetica,sans-serif; color:#ffffff; font-size:30px; line-height:1; font-weight:700; letter-spacing:-0.6px;">
+              31 Jul
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1.8px; text-transform:uppercase; color:#b8c0d0; margin-top:8px; line-height:1.4;">
+              Australian trust minimum tax consultation closes
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== SECTION HEADER - Four developments ============== -->
+  <tr>
+    <td style="padding:32px 28px 12px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td align="left" valign="bottom" style="font-family:Georgia,'Times New Roman',serif; font-size:24px; line-height:1.2; font-weight:400; color:#15264a; letter-spacing:-0.4px;">
+            Four developments to <em style="font-style:italic; color:#1f3a6e;">read carefully</em>
+          </td>
+          <td align="right" valign="bottom" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473;">
+            04 stories
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== STORY TILE 01 ============== -->
+  <tr>
+    <td style="padding:0 28px 10px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#eef1f8" style="border:1px solid #d9dde3; border-collapse:collapse; background:#eef1f8;">
+        <tr>
+          <!-- Big italic numeral -->
+          <td valign="top" width="52" bgcolor="#eef1f8" style="background:#eef1f8; padding:18px 0 18px 20px; vertical-align:top; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:34px; font-weight:400; color:#1f3a6e; letter-spacing:-0.5px; line-height:1; width:52px;">
+            01
+          </td>
+          <!-- Body cell -->
+          <td valign="top" bgcolor="#eef1f8" style="background:#eef1f8; padding:18px 16px 18px 16px; vertical-align:top;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:6px;">
+              <tr>
+                <td align="left" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473; font-weight:600;">
+                  OECD &#183; Global
+                </td>
+                <td align="right">
+                  <!-- Jurisdiction tag - change bgcolor to AU green #0a7c48 / EU purple #5b3da3 / US red #b3322a / Global navy #1f3a6e -->
+                  <span style="display:inline-block; background:#1f3a6e; color:#ffffff; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:2.0px; text-transform:uppercase; font-weight:700; padding:3px 8px;">Global</span>
+                </td>
+              </tr>
+            </table>
+            <div style="font-family:Georgia,'Times New Roman',serif; font-size:19px; line-height:1.22; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 6px 0;">
+              The first real data on the global minimum tax
+            </div>
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24; margin:0;">
+              The OECD&#39;s working paper on how MNEs responded to the 15 per cent minimum tax, using real 2024 outcomes, finds higher effective rates for in-scope groups, no material fall in investment or employment, and a first-year revenue gain of EUR 79 to 109 billion, lower than the boldest forecasts but the same order as the ex-ante estimates.
+            </p>
+          </td>
+          <!-- Aside stat -->
+          <td valign="top" width="110" align="right" style="padding:18px 20px 18px 0; vertical-align:top; width:110px;">
+            <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:22px; color:#1f3a6e; letter-spacing:-0.4px; line-height:1; margin-bottom:4px;">
+              EUR 79-109bn
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; line-height:1.4;">
+              year-one revenue
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== STORY TILE 02 ============== -->
+  <tr>
+    <td style="padding:0 28px 10px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f2eef9" style="border:1px solid #d9dde3; border-collapse:collapse; background:#f2eef9;">
+        <tr>
+          <td valign="top" width="52" bgcolor="#f2eef9" style="background:#f2eef9; padding:18px 0 18px 20px; vertical-align:top; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:34px; font-weight:400; color:#1f3a6e; letter-spacing:-0.5px; line-height:1; width:52px;">
+            02
+          </td>
+          <td valign="top" bgcolor="#f2eef9" style="background:#f2eef9; padding:18px 16px 18px 16px; vertical-align:top;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:6px;">
+              <tr>
+                <td align="left" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473; font-weight:600;">
+                  United Kingdom &#183; Pillar Two
+                </td>
+                <td align="right">
+                  <span style="display:inline-block; background:#5b3da3; color:#ffffff; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:2.0px; text-transform:uppercase; font-weight:700; padding:3px 8px;">EU</span>
+                </td>
+              </tr>
+            </table>
+            <div style="font-family:Georgia,'Times New Roman',serif; font-size:19px; line-height:1.22; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 6px 0;">
+              UK legislates the side-by-side package
+            </div>
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24; margin:0;">
+              On its 13 July Legislation Day the UK published draft Finance Bill 2026-27 rules transposing the OECD side-by-side package into its Multinational and Domestic Top-up Taxes for periods from 1 January 2026, with a technical consultation to 7 September. The first major economy to move the US accommodation into black-letter domestic law.
+            </p>
+          </td>
+          <td valign="top" width="110" align="right" style="padding:18px 20px 18px 0; vertical-align:top; width:110px;">
+            <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:22px; color:#1f3a6e; letter-spacing:-0.4px; line-height:1; margin-bottom:4px;">
+              13 Jul
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; line-height:1.4;">
+              Legislation Day
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== STORY TILE 03 ============== -->
+  <tr>
+    <td style="padding:0 28px 10px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#eaf4ef" style="border:1px solid #d9dde3; border-collapse:collapse; background:#eaf4ef;">
+        <tr>
+          <td valign="top" width="52" bgcolor="#eaf4ef" style="background:#eaf4ef; padding:18px 0 18px 20px; vertical-align:top; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:34px; font-weight:400; color:#1f3a6e; letter-spacing:-0.5px; line-height:1; width:52px;">
+            03
+          </td>
+          <td valign="top" bgcolor="#eaf4ef" style="background:#eaf4ef; padding:18px 16px 18px 16px; vertical-align:top;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:6px;">
+              <tr>
+                <td align="left" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473; font-weight:600;">
+                  Australia &#183; Treasury
+                </td>
+                <td align="right">
+                  <span style="display:inline-block; background:#0a7c48; color:#ffffff; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:2.0px; text-transform:uppercase; font-weight:700; padding:3px 8px;">AU</span>
+                </td>
+              </tr>
+            </table>
+            <div style="font-family:Georgia,'Times New Roman',serif; font-size:19px; line-height:1.22; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 6px 0;">
+              Trust minimum tax: 42.9% and the end of the bucket company
+            </div>
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24; margin:0;">
+              Treasury&#39;s design detail on the 30 per cent minimum tax on discretionary trust distributions gives corporate beneficiaries no offset, an effective 42.9 per cent on the amount received, and broad CGT rollover relief for three years from 1 July 2027 that intersects unresolved with transfer duty and trust law. Submissions close 31 July.
+            </p>
+          </td>
+          <td valign="top" width="110" align="right" style="padding:18px 20px 18px 0; vertical-align:top; width:110px;">
+            <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:22px; color:#1f3a6e; letter-spacing:-0.4px; line-height:1; margin-bottom:4px;">
+              31 Jul
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; line-height:1.4;">
+              consultation closes
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== STORY TILE 04 ============== -->
+  <tr>
+    <td style="padding:0 28px 10px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#eef1f8" style="border:1px solid #d9dde3; border-collapse:collapse; background:#eef1f8;">
+        <tr>
+          <td valign="top" width="52" bgcolor="#eef1f8" style="background:#eef1f8; padding:18px 0 18px 20px; vertical-align:top; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:34px; font-weight:400; color:#1f3a6e; letter-spacing:-0.5px; line-height:1; width:52px;">
+            04
+          </td>
+          <td valign="top" bgcolor="#eef1f8" style="background:#eef1f8; padding:18px 16px 18px 16px; vertical-align:top;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:6px;">
+              <tr>
+                <td align="left" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473; font-weight:600;">
+                  Transfer Pricing &#183; Multi-jurisdiction
+                </td>
+                <td align="right">
+                  <span style="display:inline-block; background:#1f3a6e; color:#ffffff; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:2.0px; text-transform:uppercase; font-weight:700; padding:3px 8px;">Global</span>
+                </td>
+              </tr>
+            </table>
+            <div style="font-family:Georgia,'Times New Roman',serif; font-size:19px; line-height:1.22; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 6px 0;">
+              The terms of TP compliance are being reset
+            </div>
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24; margin:0;">
+              Vietnam lifts its documentation threshold and aligns country-by-country reporting to EUR 750 million; Colombia&#39;s Supreme Administrative Court rejects a domestic rate on a foreign-currency related-party loan; a Canadian court remits an APA interest-relief decision; and the UAE clarifies downward adjustments in the corporate tax return.
+            </p>
+          </td>
+          <td valign="top" width="110" align="right" style="padding:18px 20px 18px 0; vertical-align:top; width:110px;">
+            <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:22px; color:#1f3a6e; letter-spacing:-0.4px; line-height:1; margin-bottom:4px;">
+              4
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; line-height:1.4;">
+              jurisdictions
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== SECTION HEADER - Diary ============== -->
+  <tr>
+    <td style="padding:32px 28px 12px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td align="left" valign="bottom" style="font-family:Georgia,'Times New Roman',serif; font-size:24px; line-height:1.2; font-weight:400; color:#15264a; letter-spacing:-0.4px;">
+            The <em style="font-style:italic; color:#1f3a6e;">diary</em>
+          </td>
+          <td align="right" valign="bottom" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473;">
+            Next 8 weeks
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== DIARY GRID ============== -->
+  <tr>
+    <td style="padding:0 28px 8px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #d9dde3; border-collapse:collapse;">
+        <tr>
+          <td valign="middle" width="84" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:700; color:#15264a; letter-spacing:0.2px; width:84px;">22 Jul</td>
+          <td valign="middle" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#1a1d24;">OECD Chapter VII (intra-group services) Transfer Pricing Guidelines consultation closes</td>
+          <td valign="middle" width="70" align="right" style="padding:12px 16px 12px 0; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; width:70px;">Global</td>
+        </tr>
+        <tr>
+          <td valign="middle" width="84" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:700; color:#15264a; letter-spacing:0.2px; width:84px;">24 Jul</td>
+          <td valign="middle" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#1a1d24;">US CBP de minimis suspension: public comments close</td>
+          <td valign="middle" width="70" align="right" style="padding:12px 16px 12px 0; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; width:70px;">US</td>
+        </tr>
+        <tr>
+          <td valign="middle" width="84" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:700; color:#15264a; letter-spacing:0.2px; width:84px;">30 Jul</td>
+          <td valign="middle" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#1a1d24;">Australian DMT (extended), IIR/UTPR and GIR returns due; PCG 2025/4 penalty relief applies</td>
+          <td valign="middle" width="70" align="right" style="padding:12px 16px 12px 0; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; width:70px;">AU</td>
+        </tr>
+        <tr>
+          <td valign="middle" width="84" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:700; color:#15264a; letter-spacing:0.2px; width:84px;">31 Jul</td>
+          <td valign="middle" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#1a1d24;">Australian discretionary trusts reform and 30% minimum tax consultation closes</td>
+          <td valign="middle" width="70" align="right" style="padding:12px 16px 12px 0; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; width:70px;">AU</td>
+        </tr>
+        <tr>
+          <td valign="middle" width="84" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:700; color:#15264a; letter-spacing:0.2px; width:84px;">31 Jul</td>
+          <td valign="middle" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#1a1d24;">Turkiye and Barbados 2024 top-up tax returns (extended) due</td>
+          <td valign="middle" width="70" align="right" style="padding:12px 16px 12px 0; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; width:70px;">Global</td>
+        </tr>
+        <tr>
+          <td valign="middle" width="84" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:700; color:#15264a; letter-spacing:0.2px; width:84px;">01 Sep</td>
+          <td valign="middle" style="padding:12px 16px; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#1a1d24;">France: extended GloBE Information Return deadline (top-up tax return remained 30 June)</td>
+          <td valign="middle" width="70" align="right" style="padding:12px 16px 12px 0; border-bottom:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; width:70px;">EU</td>
+        </tr>
+        <tr>
+          <td valign="middle" width="84" style="padding:12px 16px;  font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:700; color:#15264a; letter-spacing:0.2px; width:84px;">07 Sep</td>
+          <td valign="middle" style="padding:12px 16px;  font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#1a1d24;">UK Finance Bill 2026-27 Pillar Two side-by-side draft: technical consultation closes</td>
+          <td valign="middle" width="70" align="right" style="padding:12px 16px 12px 0;  font-family:Arial,Helvetica,sans-serif; font-size:9px; letter-spacing:1.8px; text-transform:uppercase; color:#5b6473; width:70px;">EU</td>
+        </tr></table>
+    </td>
+  </tr>
+
+  <!-- ============== SECTION HEADER - Detail / Commentary ============== -->
+  <tr>
+    <td style="padding:32px 28px 12px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td align="left" valign="bottom" style="font-family:Georgia,'Times New Roman',serif; font-size:24px; line-height:1.2; font-weight:400; color:#15264a; letter-spacing:-0.4px;">
+            The <em style="font-style:italic; color:#1f3a6e;">detail</em>
+          </td>
+          <td align="right" valign="bottom" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473;">
+            Commentary &amp; analysis
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== COMMENTARY 01 - light teal band ============== -->
+  <tr>
+    <td style="padding:0 28px 14px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #d9dde3; border-collapse:collapse;">
+        <!-- Coloured header band (light teal) -->
+        <tr>
+          <td bgcolor="#e6eef0" style="background:#e6eef0; padding:16px 24px; border-bottom:2px solid #3f7480;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td valign="top" align="left">
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#1d4a52; font-weight:700; margin-bottom:6px;">
+                    OECD &#183; Global minimum tax
+                  </div>
+                  <h3 style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.22; font-weight:500; color:#1d4a52; letter-spacing:-0.2px; margin:0;">
+                    The first real data: revenue up, investment steady
+                  </h3>
+                </td>
+                <td valign="top" align="right" width="50" style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:28px; color:#3f7480; font-weight:400; line-height:1; letter-spacing:-0.5px; width:50px;">
+                  01
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- Body -->
+        <tr>
+          <td style="padding:20px 24px 22px 24px; background:#ffffff;">
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">
+              The OECD&#39;s working paper on how multinationals responded to the 15 per cent global minimum tax, released 15 July, is the first empirical read using real 2024 outcomes rather than forecasts. In-scope groups recorded higher effective tax rates, the effect strongest for those most exposed to top-up tax, and the paper found no evidence of a material fall in investment or employment. First-year revenue is estimated at EUR 79 to 109 billion, lower than the boldest forecasts but the same order as the ex-ante estimates. The verdict makes the political durability of Pillar Two, not its design, the strategic variable.
+            </p>
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0;">
+              What clients should do. Retire any internal narrative that treats Pillar Two as a temporary imposition to be waited out. Fold the durability finding into medium-term effective tax rate forecasting and into substance-location decisions, and where the group sits near the EUR 750 million threshold, plan transactions and structure around it deliberately rather than incidentally.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== COMMENTARY 02 - sand band ============== -->
+  <tr>
+    <td style="padding:0 28px 14px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #d9dde3; border-collapse:collapse;">
+        <tr>
+          <td bgcolor="#efe9dc" style="background:#efe9dc; padding:16px 24px; border-bottom:2px solid #a07b3a;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td valign="top" align="left">
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b4a26; font-weight:700; margin-bottom:6px;">
+                    United Kingdom &#183; Pillar Two
+                  </div>
+                  <h3 style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.22; font-weight:500; color:#5b4a26; letter-spacing:-0.2px; margin:0;">
+                    UK legislates the side-by-side package
+                  </h3>
+                </td>
+                <td valign="top" align="right" width="50" style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:28px; color:#a07b3a; font-weight:400; line-height:1; letter-spacing:-0.5px; width:50px;">
+                  02
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:20px 24px 22px 24px; background:#ffffff;">
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">
+              On its 13 July Legislation Day the United Kingdom published draft Finance Bill 2026-27 legislation transposing the OECD side-by-side package into its Multinational and Domestic Top-up Taxes, for accounting periods beginning on or after 1 January 2026, with a technical consultation to 7 September 2026. It is the first major economy to move the US accommodation from OECD administrative guidance into black-letter domestic law, setting a template others will follow and giving in-scope groups the first concrete statutory text on how the carve-out will operate in a GloBE jurisdiction.
+            </p>
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0;">
+              What clients should do. For any group with UK top-up tax exposure, read the draft against your current GloBE modelling to find where the US accommodation changes a top-up outcome you had assumed, diarise the 7 September consultation and consider a submission where the drafting is ambiguous, and treat the 1 January 2026 effective date as live for period-end provisioning now.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== COMMENTARY 03 - mist band ============== -->
+  <tr>
+    <td style="padding:0 28px 14px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #d9dde3; border-collapse:collapse;">
+        <tr>
+          <td bgcolor="#e8ecf3" style="background:#e8ecf3; padding:16px 24px; border-bottom:2px solid #3a5599;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td valign="top" align="left">
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#28365a; font-weight:700; margin-bottom:6px;">
+                    Australia &#183; Treasury
+                  </div>
+                  <h3 style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.22; font-weight:500; color:#28365a; letter-spacing:-0.2px; margin:0;">
+                    Trust minimum tax: 42.9% and the end of the bucket company
+                  </h3>
+                </td>
+                <td valign="top" align="right" width="50" style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:28px; color:#3a5599; font-weight:400; line-height:1; letter-spacing:-0.5px; width:50px;">
+                  03
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:20px 24px 22px 24px; background:#ffffff;">
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">
+              Treasury&#39;s consultation on the 30 per cent minimum tax on discretionary trust distributions, closing 31 July, sets out a design in which corporate beneficiaries get no offset: a company pays 30 per cent on its share of trust income on top of the 30 per cent already paid by the trustee, an effective 42.9 per cent on the amount received, and, on the modelling, the end of the bucket company from 1 July 2028. Broad CGT rollover relief runs for three years from 1 July 2027 but intersects unresolved with state transfer duty and trust law, and the consultation expressly asks how the measure interacts with Bendel.
+            </p>
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0;">
+              What clients should do. Treat the fortnight to 31 July as a genuine window. Model the 42.9 per cent outcome against every bucket-company arrangement in the ownership chain and the residual section 100A and Part IVA exposure, price duty and trust-law risk alongside any rollover, and consider a submission on the corporate-beneficiary double tax, the franking-credit treatment and the fixed-trust definition.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== COMMENTARY 04 - pale gold band ============== -->
+  <tr>
+    <td style="padding:0 28px 14px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #d9dde3; border-collapse:collapse;">
+        <tr>
+          <td bgcolor="#ece6db" style="background:#ece6db; padding:16px 24px; border-bottom:2px solid #8a6a2a;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td valign="top" align="left">
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#4a3f1f; font-weight:700; margin-bottom:6px;">
+                    Pillar Two &#183; Exchange layer
+                  </div>
+                  <h3 style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.22; font-weight:500; color:#4a3f1f; letter-spacing:-0.2px; margin:0;">
+                    Central filing is being wired in one country at a time
+                  </h3>
+                </td>
+                <td valign="top" align="right" width="50" style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:28px; color:#8a6a2a; font-weight:400; line-height:1; letter-spacing:-0.5px; width:50px;">
+                  04
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:20px 24px 22px 24px; background:#ffffff;">
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">
+              T&#252;rkiye published Presidential Decision No. 11511 on 11 July, listing in three annexes the jurisdictions qualifying for the QDMTT safe harbour, applying a qualified domestic minimum tax and applying the income inclusion rule, retroactive to periods from 1 January 2024. Germany approved its amended minimum-tax regulation, and the ATO folded the OECD common understanding on central filing and exchange into PCG 2025/4. Central filing only releases local filing where the exchange relationship exists and the host regime is confirmed as qualified, and those confirmations are being enacted country by country.
+            </p>
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0;">
+              What clients should do. For each jurisdiction the group touches, record whether the local regime and the exchange relationship are actually operational, not merely legislated, and treat &#39;central filing releases local filing&#39; as a proposition to be verified per country rather than assumed. Use the T&#252;rkiye annexes to confirm the safe-harbour position for any Turkish member of the group.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== COMMENTARY 05 - sage band (optional 5th card) ============== -->
+  <tr><td style="padding:0 28px 14px 28px; background:#ffffff;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #d9dde3; border-collapse:collapse;"><tr><td bgcolor="#e9efe6" style="background:#e9efe6; padding:16px 24px; border-bottom:2px solid #5a7c52;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" align="left"><div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#34502f; font-weight:700; margin-bottom:6px;">Transfer Pricing &#183; Multi-jurisdiction</div><h3 style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.22; font-weight:500; color:#34502f; letter-spacing:-0.2px; margin:0;">The terms of transfer pricing compliance are being reset</h3></td><td valign="top" align="right" width="50" style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:28px; color:#5a7c52; font-weight:400; line-height:1; width:50px;">05</td></tr></table></td></tr><tr><td style="padding:20px 24px 22px 24px; background:#ffffff;"><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">Vietnam&#39;s new related-party decree, effective 1 July 2026, lifts the documentation exemption threshold to VND 500 billion and aligns country-by-country reporting to EUR 750 million; Colombia&#39;s Supreme Administrative Court held that a domestic interest rate cannot apply to a foreign-currency loan to a foreign related party and endorsed passive association under paragraph 7.13 of the OECD Guidelines; a Canadian Federal Court remitted an APA interest-relief decision; and the UAE clarified downward adjustments in the corporate tax return. None is a rate change; each changes what must be documented and disclosed before a return is lodged.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0;"><strong style="color:#15264a;">What clients should do.</strong> Re-test Vietnamese documentation and country-by-country obligations against the new decree now, hold the Colombian reasoning in support of a currency-matched benchmarking approach, confirm the UAE downward-adjustment mechanism before lodgment, and treat documentation design, not the return, as the point at which transfer pricing exposure is now won or lost.</p></td></tr></table></td></tr>
+
+  <!-- ============== COMMENTARY 06 - slate band (optional 6th card) ============== -->
+  
+
+  <!-- ============== AROUND THE WORLD - cream block, 2-column grid ============== -->
+  <tr>
+    <td style="padding:24px 0 0 0; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f6f1e7" style="background:#f6f1e7; border-collapse:collapse;">
+        <!-- Section header inside cream band -->
+        <tr>
+          <td style="padding:20px 28px 18px 28px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="left" valign="bottom" style="font-family:Georgia,'Times New Roman',serif; font-size:24px; line-height:1.2; font-weight:400; color:#15264a; letter-spacing:-0.4px;">
+                  Around the <em style="font-style:italic; color:#1f3a6e;">world</em>
+                </td>
+                <td align="right" valign="bottom" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473;">
+                  8 markets
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- 2-column grid (rows of 2). Add more rows as needed; each <tr> = one row of 2 markets. -->
+        <tr>
+          <td style="padding:0 28px 8px 28px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td valign="top" width="50%" style="padding:0 16px 18px 0; vertical-align:top;">
+                  <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; color:#1f3a6e; font-weight:500; margin-bottom:4px;">United Kingdom</div>
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24;">Beyond the side-by-side package, the 13 July draft Finance Bill legislation includes new rules on foreign permanent establishments, an oil and gas revenue levy, a securities transfer tax, the taxation of crypto asset loans and stablecoins, pension scheme surpluses, an international student levy and reforms to individual savings accounts, ahead of the Autumn 2026 Budget.</div>
+                </td>
+                <td valign="top" width="50%" style="padding:0 0 18px 16px; vertical-align:top;">
+                  <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; color:#1f3a6e; font-weight:500; margin-bottom:4px;">European Union</div>
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24;">The European Parliament recommended a &#39;28th tax regime&#39; for an optional pan-EU corporate framework (&#39;EU Inc.&#39;) built on a single consolidated corporate tax base with coordinated transfer pricing safe harbours; an Advocate General opined in Societe Generale (C-241/25) that Sweden may not require a non-resident loss-making company to recalculate its losses under Swedish rules to claim a withholding tax refund; and ECOFIN adopted the 2026 country-specific recommendations.</div>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="50%" style="padding:0 16px 18px 0; vertical-align:top;">
+                  <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; color:#1f3a6e; font-weight:500; margin-bottom:4px;">Germany</div>
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24;">Germany has notified Russia of the suspension of their 1996 double tax treaty with effect from 1 January 2027, and its Federal Council approved the amended regulation implementing the minimum taxation law.</div>
+                </td>
+                <td valign="top" width="50%" style="padding:0 0 18px 16px; vertical-align:top;">
+                  <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; color:#1f3a6e; font-weight:500; margin-bottom:4px;">Vietnam</div>
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24;">A new decree on related-party transactions, effective 1 July 2026, raises the transfer pricing documentation exemption threshold to VND 500 billion, aligns country-by-country reporting to EUR 750 million, sets a public-information-first hierarchy for comparables and narrows the related-party definition for financing arrangements.</div>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="50%" style="padding:0 16px 18px 0; vertical-align:top;">
+                  <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; color:#1f3a6e; font-weight:500; margin-bottom:4px;">Colombia and Canada</div>
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24;">Colombia&#39;s Supreme Administrative Court held that a domestic interest rate cannot apply to a foreign-currency loan to a foreign related party and that passive association needs no separate remuneration under paragraph 7.13 of the OECD Guidelines; and Canada&#39;s Federal Court, on consent, remitted the CRA&#39;s interest-relief decision in the LG Electronics APA matter for redetermination, allowing further submissions by 4 August 2026.</div>
+                </td>
+                <td valign="top" width="50%" style="padding:0 0 18px 16px; vertical-align:top;">
+                  <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; color:#1f3a6e; font-weight:500; margin-bottom:4px;">United Arab Emirates</div>
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24;">The Federal Tax Authority clarified how downward transfer pricing adjustments are to be reflected in the corporate tax return, giving groups a clearer mechanism for truing up Emirati results to arm&#39;s length.</div>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="50%" style="padding:0 16px 18px 0; vertical-align:top;">
+                  <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; color:#1f3a6e; font-weight:500; margin-bottom:4px;">United States</div>
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24;">A third budget reconciliation bill remains an uphill prospect against a tightening congressional calendar; a senior Treasury official publicly called public country-by-country reporting &#39;very dangerous&#39;; the IRS introduced an Automatic Exemption from Penalty program that will replace First-Time Abate for returns due on or after 1 January 2027; and the USMCA parties used the 1 July review deadline to continue discussions without renewing, leaving the 2036 expiry intact.</div>
+                </td>
+                <td valign="top" width="50%" style="padding:0 0 18px 16px; vertical-align:top;">
+                  <div style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; color:#1f3a6e; font-weight:500; margin-bottom:4px;">Trade agreements</div>
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.55; color:#1a1d24;">Switzerland and the United Kingdom concluded negotiations for an enhanced free trade agreement on 13 July; the MERCOSUR-Singapore agreement enters into force between Brazil and Singapore on 1 August; and the EFTA-MERCOSUR agreement enters into force between Brazil and Iceland on 1 October.</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr><td style="height:14px; line-height:14px; font-size:0;">&nbsp;</td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== CONVERSATION CATALYST (auto-filled by merger) ============== -->
+  <tr><td style="padding:30px 28px 0 28px; background:#ffffff;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:3px solid #1f3a6e; border-collapse:collapse;"><tr><td style="padding-top:20px;"><div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#1f3a6e; font-weight:700; margin-bottom:8px;">The Conversation Catalyst</div><h3 style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:26px; line-height:1.15; font-weight:400; color:#15264a; margin:0 0 14px 0;">Food for thought.</h3><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">There is a quiet turning point buried in this week&#39;s material, and it is not a deadline. For three years the case against Pillar Two rested on two predictions: that it would raise less than promised, and that it would drive investment away. This week the OECD produced the first real-world data, and both predictions came out weaker than their advocates hoped. The regime raised money, in the same order of magnitude as forecast, and the feared flight of investment did not show up in year one. That does not settle the politics, which are still being fought in Munich conference halls and Washington committee rooms. But it changes the base rate. A tax that demonstrably works is a tax that survives, and the planning assumption for the rest of the decade should be that this architecture is permanent.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">The permanence is being poured into concrete the same week. The United Kingdom did not wait for the OECD to finish refining the side-by-side package; it wrote the January guidance into draft law and set a September consultation date, which is what a government does when it regards a regime as settled rather than provisional. T&#252;rkiye published its safe-harbour annexes; Germany approved its minimum-tax regulation; Australia folded the central-filing understanding into its penalty guideline. Read together, these are not the actions of administrations hedging against repeal. They are the actions of administrations building operational machinery they expect to run for years, and the group that keeps treating Pillar Two as negotiable is misreading the room.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">Australia&#39;s trust measure is the domestic mirror of the same discipline. Bendel was a genuine taxpayer win, and the temptation is to bank it and move on. But the Treasury has answered on the distribution side within months, and the answer carries a number that ends a planning structure a generation of advisers built their practices around: 42.9 per cent on income routed to a corporate beneficiary, no offset, by design. The lesson repeats across the international and domestic material alike. The environment no longer rewards a good result so much as a well-evidenced response to a moving one. The task for the year is not to find the aggressive position or the soft deadline; it is to keep a live, verified map of who files what, where, in which format and by when, and to convert every favourable turn, a safe harbour, a carve-out, a rollover, a treaty credit, into a documented decision before the next measure overtakes it.</p></td></tr></table></td></tr>
+
+  <!-- ============== DETAILED NARRATIVE (auto-filled by merger) ============== -->
+  <tr><td style="padding:32px 28px 12px 28px; background:#ffffff;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="left" valign="bottom" style="font-family:Georgia,'Times New Roman',serif; font-size:24px; line-height:1.2; font-weight:400; color:#15264a; letter-spacing:-0.4px;">The full <em style="font-style:italic; color:#1f3a6e;">analysis</em></td><td align="right" valign="bottom" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473;">Detailed narrative</td></tr></table></td></tr><tr><td style="padding:0 28px 4px 28px; background:#ffffff;"><div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#1f3a6e; font-weight:700; margin-top:4px; margin-bottom:6px;">OECD &#183; Global minimum tax</div><div style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.25; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 10px 0;">The OECD&#39;s first-year verdict: the global minimum tax raised revenue, and did not cost investment</div><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">On 15 July 2026 the OECD published a working paper, &#39;MNE Responses to the Global Minimum Tax&#39;, the first empirical ex-post assessment of how multinational groups responded to the 15 per cent global minimum tax in its opening year of operation in 2024. The methodology matters to the credibility of the result. The paper uses group-level financial and ownership data and compares groups sitting just above and just below the EUR 750 million revenue threshold that determines whether the rules bite, isolating the effect of the regime rather than of the broader economic cycle.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">The findings are consequential. Groups within scope recorded higher effective tax rates after the rules took effect, and the effect was stronger for those more exposed to top-up taxation, which is what a functioning minimum tax is supposed to do. The OECD found no evidence that the regime significantly reduced investment or employment at group level in year one, undercutting the central argument advanced against it. And on revenue, the paper estimates the minimum tax raised between EUR 79 billion and EUR 109 billion in its first year. That is lower than the most optimistic earlier forecasts but of the same order as the OECD&#39;s own ex-ante estimates; a separate, updated OECD economic impact assessment released the same week puts the annual revenue gain higher again, at roughly USD 91 billion to USD 155 billion, or 3.2 to 5.4 per cent of current corporate income tax receipts. The OECD cautions that the data is early and the numbers will move.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">Why it matters.</strong> This is the first time the Pillar Two debate has been informed by outcomes instead of models, and the outcomes support the regime&#39;s continuation. A senior US Treasury official spent the same week at an international tax conference in Munich describing public country-by-country reporting as &#39;very dangerous&#39; and defending the side-by-side agreement, and a separate OECD official signalled that a forthcoming economic assessment would trim revenue estimates on account of the substance-based income exclusion. The politics remain live. But a regime shown to raise revenue without deterring investment is one that finance ministries will defend, and the strategic planning assumption should now be permanence, not attrition.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">What clients should do.</strong> Retire any residual internal narrative that treats Pillar Two as a temporary imposition to be waited out. Fold the durability finding into medium-term effective tax rate forecasting and into decisions on where to locate substance, given that the substance-based income exclusion is doing measurable work in the results. Where a group is close to the EUR 750 million threshold, note that the OECD&#39;s own method treats that boundary as the line where behaviour changes, and plan transactions and structure around it deliberately rather than incidentally.</p></td></tr><tr><td style="padding:0 28px 4px 28px; background:#ffffff;"><div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#1f3a6e; font-weight:700; border-top:1px solid #e6e9ef; padding-top:18px; margin-top:8px; margin-bottom:6px;">United Kingdom &#183; Pillar Two</div><div style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.25; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 10px 0;">UK Legislation Day: the side-by-side package moves from OECD guidance into law</div><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">On 13 July 2026, its Legislation Day, the United Kingdom published a substantial package of draft Finance Bill 2026-27 legislation and technical documents. The centrepiece for multinationals is a bill transposing the OECD&#39;s Pillar Two side-by-side package into the UK&#39;s Multinational Top-up Tax and Domestic Top-up Tax, in line with the OECD administrative guidance issued in January 2026, effective for accounting periods beginning on or after 1 January 2026, with further technical amendments applying mainly for periods beginning on or after 31 December 2026. The technical consultation closes on 7 September 2026. The package also carried draft rules on foreign permanent establishments, an oil and gas revenue levy, a securities transfer tax, the taxation of crypto asset loans and stablecoins, an international student levy and a wide field of personal and indirect tax measures.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">Why it matters.</strong> The side-by-side package is the diplomatic settlement that accommodates the US minimum tax regime alongside the GloBE rules rather than colliding with it. Until now it has lived in OECD administrative guidance, which jurisdictions were expected to implement but had not yet enacted. The United Kingdom is the first major economy to convert it into draft domestic legislation, which sets a template others will follow and gives in-scope groups the first concrete statutory text on how the US carve-out will actually operate in a GloBE jurisdiction. It also confirms, in the most tangible way available, that the Pillar Two framework is being built out rather than wound back.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">What clients should do.</strong> For any group with a UK constituent entity or UK top-up tax exposure, read the draft side-by-side provisions against your current GloBE modelling and identify where the US accommodation changes a top-up outcome you had assumed. Diarise the 7 September consultation and consider a submission where the drafting is ambiguous on your fact pattern, because first-mover legislation tends to harden into the reference text. Treat the 1 January 2026 effective date as live for period-end provisioning now, not as a 2027 problem.</p></td></tr><tr><td style="padding:0 28px 4px 28px; background:#ffffff;"><div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#1f3a6e; font-weight:700; border-top:1px solid #e6e9ef; padding-top:18px; margin-top:8px; margin-bottom:6px;">Australia &#183; Treasury and High Court</div><div style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.25; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 10px 0;">Australia&#39;s trust minimum tax: the design detail, and a 42.9 per cent answer to Bendel</div><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">The Treasury&#39;s consultation paper on the 30 per cent minimum tax on discretionary trust distributions, released on 8 July with submissions closing 31 July 2026, has now been unpacked in detail, and the design is more consequential than budget night implied. From 1 July 2028, a trustee will pay 30 per cent tax on the trust&#39;s taxable income, with individual and other non-corporate beneficiaries receiving a non-refundable minimum tax offset. Corporate beneficiaries, however, get no offset. A company beneficiary that pays 30 per cent corporate tax on its share of trust income pays that on top of the 30 per cent already paid by the trustee, with no credit, producing an effective rate of 42.9 per cent on the amount it actually receives. On $100,000 of trust income routed to a bucket company, that is $60,000 of tax. The paper treats this as an intentional design feature, and practitioners reading it have concluded it ends the bucket company strategy for groups that keep discretionary trusts past commencement.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">Three further design points deserve attention. The paper offers broad capital gains tax rollover relief, modelled on the small business restructure rollover but wider, available for three years from 1 July 2027 to move assets out of a discretionary trust into a company or fixed trust without immediate tax; but that relief intersects unresolved with state transfer duty and with trust law, since transferring a broad beneficiary class&#39;s assets into a company with restricted shareholders can breach a trustee&#39;s fiduciary duty and invite beneficiary litigation. Distributions to foreign resident beneficiaries, to the extent they comprise dividends, interest and royalties subject to foreign resident withholding tax, are carved out, preserving treaty and withholding outcomes for cross-border structures. And the treatment of a trust&#39;s excess franking credits, refund or carry-forward, remains open, as does the threshold question of what separates a &#39;fixed&#39; trust from a &#39;discretionary&#39; one for the measure&#39;s purposes.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">Why it matters.</strong> This is the Budget answering back on the distribution side at the moment the deemed-dividend side has been read back. Bendel removed the foundation for treating an unpaid present entitlement to a corporate beneficiary as a Division 7A loan; the trust minimum tax reaches much of the same ground through a charge on distributions, and the consultation expressly asks how the two should interact, while noting the 2018-19 announced-but-unenacted measure on unpaid present entitlements is unlikely to remain unenacted much longer. A group reading the Bendel win without reading this consultation is reading half the file.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">What clients should do.</strong> Treat the fortnight to 31 July as a genuine window. Model the 42.9 per cent corporate-beneficiary outcome against every bucket-company arrangement in the ownership chain, and against the residual section 100A and Part IVA exposure, rather than assuming Bendel has cleared the field. Where a restructure out of a discretionary trust is contemplated, price the state transfer duty and trust-law exposure alongside the CGT rollover, because the rollover&#39;s appeal falls away if duty or a fiduciary-duty dispute follows. Consider a submission, particularly on the corporate-beneficiary double tax, the franking-credit treatment and the fixed-trust definition, and document any decision taken now as a deliberate response to a known future measure.</p></td></tr><tr><td style="padding:0 28px 4px 28px; background:#ffffff;"><div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#1f3a6e; font-weight:700; border-top:1px solid #e6e9ef; padding-top:18px; margin-top:8px; margin-bottom:6px;">Pillar Two &#183; Exchange layer</div><div style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.25; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 10px 0;">Central filing is a promise being wired in one jurisdiction at a time</div><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">The week&#39;s other Pillar Two developments were less about deadlines than about the plumbing that makes a single central filing release a group from filing everywhere else. T&#252;rkiye published Presidential Decision No. 11511 on 11 July, setting out, in three annexes, the jurisdictions qualifying for the QDMTT safe harbour, those applying a qualified domestic minimum tax and those applying the income inclusion rule, each covering more than 40 jurisdictions and effective retroactively for accounting periods beginning on or after 1 January 2024. Germany&#39;s Federal Council approved the amended regulation implementing its minimum taxation law; and the ATO&#39;s update to PCG 2025/4 folded the OECD common understanding on central filing and exchange into Australia&#39;s transitional penalty approach for the 2024 year.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">Why it matters.</strong> Central filing only relieves local filing where the specific exchange relationship exists and the host jurisdiction&#39;s regime is confirmed as qualified, and this is the season those confirmations are being enacted country by country. A safe-harbour annex published, a domestic regime updated to the latest commentary, an exchange understanding folded into a compliance guideline: each changes the practical answer to the question every in-scope group is asking, which is whether it can file once and be released everywhere else, or not yet. The T&#252;rkiye lists are also a reminder that a jurisdiction&#39;s &#39;qualified&#39; status is not static; it rests on keeping pace with the moving OECD text, so a group cannot verify the safe-harbour position once and file it away.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">What clients should do.</strong> For each jurisdiction a group touches, record whether the local regime and the exchange relationship are actually operational, not merely legislated, and treat &#39;central filing releases local filing&#39; as a proposition to be verified per country rather than assumed. Where a domestic regime has recently updated to the latest OECD commentary, refresh the qualified-status assumption in the model, because safe-harbour and top-up outcomes depend on it. Use the T&#252;rkiye annexes to confirm the safe-harbour position for any Turkish member of the group.</p></td></tr><tr><td style="padding:0 28px 4px 28px; background:#ffffff;"><div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#1f3a6e; font-weight:700; border-top:1px solid #e6e9ef; padding-top:18px; margin-top:8px; margin-bottom:6px;">Transfer Pricing &#183; Multi-jurisdiction</div><div style="font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:1.25; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 10px 0;">Transfer pricing: the terms of compliance are being reset across jurisdictions</div><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;">Several jurisdictions moved on the mechanics of transfer pricing in the same week, and the pattern is a migration of the compliance burden from the annual return into the design of documentation and disclosure. Vietnam issued a new decree on related-party transactions, effective from 1 July 2026 and applying from the 2026 corporate income tax period, that raises the documentation exemption revenue threshold from VND 200 billion to VND 500 billion, aligns the country-by-country reporting threshold to EUR 750 million, sets a priority order for comparable data sources led by public information, and refines when a borrowing or lending arrangement counts as related-party. Colombia&#39;s Supreme Administrative Court held, in a decision of 2 July, that a domestic Colombian interest rate cannot be applied to a foreign-currency loan to a foreign related party because the markets are not comparable, and confirmed that passive association, the implicit support a group member enjoys, does not itself require separate remuneration under paragraph 7.13 of the OECD Guidelines. A Canadian Federal Court remitted an APA-related interest-relief decision in the LG Electronics matter for redetermination, and the United Arab Emirates clarified the treatment of downward transfer pricing adjustments in the corporate tax return.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">Why it matters.</strong> None of these is a change to a tax rate; each changes the terms on which exposure is measured, documented and disclosed. Vietnam&#39;s higher thresholds narrow the documentation net for smaller flows while retaining full country-by-country obligations; Colombia&#39;s reasoning is a useful authority for pricing foreign-currency intercompany debt and for resisting a blunt domestic-rate substitution; and the UAE&#39;s guidance on downward adjustments matters for any group truing up Emirati results to arm&#39;s length. For a group operating across these jurisdictions, the work is moving upstream, into getting the documentation, the comparables and the disclosures right before the return is filed.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.65; color:#1a1d24; margin:0 0 12px 0;"><strong style="color:#15264a;">What clients should do.</strong> For Vietnamese dealings, re-test documentation and country-by-country obligations against the new decree now, since it applies from the current 2026 period. Where intercompany debt is denominated in a foreign currency, hold the Colombian reasoning in support of a currency-matched benchmarking approach and against a domestic-rate challenge. For UAE members, confirm the mechanism and evidence for any downward adjustment before lodgment. Across the group, treat documentation design, not the return, as the point at which transfer pricing exposure is now won or lost.</p></td></tr><tr><td style="padding:32px 28px 12px 28px; background:#ffffff;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="left" valign="bottom" style="font-family:Georgia,'Times New Roman',serif; font-size:24px; line-height:1.2; font-weight:400; color:#15264a; letter-spacing:-0.4px;">Australia: <em style="font-style:italic; color:#1f3a6e;">additional developments</em></td><td align="right" valign="bottom" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473;">Cases &amp; consultations</td></tr></table></td></tr><tr><td style="padding:0 28px 4px 28px; background:#ffffff;"><p style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.6; color:#1a1d24; margin:0 0 11px 0;"><strong style="color:#15264a;">PCG 2025/4 updated for central filing.</strong> On 9 July the ATO amended Practical Compliance Guideline PCG 2025/4 to reflect the OECD common understanding on central filing and exchange of the GloBE Information Return for the 2024 fiscal year. Where the GIR has been centrally filed in a listed jurisdiction by the relevant deadline and the local notification lodged, the 2024 implementing jurisdictions will waive local GIR penalties and not enforce local filing before the relevant exchange deadline.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.6; color:#1a1d24; margin:0 0 11px 0;"><strong style="color:#15264a;">Australia and Japan agree the arbitration mode.</strong> The ATO and Japan&#39;s National Tax Agency have settled the mode of application of the mandatory binding arbitration process under Part VI of the OECD Multilateral Instrument as it modifies the Australia-Japan double tax agreement, including three-member panels chaired by a non-national and detailed rules on requests, terms of reference and arbitrator independence. The memorandum gives taxpayers a clearer route to resolution where a mutual agreement procedure stalls.</p><p style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.6; color:#1a1d24; margin:0 0 11px 0;"><strong style="color:#15264a;">Director penalties: Ostwald v FC of T.</strong> In Ostwald &amp; Ors v FC of T [2026] FCA 868 (3 July), the Federal Court dismissed three directors&#39; judicial review applications against superannuation guarantee charge director penalties, holding that a partial discharge of one director&#39;s penalty from an income tax credit was not &#39;recovery&#39; within section 269-35(4A)(a)(ii) of Schedule 1 to the Taxation Administration Act 1953, so that no reviewable decision arose for two of the brothers, and that the Commissioner could disregard information supplied outside the 60-day window.</p></td></tr><tr><td style="padding:32px 28px 12px 28px; background:#ffffff;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="left" valign="bottom" style="font-family:Georgia,'Times New Roman',serif; font-size:24px; line-height:1.2; font-weight:400; color:#15264a; letter-spacing:-0.4px;">Pillar Two: <em style="font-style:italic; color:#1f3a6e;">filing deadlines</em></td><td align="right" valign="bottom" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#5b6473;">Compliance matrix</td></tr></table></td></tr><tr><td style="padding:0 28px 8px 28px; background:#ffffff;"><p style="font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:1.55; color:#5b6473; margin:0 0 12px 0;">A working view of the milestones now in play, updated for UK Legislation Day, the OECD first-year assessment, the Turkiye annexes and the Australian trust consultation. The statutory GloBE Information Return date has not moved; jurisdictions are varying only the enforcement posture and the domestic implementation timetable. Confirm each entity&#39;s obligation against its local rules and verify exchange activation before relying on central filing.</p><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #d9dde3; border-collapse:collapse;"><tr><td style="padding:9px 10px; background:#1f3a6e; font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#ffffff; font-weight:700;">Jurisdiction</td><td style="padding:9px 10px; background:#1f3a6e; font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#ffffff; font-weight:700;">Obligation or milestone</td><td style="padding:9px 10px; background:#1f3a6e; font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#ffffff; font-weight:700;">Date</td><td style="padding:9px 10px; background:#1f3a6e; font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#ffffff; font-weight:700;">Note</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">OECD</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Chapter VII (intra-group services) Transfer Pricing Guidelines consultation closes</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">22 Jul 2026</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Consider a submission on material service-fee flows</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">United States</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">CBP de minimis suspension: public comments close</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">24 Jul 2026</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Reassess low-value import and e-commerce landed cost</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Australia</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">DMT (extended), IIR/UTPR and GIR returns due; PCG 2025/4 penalty relief and central-filing understanding apply</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">30 Jul 2026</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">No penalties on a GIR lodged by this date; do not defer the data work</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Australia</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Discretionary trusts reform and 30% minimum tax: consultation closes</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">31 Jul 2026</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Model the 42.9% corporate-beneficiary outcome and the Bendel interaction; consider a submission</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Turkiye; Barbados</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">2024 top-up tax return filing and payment (extended) due</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">31 Jul 2026</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Confirm constituent-entity filing and payment channels</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">MERCOSUR; Singapore</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">MERCOSUR-Singapore FTA enters into force (Brazil-Singapore)</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">01 Aug 2026</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Reassess tariff and origin treatment on affected goods</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Australia</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Statute Update Bill 2026: Senate Legal and Constitutional Affairs Committee report</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">07 Aug 2026</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Minor and technical amendments, including ITAA 1997 financial entity definition</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Australia</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Critical Minerals Production Tax Incentive: administrative arrangements consultation closes</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">11 Aug 2026</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Review draft forms and 90-day reporting timeframe for Division 419 claimants</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Australia</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Tax Reform No 2 Bill: Senate Economics Legislation Committee report</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">13 Aug 2026</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Track loss carry-back and instant asset write-off measures</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">France</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Extended GloBE Information Return filing deadline (top-up tax return remained 30 Jun 2026)</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">01 Sep 2026</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Split the two French obligations; verify any central-filing reliance</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">United Kingdom</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Finance Bill 2026-27 Pillar Two side-by-side draft: technical consultation closes</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">07 Sep 2026</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Read the draft against your GloBE model; consider a submission where drafting is ambiguous</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Ireland</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Central-filing penalty-free backstop: file before the earlier of the local penalty-free date and this date</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">30 Sep 2026</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Lodge the Irish Notification of Filing within the statutory deadline</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Poland</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Domestic tax-scheme (MDR) reporting abolished; cross-border MDR remains</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">01 Oct 2026</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Retire domestic scheme reporting; retain cross-border processes</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Greece</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">First GIR and notification (extended) due</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">30 Oct 2026</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Use the new AADE portal; confirm exchange before relying on central filing</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Global and Australia</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">First GIR due for 30 June balancers; EU public CbCR transitional any-format window ends</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">31 Dec 2026</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Begin June-balancer data collation; lock the public CbCR filing format</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">United Kingdom</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Side-by-side package and MTT/DTT amendments take effect (periods from 1 Jan 2026; further amendments from 31 Dec 2026)</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">2026-27</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Provision for the effective date now; do not treat as a 2027 problem</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Australia</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">CGT discount replaced by indexation and 30% minimum tax; negative gearing restricted; Dynamic PAYGI available</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">01 Jul 2027</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Model the notional reset and two-tier cost base; assess Dynamic PAYGI opt-in</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Australia</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Trust minimum tax CGT rollover relief window opens (three years)</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">01 Jul 2027</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Plan any restructure out of a discretionary trust within the window; price duty and trust-law exposure</td></tr><tr><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Australia</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Pillar Two transitional penalty-relief period ends (PCG 2025/4)</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">30 Jun 2028</td><td style="padding:8px 10px; background:#ffffff; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Embed business-as-usual compliance before expiry</td></tr><tr><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; color:#15264a;">Australia</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24;">Trust integrity measures, incl. 30% minimum tax on discretionary trust distributions, commence</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#1a1d24; white-space:nowrap;">01 Jul 2028</td><td style="padding:8px 10px; background:#f4f6f9; border-top:1px solid #e8eaee; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#5b6473;">Re-test bucket-company and distribution strategies against the 42.9% corporate-beneficiary rate</td></tr></table></td></tr>
+
+  <!-- ============== AUTHOR BIO + DISCLAIMER ============== -->
+  <tr>
+    <td style="padding:20px 28px 24px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #e6e9ef; border-collapse:collapse;">
+        <tr><td style="padding-top:20px;">
+          <div style="font-family:Georgia,'Times New Roman',serif; font-size:18px; line-height:1.25; font-weight:500; color:#15264a; letter-spacing:-0.2px; margin:0 0 4px 0;">
+            Neil Pereira, Pereira Consulting
+          </div>
+          <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2.0px; text-transform:uppercase; color:#1f3a6e; font-weight:600; margin-bottom:14px;">
+            Chartered Tax Adviser &middot; Registered Tax Agent &middot; Solicitor
+          </div>
+          <p style="font-family:Arial,Helvetica,sans-serif; font-size:13.5px; line-height:1.6; color:#1a1d24; margin:0 0 16px 0;">
+            Pereira Consulting is an independent tax advisory practice founded by Neil Pereira, advising multinational groups on international tax operating into and out of Australia on Pillar Two readiness, transfer pricing, anti-avoidance, ATO disputes and corporate income tax compliance. Neil is a Chartered Tax Adviser, Registered Tax Agent and Solicitor.
+          </p>
+          <p style="font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:1.55; color:#5b6473; font-style:italic; margin:0;">
+            <strong style="color:#15264a;">Disclaimer.</strong> This newsletter is general information only and does not constitute tax or legal advice. It is current as at the issue date. Pereira Consulting accepts no liability for any decision made in reliance on its contents. Please contact Neil Pereira to discuss the application of these developments to your specific circumstances.
+          </p>
+        </td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== CTA BAR - navy block + bulletproof button ============== -->
+  <tr>
+    <td style="padding:8px 28px 28px 28px; background:#ffffff;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#1f3a6e" style="background:#1f3a6e; border-collapse:collapse;">
+        <tr>
+          <td valign="middle" style="padding:26px 26px 26px 26px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td valign="middle" align="left" style="padding-right:20px;">
+                  <div style="font-family:Georgia,'Times New Roman',serif; font-size:21px; line-height:1.2; font-weight:500; color:#ffffff; letter-spacing:-0.2px; margin:0 0 6px 0;">
+                    Lodging your first Pillar Two returns across a spread of national deadlines, or stress-testing a trust or transfer pricing position before the next measure lands?
+                  </div>
+                  <p style="font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:1.5; color:#c8d0e0; margin:0;">
+                    A 30 minute scoping call. We bring the analysis; you bring the structure chart.
+                  </p>
+                </td>
+                <!-- Bulletproof VML button (renders as solid white CTA in Outlook desktop) -->
+                <td valign="middle" align="right" width="170" style="width:170px;">
+                  <!--[if mso]>
+                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="mailto:neil@pereiraconsulting.com?subject=The%20Strategic%20Brief%3A%20Book%20a%20Call" style="height:42px;v-text-anchor:middle;width:170px;" arcsize="0%" stroke="f" fillcolor="#ffffff">
+                    <w:anchorlock/>
+                    <center style="color:#1f3a6e;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;">BOOK A CALL &rarr;</center>
+                  </v:roundrect>
+                  <![endif]-->
+                  <!--[if !mso]> <!-- -->
+                  <a href="mailto:neil@pereiraconsulting.com?subject=The%20Strategic%20Brief%3A%20Book%20a%20Call" style="background:#ffffff; color:#1f3a6e; padding:13px 18px; font-family:Arial,Helvetica,sans-serif; font-weight:600; font-size:12px; letter-spacing:1.6px; text-transform:uppercase; text-decoration:none; display:inline-block;">Book a Call &rarr;</a>
+                  <!-- <![endif]-->
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== FOOTER - three-column dark ============== -->
+  <tr>
+    <td bgcolor="#0c1a36" style="background:#0c1a36; padding:28px 28px 24px 28px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td valign="top" width="40%" style="padding-right:16px; vertical-align:top;">
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.4px; text-transform:uppercase; color:#7886a4; margin-bottom:8px; font-weight:600;">
+              Pereira Consulting
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.55; color:#ffffff; font-weight:500; margin-bottom:4px;">
+              International Tax · Sydney
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:1.55; color:#9aa3bc;">
+              Strategy &middot; Advice &middot; Expertise
+            </div>
+          </td>
+          <td valign="top" width="30%" style="padding-right:16px; vertical-align:top;">
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.4px; text-transform:uppercase; color:#7886a4; margin-bottom:8px; font-weight:600;">
+              Get in touch
+            </div>
+            <a href="mailto:neil@pereiraconsulting.com" style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.55; color:#d3dafa; text-decoration:none; display:block; margin-bottom:4px;">neil@pereiraconsulting.com</a>
+            <a href="https://pereiraconsulting.com" style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.55; color:#d3dafa; text-decoration:none; display:block; margin-bottom:4px;">pereiraconsulting.com</a>
+            <a href="https://www.linkedin.com/in/pereiraneil/" style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.55; color:#d3dafa; text-decoration:none; display:block;">LinkedIn</a>
+          </td>
+          <td valign="top" width="30%" style="vertical-align:top;">
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2.4px; text-transform:uppercase; color:#7886a4; margin-bottom:8px; font-weight:600;">
+              This brief
+            </div>
+            <a href="#" style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.55; color:#d3dafa; text-decoration:none; display:block; margin-bottom:4px;">Read full analysis (web)</a>
+            <a href="#" style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.55; color:#d3dafa; text-decoration:none; display:block; margin-bottom:4px;">Forward to a colleague</a>
+            <a href="#" style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.55; color:#d3dafa; text-decoration:none; display:block;">Past issues · Archive</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== FOOTER LEGAL ============== -->
+  <tr>
+    <td bgcolor="#0c1a36" style="background:#0c1a36; padding:16px 28px 24px 28px; border-top:1px solid #1c2a4a;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td align="left" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1.6px; text-transform:uppercase; color:#6b7497;">
+            &copy; 2026 Pereira Consulting
+          </td>
+          <td align="right" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1.6px; text-transform:uppercase; color:#6b7497;">
+            <a href="mailto:neil@pereiraconsulting.com?subject=Unsubscribe" style="color:#6b7497; text-decoration:none;">Manage preferences · Unsubscribe</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============== PSL line - the firm's mandatory liability footer ============== -->
+  <tr>
+    <td bgcolor="#0c1a36" style="background:#0c1a36; padding:0 28px 24px 28px;">
+      <div style="font-family:Georgia,'Times New Roman',serif; font-size:10px; line-height:1.55; color:#5a648a; font-style:italic;">
+        Liability limited by a scheme approved under Professional Standards Legislation.
+      </div>
+    </td>
+  </tr>
+
+</table>
+<!-- =================================================================
+     END EMAIL CONTAINER
+     ================================================================= -->
+
+</td></tr>
+</table>
+
+</body>
+</html>
