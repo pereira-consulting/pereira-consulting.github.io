@@ -1,0 +1,1666 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pillar Two Transitional Safe Harbour Calculator | Pereira Consulting</title>
+<meta name="description" content="Test your CbCR data against the three Pillar Two transitional safe harbour tests: de minimis, simplified ETR and routine profits. Runs entirely in your browser; nothing is uploaded.">
+<meta property="og:title" content="Pillar Two Transitional Safe Harbour Calculator">
+<meta property="og:description" content="Test your CbCR data against the three transitional safe harbour tests. Runs entirely in your browser; nothing is uploaded.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.pereiraconsulting.com/tools/pillar-two-transitional-safe-harbour-calculator.html">
+<link rel="canonical" href="https://www.pereiraconsulting.com/tools/pillar-two-transitional-safe-harbour-calculator.html">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Serif:ital@1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     PILLAR TWO TRANSITIONAL SAFE HARBOUR CALCULATOR
+     Palette and type inherited from the Pereira Consulting
+     homepage ("Coastline Vivid"). Light only, to match the site.
+     ============================================================ */
+  :root {
+    --paper:        #FFFFFF;
+    --panel:        #FFFFFF;
+    --panel-sunk:   #F7F2E7;
+    --sand:         #F7F2E7;
+    --ink:          #0A1D3F;
+    --navy:         #0A1D3F;
+    --navy-ink:     #0A1D3F;
+    --blue:         #0A66D6;
+    --cyan:         #00B4D8;
+    --gold:         #F2A33C;
+    --coral:        #F0735A;
+    --slate:        #41506E;
+    --slate-soft:   #7A86A0;
+    --rule:         rgba(10,29,63,.10);
+    --rule-soft:    rgba(10,29,63,.06);
+
+    --grad-cool:    linear-gradient(96deg,#0A66D6,#00B4D8);
+
+    /* Semantic status. Fail and warn are drawn from the site's
+       coral and gold; pass is a green tuned to sit with the cyan. */
+    --pass:         #0B7A5C;
+    --pass-bg:      #E4F3EE;
+    --fail:         #C4462F;
+    --fail-bg:      #FDEBE7;
+    --warn:         #8A5A0B;
+    --warn-bg:      #FDF3E2;
+
+    --shadow:       0 1px 2px rgba(10,29,63,.04), 0 18px 40px -28px rgba(10,29,63,.30);
+
+    --r-lg:         24px;
+    --r-md:         18px;
+
+    --disp:    "Bricolage Grotesque", system-ui, sans-serif;
+    --serif-i: "Instrument Serif", Georgia, serif;
+    --serif: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --sans:  "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono:  "JetBrains Mono", ui-monospace, Consolas, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  ::selection { background: var(--cyan); color: #fff; }
+
+  .p2 * { box-sizing: border-box; }
+
+  .p2 {
+    background: var(--paper);
+    color: var(--slate);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.65;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Embedded in the homepage preview frame the site header is already
+     above us, so the masthead would read as a duplicate. */
+  .p2.is-embedded .masthead,
+  .p2.is-embedded .backlink { display: none; }
+
+  .p2 .wrap {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .p2 .masthead {
+    border-bottom: 1px solid var(--rule);
+    background: var(--panel);
+  }
+  .p2 .masthead .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 16px;
+  }
+  .p2 .wordmark {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-family: var(--sans);
+    line-height: 1;
+  }
+  .p2 .wordmark b {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: .01em;
+    color: var(--navy);
+  }
+  .p2 .wordmark span {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--slate);
+  }
+  .p2 .wordmark em {
+    display: block;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid var(--rule);
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--slate-soft);
+  }
+  .p2 .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-family: var(--sans);
+    font-size: 13.5px;
+  }
+  .p2 .contacts a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .p2 .contacts a:hover { text-decoration: underline; }
+  .p2 .contacts svg { width: 15px; height: 15px; flex: none; }
+
+  /* ---------- intro ---------- */
+
+  .p2 .intro { padding: 44px 0 8px; }
+  .p2 .eyebrow {
+    font-family: var(--sans);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 0 14px;
+  }
+  .p2 h1 {
+    font-family: var(--disp);
+    font-size: clamp(32px, 4.6vw, 52px);
+    line-height: 1.06;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0 0 18px;
+    text-wrap: balance;
+    letter-spacing: -.02em;
+  }
+  .p2 .lead {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--slate);
+    max-width: 62ch;
+    margin: 0;
+  }
+  .p2 .lead + .lead { margin-top: 12px; }
+
+  .p2 .backlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 26px;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .02em;
+    color: var(--blue);
+    text-decoration: none;
+  }
+  .p2 .backlink:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+  /* ---------- layout blocks ---------- */
+
+  .p2 main { padding-bottom: 64px; }
+  .p2 .stack {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-top: 40px;
+  }
+  .p2 .panel {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow);
+  }
+  .p2 .panel-pad { padding: 26px; }
+
+  .p2 h2 {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 4px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--blue);
+    display: inline-block;
+  }
+  .p2 h3 {
+    font-family: var(--disp);
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin: 0 0 6px;
+  }
+  .p2 .sub {
+    color: var(--slate);
+    font-size: 15px;
+    margin: 0;
+    max-width: 70ch;
+  }
+
+  /* ---------- dropzone ---------- */
+
+  .p2 .drop {
+    border: 1.5px dashed var(--rule);
+    border-radius: var(--r-md);
+    background: var(--panel-sunk);
+    padding: 40px 24px;
+    text-align: center;
+    transition: border-color .18s ease, background .18s ease;
+  }
+  .p2 .drop.is-drag {
+    border-color: var(--blue);
+    background: var(--sand);
+  }
+  .p2 .drop.is-loaded {
+    border-style: solid;
+    border-color: var(--pass);
+    background: var(--pass-bg);
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+  }
+  .p2 .drop svg.big { width: 34px; height: 34px; color: var(--slate-soft); }
+  .p2 .drop p {
+    font-family: var(--sans);
+    font-size: 16px;
+    color: var(--ink);
+    margin: 14px 0 4px;
+  }
+  .p2 .drop small {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--slate-soft);
+  }
+  .p2 .loaded-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--pass);
+  }
+  .p2 .loaded-note svg { width: 18px; height: 18px; flex: none; }
+
+  .p2 .linkbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: var(--blue);
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .p2 .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ---------- buttons ---------- */
+
+  .p2 .btnrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .p2 .btn {
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    color: var(--ink);
+    cursor: pointer;
+    transition: border-color .15s ease, color .15s ease, background .15s ease;
+  }
+  .p2 .btn:hover { border-color: var(--blue); color: var(--blue); }
+  .p2 .btn-primary {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #FDFCFA;
+  }
+  .p2 .btn-primary:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #FFFFFF;
+  }
+
+  .p2 :focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+  }
+
+  /* ---------- required columns ---------- */
+
+  .p2 .cols {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .p2 .cols h4 {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin: 0 0 12px;
+  }
+  .p2 .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+  .p2 .chip {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    padding: 5px 12px;
+    border: 1px solid var(--rule-soft);
+    border-radius: 999px;
+    background: var(--sand);
+    color: var(--slate);
+  }
+
+  /* ---------- messages ---------- */
+
+  .p2 .msg {
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-left: 3px solid;
+    border-radius: 12px;
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .p2 .msg-error { border-color: var(--fail); background: var(--fail-bg); color: var(--fail); }
+  .p2 .msg-warn  { border-color: var(--warn); background: var(--warn-bg); color: var(--warn); }
+  .p2 .msg strong { display: block; margin-bottom: 5px; font-weight: 700; }
+  .p2 .msg ul { margin: 6px 0 0; padding-left: 18px; }
+  .p2 .msg li { margin-bottom: 3px; }
+
+  /* ---------- summary tiles ---------- */
+
+  .p2 .tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+  }
+  .p2 .tile {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    padding: 20px 22px;
+    box-shadow: var(--shadow);
+    border-top: 3px solid var(--navy);
+  }
+  .p2 .tile.t-pass { border-top-color: var(--pass); }
+  .p2 .tile.t-fail { border-top-color: var(--fail); }
+  .p2 .tile.t-flag { border-top-color: var(--warn); }
+  .p2 .tile dt {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--slate-soft);
+    margin-bottom: 10px;
+  }
+  .p2 .tile dd {
+    margin: 0;
+    font-family: var(--disp);
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+  .p2 .tile.t-pass dd { color: var(--pass); }
+  .p2 .tile.t-fail dd { color: var(--fail); }
+  .p2 .tile.t-flag dd { color: var(--warn); }
+  .p2 .tile p {
+    margin: 8px 0 0;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    color: var(--slate-soft);
+  }
+
+  /* ---------- table ---------- */
+
+  .p2 .tablehead {
+    padding: 24px 26px 18px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .p2 .scroller { overflow-x: auto; }
+  .p2 table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--sans);
+    font-size: 13.5px;
+  }
+  .p2 thead th {
+    text-align: left;
+    padding: 11px 10px;
+    background: var(--panel-sunk);
+    border-bottom: 1px solid var(--rule);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--slate);
+    white-space: nowrap;
+  }
+  .p2 thead th.num, .p2 td.num { text-align: right; }
+  .p2 thead th.mid, .p2 td.mid { text-align: center; }
+  .p2 tbody td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--rule-soft);
+    white-space: nowrap;
+    color: var(--slate);
+  }
+  .p2 td.num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+  .p2 td.juris {
+    font-weight: 600;
+    color: var(--ink);
+    white-space: normal;
+    min-width: 128px;
+  }
+  .p2 tr.row-fail td.juris { box-shadow: inset 3px 0 0 var(--fail); }
+  .p2 tr.row-main:hover td { background: var(--panel-sunk); }
+  .p2 tr.row-main { cursor: pointer; }
+
+  .p2 .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+  }
+  .p2 .pill svg { width: 13px; height: 13px; }
+  .p2 .pill-pass { background: var(--pass-bg); color: var(--pass); }
+  .p2 .pill-fail { background: var(--fail-bg); color: var(--fail); }
+  .p2 .pill-na   { background: var(--panel-sunk); color: var(--slate-soft); }
+  .p2 .flagdot {
+    display: inline-block;
+    margin-left: 7px;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--warn);
+    letter-spacing: .04em;
+  }
+
+  .p2 tr.detail td {
+    background: var(--panel-sunk);
+    white-space: normal;
+    padding: 0 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .p2 .detailbox {
+    padding: 18px 4px 22px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+  }
+  .p2 .detailbox h5 {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    color: var(--navy);
+  }
+  .p2 .detailbox p {
+    margin: 0 0 5px;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.5;
+  }
+  .p2 .detailbox .val {
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .p2 .detailbox .verdict { font-weight: 700; }
+  .p2 .verdict.ok { color: var(--pass); }
+  .p2 .verdict.no { color: var(--fail); }
+
+  /* ---------- CTA ---------- */
+
+  .p2 .cta {
+    padding: 30px 26px;
+    border-top: 1px solid var(--rule);
+    background: var(--sand);
+  }
+  .p2 .cta h4 {
+    font-family: var(--disp);
+    font-size: 23px;
+    font-weight: 500;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .p2 .cta p {
+    margin: 0 0 18px;
+    color: var(--slate);
+    font-size: 15px;
+    max-width: 66ch;
+  }
+  .p2 .cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 11px 20px;
+    border-radius: 999px;
+    background: var(--grad-cool);
+    color: #FFFFFF;
+    text-decoration: none;
+    box-shadow: 0 10px 26px rgba(0,180,216,.34);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .p2 .cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(0,180,216,.44);
+  }
+  .p2 .cta a svg { width: 16px; height: 16px; }
+
+  /* ---------- methodology ---------- */
+
+  .p2 details.method { border-radius: 4px; }
+  .p2 details.method > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .p2 details.method > summary::-webkit-details-marker { display: none; }
+  .p2 details.method > summary .marker {
+    font-family: var(--mono);
+    font-size: 18px;
+    color: var(--blue);
+    line-height: 1;
+  }
+  .p2 details.method[open] > summary { border-bottom: 1px solid var(--rule); }
+  .p2 .method-body { padding: 24px 26px 28px; }
+  .p2 .method-body h4 {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 26px 0 10px;
+  }
+  .p2 .method-body h4:first-child { margin-top: 0; }
+  .p2 .method-body p,
+  .p2 .method-body li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--slate);
+    max-width: 74ch;
+  }
+  .p2 .method-body p { margin: 0 0 10px; }
+  .p2 .method-body ul { margin: 0 0 10px; padding-left: 20px; }
+  .p2 .method-body li { margin-bottom: 7px; }
+  .p2 .method-body cite { font-style: italic; }
+  .p2 .ratetable {
+    margin-top: 6px;
+    font-size: 13px;
+    border: 1px solid var(--rule);
+  }
+  .p2 .ratetable th, .p2 .ratetable td {
+    padding: 8px 14px;
+    white-space: nowrap;
+  }
+  .p2 .ratetable td { border-bottom: 1px solid var(--rule-soft); color: var(--slate); }
+
+  /* ---------- footer ---------- */
+
+  .p2 footer {
+    border-top: 1px solid var(--rule);
+    background: var(--panel);
+    padding: 40px 0 48px;
+  }
+  .p2 footer h4 {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 14px;
+  }
+  .p2 footer ul { margin: 0; padding-left: 18px; }
+  .p2 footer li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--slate);
+    margin-bottom: 10px;
+    max-width: 78ch;
+  }
+  .p2 footer li b { color: var(--ink); font-weight: 700; }
+  .p2 .colophon {
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    color: var(--slate-soft);
+  }
+  .p2 .colophon a { color: var(--blue); font-weight: 600; text-decoration: none; }
+  .p2 .colophon a:hover { text-decoration: underline; }
+  .p2 .colophon .psl {
+    font-family: var(--serif-i);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--slate);
+  }
+
+  @media (max-width: 720px) {
+    .p2 .intro { padding-top: 32px; }
+    .p2 .panel-pad, .p2 .tablehead, .p2 .cta, .p2 .method-body { padding-left: 18px; padding-right: 18px; }
+    .p2 details.method > summary { padding-left: 18px; padding-right: 18px; }
+    .p2 .tile dd { font-size: 32px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .p2 * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="p2" id="app">
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="wordmark">
+        <b>PEREIRA</b>
+        <span>CONSULTING</span>
+        <em>International Tax</em>
+      </div>
+      <nav class="contacts">
+        <a href="https://www.pereiraconsulting.com" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg>
+          www.pereiraconsulting.com
+        </a>
+        <a href="mailto:neil@pereiraconsulting.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          neil@pereiraconsulting.com
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <section class="intro">
+        <p class="eyebrow">Pillar Two &middot; GloBE Rules</p>
+        <h1>Transitional CbCR Safe Harbour Calculator</h1>
+        <p class="lead">Upload a country-by-country report and this page tests each jurisdiction against the three transitional safe harbour tests: de minimis, simplified ETR, and routine profits.</p>
+        <p class="lead">Every calculation runs in your browser. The file you choose is read locally by the page and never leaves your machine: there is no upload, no server-side processing and no storage of your figures.</p>
+        <a class="backlink" href="/">&larr; pereiraconsulting.com</a>
+      </section>
+
+      <div class="stack">
+
+        <!-- Upload -->
+        <section class="panel panel-pad" aria-labelledby="h-upload">
+          <h2 id="h-upload">Your data</h2>
+          <div id="dropWrap"></div>
+
+          <div class="btnrow">
+            <button class="btn" type="button" id="btnSample">Show worked example</button>
+            <button class="btn" type="button" id="btnTemplate">Download CSV template</button>
+            <button class="btn" type="button" id="btnCopy">Copy template to clipboard</button>
+          </div>
+
+          <div class="cols">
+            <h4>Required columns</h4>
+            <div class="chips" id="chips"></div>
+          </div>
+
+          <div id="messages" aria-live="polite"></div>
+        </section>
+
+        <!-- Summary -->
+        <section aria-labelledby="h-summary">
+          <h2 id="h-summary" class="visually-hidden">Summary</h2>
+          <dl class="tiles" id="tiles"></dl>
+        </section>
+
+        <!-- Results -->
+        <section class="panel" aria-labelledby="h-results">
+          <div class="tablehead">
+            <h3 id="h-results" data-role="title">Worked example</h3>
+            <p class="sub" data-role="subtitle">Illustrative figures run through the same calculation engine as your own file. A jurisdiction qualifies if it satisfies at least one of the three tests. Select any row to see the threshold against the actual figure.</p>
+          </div>
+          <div class="scroller">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Jurisdiction</th>
+                  <th scope="col" class="mid">FY</th>
+                  <th scope="col" class="num">Revenue</th>
+                  <th scope="col" class="num">PBT</th>
+                  <th scope="col" class="num">Tax accrued</th>
+                  <th scope="col" class="num">SBIE</th>
+                  <th scope="col" class="num">Simplified ETR</th>
+                  <th scope="col" class="mid">De minimis</th>
+                  <th scope="col" class="mid">ETR</th>
+                  <th scope="col" class="mid">Routine profits</th>
+                  <th scope="col" class="mid">Safe harbour</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+          <div id="ctaSlot"></div>
+        </section>
+
+        <!-- Methodology -->
+        <section class="panel">
+          <details class="method">
+            <summary>
+              <span>Methodology, rates and limitations</span>
+              <span class="marker" aria-hidden="true">+</span>
+            </summary>
+            <div class="method-body">
+
+              <h4>What this tool does</h4>
+              <p>Figures are aggregated by jurisdiction and fiscal year, which reflects the jurisdictional blending the safe harbour requires, then tested against each of the three transitional tests. A jurisdiction qualifies if it satisfies any one of them.</p>
+              <ul>
+                <li><b>De minimis test.</b> Total revenue below &euro;10 million and profit (loss) before income tax below &euro;1 million for the jurisdiction, taken from the Qualified CbC Report for the single year. The three-year averaging in the permanent de minimis exclusion under Article 5.5 does not apply here.</li>
+                <li><b>Simplified ETR test.</b> Simplified covered taxes divided by profit (loss) before income tax, measured against the transition rate for the year.</li>
+                <li><b>Routine profits test.</b> Profit (loss) before income tax equal to or less than the substance-based income exclusion computed at the transitional Article 9.2 rates.</li>
+              </ul>
+
+              <h4>Transition rates applied</h4>
+              <div class="scroller">
+                <table class="ratetable">
+                  <thead>
+                    <tr>
+                      <th scope="col">FY beginning in</th>
+                      <th scope="col" class="num">Simplified ETR rate</th>
+                      <th scope="col" class="num">SBIE payroll</th>
+                      <th scope="col" class="num">SBIE tangible assets</th>
+                    </tr>
+                  </thead>
+                  <tbody id="rateRows"></tbody>
+                </table>
+              </div>
+
+              <h4>Transitional period</h4>
+              <p>The safe harbour originally applied to fiscal years beginning on or before 31 December 2026 and not ending after 30 June 2028. The OECD Side-by-Side Package released on 5 January 2026 extended the period by one year, to fiscal years beginning on or before 31 December 2027 and not ending after 30 June 2029, with the transition rate set at 17 per cent for fiscal years beginning in 2026 and 2027.</p>
+              <p>The Australian position has not yet caught up. The ATO guidance on the transitional CbC reporting safe harbour, current to 30 June 2026, still states the original period. This tool computes fiscal year 2027 on the extended OECD basis and marks those rows, because whether the extension is available to an Australian-parented or Australian-taxed group depends on the Australian rules being updated. Confirm the position before relying on a 2027 result.</p>
+
+              <h4>Simplifications you need to know about</h4>
+              <ul>
+                <li>Employee costs and PP&amp;E from the CbC report are used as proxies for eligible payroll costs and the eligible tangible asset carrying values that the substance-based income exclusion actually requires. These are not the same measures.</li>
+                <li>Income tax accrued for the current year is used without the adjustments the safe harbour requires, being the removal of taxes that are not Covered Taxes and amounts relating to uncertain tax positions. The test proper uses income tax expense per the Qualified Financial Statements.</li>
+                <li>The safe harbour is only available where the group has a Qualified CbC Report prepared from Qualified Financial Statements. This tool cannot verify that condition, and no calculation here establishes it.</li>
+                <li>The once out, always out rule is not modelled. A jurisdiction for which the group did not apply the safe harbour in the previous fiscal year is generally excluded from it in later years.</li>
+                <li>Joint ventures, stateless constituent entities, investment entities, flow-through ultimate parent entities, minority-owned constituent entities and jurisdictions with an eligible distribution tax system are out of scope, as are the specific exclusions in the rules.</li>
+                <li>Thresholds are expressed in euro. Converting a report presented in another currency is your responsibility.</li>
+              </ul>
+
+              <h4>Sources</h4>
+              <ul>
+                <li>OECD, <cite>Safe Harbours and Penalty Relief: Global Anti-Base Erosion Rules (Pillar Two)</cite> (Inclusive Framework on BEPS, December 2022).</li>
+                <li>OECD, <cite>Tax Challenges Arising from the Digitalisation of the Economy: Global Anti-Base Erosion Model Rules (Pillar Two)</cite> (December 2021) art 9.2.</li>
+                <li>OECD, <cite>Side-by-Side Package</cite> (Inclusive Framework on BEPS, 5 January 2026), extending the transitional CbCR safe harbour by one year.</li>
+                <li><cite>Taxation (Multinational&mdash;Global and Domestic Minimum Tax) Rules 2024</cite> (Cth) ch 8; <cite>Taxation (Multinational&mdash;Global and Domestic Minimum Tax) Act 2024</cite> (Cth).</li>
+                <li>Australian Taxation Office, <cite>Transitional CBC reporting safe harbour</cite> (web guidance, current to 30 June 2026).</li>
+              </ul>
+
+            </div>
+          </details>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <h4>Important</h4>
+      <ul>
+        <li><b>This is not advice.</b> The tool is an indicative screen. It does not take account of your circumstances, and it is not a substitute for advice on your group's Pillar Two position. You are responsible for how you use the output.</li>
+        <li><b>Your data stays with you.</b> Files are read and calculated in your browser. Nothing is uploaded, stored or retained. Satisfying your own organisation's confidentiality and data handling requirements remains your responsibility.</li>
+        <li><b>Accuracy.</b> The calculations follow OECD guidance as at the date shown, using the simplifications set out in the methodology panel. The rules are detailed and continue to change, and no guarantee of accuracy or completeness is given.</li>
+      </ul>
+      <div class="colophon">
+        <span class="psl">Liability limited by a scheme approved under Professional Standards Legislation.</span>
+        <span>
+          <a href="https://www.pereiraconsulting.com" target="_blank" rel="noopener noreferrer">www.pereiraconsulting.com</a>
+          &nbsp;&middot;&nbsp;
+          <a href="mailto:neil@pereiraconsulting.com">neil@pereiraconsulting.com</a>
+        </span>
+        <span>Pereira Consulting &middot; NRTPCo Pty Ltd &middot; ABN 77 633 565 107</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------------------------------------------------------------- constants
+
+  // Simplified ETR transition rates.
+  // OECD, Safe Harbours and Penalty Relief (Dec 2022): 15% for FYs beginning in
+  // 2023 and 2024, 16% for 2025, 17% for 2026. The Side-by-Side Package
+  // (5 Jan 2026) extends the period and sets 17% for FYs beginning in 2027.
+  var TRANSITION_RATES = { 2023: 0.15, 2024: 0.15, 2025: 0.16, 2026: 0.17, 2027: 0.17 };
+
+  // Transitional SBIE rates per GloBE Model Rules art 9.2: [payroll, tangible].
+  var SBIE_RATES = {
+    2023: [0.100, 0.080],
+    2024: [0.098, 0.078],
+    2025: [0.096, 0.076],
+    2026: [0.094, 0.074],
+    2027: [0.092, 0.072]
+  };
+
+  // Fiscal years inside the transitional period.
+  var FIRST_YEAR = 2023;
+  var LAST_YEAR_OECD = 2027;   // per the Side-by-Side Package (5 Jan 2026)
+  var LAST_YEAR_AU = 2026;     // per ATO guidance current to 30 June 2026
+
+  var REQUIRED_COLUMNS = [
+    "Country",
+    "Year",
+    "Revenues - Total",
+    "Profit (Loss) before Income Tax",
+    "Income Tax Accrued - Current Year",
+    "Employee costs",
+    "PP&E"
+  ];
+
+  var DE_MINIMIS_REVENUE = 10000000;
+  var DE_MINIMIS_PBT = 1000000;
+  var PREVIEW_ROWS = 5;
+
+  var MAILTO = "mailto:neil@pereiraconsulting.com?subject=" +
+    encodeURIComponent("Pillar Two transitional safe harbour: full jurisdiction report");
+
+  // ---------------------------------------------------------------- utilities
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  var nf0 = new Intl.NumberFormat("en-AU", { maximumFractionDigits: 0 });
+  var pf2 = new Intl.NumberFormat("en-AU", { style: "percent", minimumFractionDigits: 2 });
+
+  function money(n) { return nf0.format(Math.round(n)); }
+  function pct(n) { return (n === null || !isFinite(n)) ? "N/A" : pf2.format(n); }
+
+  function el(tag, attrs, children) {
+    var node = document.createElement(tag);
+    if (attrs) {
+      Object.keys(attrs).forEach(function (k) {
+        if (k === "class") { node.className = attrs[k]; }
+        else if (k === "text") { node.textContent = attrs[k]; }
+        else if (k === "html") { node.innerHTML = attrs[k]; }
+        else { node.setAttribute(k, attrs[k]); }
+      });
+    }
+    (children || []).forEach(function (c) { node.appendChild(c); });
+    return node;
+  }
+
+  var ICON_TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+  var ICON_CROSS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+
+  // ------------------------------------------------------------- CSV parsing
+
+  function parseCsvLine(line) {
+    var out = [];
+    var field = "";
+    var inQuotes = false;
+    for (var i = 0; i < line.length; i++) {
+      var ch = line[i];
+      if (inQuotes) {
+        if (ch === '"') {
+          if (line[i + 1] === '"') { field += '"'; i++; }
+          else { inQuotes = false; }
+        } else { field += ch; }
+      } else if (ch === '"') {
+        inQuotes = true;
+      } else if (ch === ",") {
+        out.push(field); field = "";
+      } else {
+        field += ch;
+      }
+    }
+    out.push(field);
+    return out;
+  }
+
+  function parseNumber(raw) {
+    if (raw === undefined || raw === null) { return null; }
+    var s = String(raw).trim();
+    if (s === "" || s === "-") { return 0; }
+    if (s.charAt(0) === '"' && s.charAt(s.length - 1) === '"') { s = s.slice(1, -1).trim(); }
+    s = s.replace(/[\s$€£¥]/g, "");
+    // Continental formatting, e.g. 1.234.567,89. Convert it before the comma
+    // strip below would silently turn 1.234,56 into 1.23456.
+    if (/^[+-]?\(?\d{1,3}(\.\d{3})+(,\d+)?\)?-?$/.test(s)) {
+      s = s.replace(/\./g, "").replace(",", ".");
+    }
+    s = s.replace(/,/g, "");
+    s = s.replace(/[\s $€£¥]/g, "");
+    var negative = false;
+    if (s.charAt(0) === "(" && s.charAt(s.length - 1) === ")") {
+      negative = true;
+      s = s.slice(1, -1);
+    }
+    if (s.charAt(s.length - 1) === "-") { negative = true; s = s.slice(0, -1); }
+    if (s === "") { return 0; }
+    if (!/^[+-]?\d*\.?\d+(?:[eE][+-]?\d+)?$/.test(s)) { return null; }
+    var n = parseFloat(s);
+    if (!isFinite(n)) { return null; }
+    return negative ? -n : n;
+  }
+
+  // Returns { rows: [...], errors: [...] }. Throws only on file-level problems.
+  function parseCSV(text) {
+    var lines = text.replace(/^﻿/, "").split(/\r?\n/);
+    while (lines.length && lines[lines.length - 1].trim() === "") { lines.pop(); }
+    if (!lines.length) { throw new Error("The file is empty."); }
+
+    var headers = parseCsvLine(lines.shift()).map(function (h) {
+      return h.trim().replace(/^"|"$/g, "");
+    });
+
+    var missing = REQUIRED_COLUMNS.filter(function (c) { return headers.indexOf(c) === -1; });
+    if (missing.length) {
+      throw new Error("The file is missing these required columns: " + missing.join(", ") + ".");
+    }
+
+    var idx = {};
+    REQUIRED_COLUMNS.forEach(function (c) { idx[c] = headers.indexOf(c); });
+
+    var rows = [];
+    var errors = [];
+
+    lines.forEach(function (line, i) {
+      var lineNo = i + 2;
+      if (!line.trim()) { return; }
+
+      var values = parseCsvLine(line);
+
+      if (values.length < headers.length) {
+        errors.push("Row " + lineNo + " has " + values.length + " columns; the header row has " + headers.length + ".");
+        return;
+      }
+      if (values.length > headers.length) {
+        errors.push("Row " + lineNo + " has " + values.length + " columns; the header row has " + headers.length + ".");
+        return;
+      }
+
+      var country = (values[idx["Country"]] || "").trim();
+      if (!country) {
+        errors.push("Row " + lineNo + " has no jurisdiction in the Country column.");
+        return;
+      }
+
+      var yearRaw = (values[idx["Year"]] || "").trim();
+      var year = /^\d{4}$/.test(yearRaw) ? parseInt(yearRaw, 10) : NaN;
+      if (isNaN(year)) {
+        errors.push("Row " + lineNo + " (" + country + "): “" + yearRaw + "” is not a four-digit fiscal year.");
+        return;
+      }
+
+      var record = { Country: country, Year: year };
+      var bad = null;
+
+      [["Revenues - Total", "Revenue"],
+       ["Profit (Loss) before Income Tax", "PBT"],
+       ["Income Tax Accrued - Current Year", "TaxAccrued"],
+       ["Employee costs", "EmployeeCosts"],
+       ["PP&E", "PPE"]].forEach(function (pair) {
+        if (bad) { return; }
+        var n = parseNumber(values[idx[pair[0]]]);
+        if (n === null) {
+          bad = pair[0] + " (“" + String(values[idx[pair[0]]]).trim() + "”)";
+          return;
+        }
+        record[pair[1]] = n;
+      });
+
+      if (bad) {
+        errors.push("Row " + lineNo + " (" + country + "): could not read a number from " + bad + ".");
+        return;
+      }
+
+      rows.push(record);
+    });
+
+    return { rows: rows, errors: errors };
+  }
+
+  // ------------------------------------------------------------ calculations
+
+  function runCalculations(data) {
+    var grouped = {};
+
+    data.forEach(function (row) {
+      var key = row.Country + "|" + row.Year;
+      if (!grouped[key]) {
+        grouped[key] = {
+          Country: row.Country, Year: row.Year,
+          Revenue: 0, PBT: 0, TaxAccrued: 0, EmployeeCosts: 0, PPE: 0,
+          Entities: 0
+        };
+      }
+      var g = grouped[key];
+      g.Revenue += row.Revenue;
+      g.PBT += row.PBT;
+      g.TaxAccrued += row.TaxAccrued;
+      g.EmployeeCosts += row.EmployeeCosts;
+      g.PPE += row.PPE;
+      g.Entities += 1;
+    });
+
+    var results = Object.keys(grouped).map(function (key) {
+      var r = grouped[key];
+      var pbt = r.PBT;
+
+      var inOecdPeriod = r.Year >= FIRST_YEAR && r.Year <= LAST_YEAR_OECD;
+      var inAuPeriod = r.Year >= FIRST_YEAR && r.Year <= LAST_YEAR_AU;
+
+      // De minimis: single-year revenue and PBT per the Qualified CbC Report.
+      r.DeMinimisTest = r.Revenue < DE_MINIMIS_REVENUE && pbt < DE_MINIMIS_PBT;
+
+      // Simplified ETR. Divisor floored at 1 so a nil or negative PBT cannot
+      // divide by zero; the test itself still requires a positive PBT.
+      r.SimplETR = pbt > 0 ? r.TaxAccrued / pbt : null;
+      r.TransitionRate = Object.prototype.hasOwnProperty.call(TRANSITION_RATES, r.Year)
+        ? TRANSITION_RATES[r.Year] : null;
+      r.ETRForTest = r.TaxAccrued / Math.max(pbt, 1);
+      r.ETRTest = r.TransitionRate !== null && pbt > 0 && r.ETRForTest >= r.TransitionRate;
+
+      // Routine profits.
+      var rates = Object.prototype.hasOwnProperty.call(SBIE_RATES, r.Year) ? SBIE_RATES[r.Year] : null;
+      r.PayrollRate = rates ? rates[0] : null;
+      r.TangibleRate = rates ? rates[1] : null;
+      r.SBIE = rates ? (r.EmployeeCosts * rates[0]) + (r.PPE * rates[1]) : null;
+      r.RoutineProfitsTest = rates !== null && (pbt <= r.SBIE);
+
+      r.SafeHarbour = r.DeMinimisTest || r.ETRTest || r.RoutineProfitsTest;
+
+      r.OutsidePeriod = !inOecdPeriod;
+      r.ExtensionOnly = inOecdPeriod && !inAuPeriod;
+
+      // Outside the transitional period the safe harbour is not available at
+      // all, so there is no test to pass. Null renders as N/A rather than a
+      // pass or fail, and the figures stay visible for reference.
+      if (r.OutsidePeriod) {
+        r.DeMinimisTest = null;
+        r.ETRTest = null;
+        r.RoutineProfitsTest = null;
+        r.SafeHarbour = null;
+      }
+
+      return r;
+    });
+
+    results.sort(function (a, b) {
+      if (a.Country < b.Country) { return -1; }
+      if (a.Country > b.Country) { return 1; }
+      return a.Year - b.Year;
+    });
+
+    return results;
+  }
+
+  // --------------------------------------------------------------- sample CSV
+
+  var SAMPLE_CSV = [
+    '"Country","Year","Revenues - Total","Profit (Loss) before Income Tax","Income Tax Accrued - Current Year","Employee costs","PP&E"',
+    '"Australia",2024,"185,000,000","14,200,000","3,650,000","28,000,000","46,000,000"',
+    '"Singapore",2024,"64,000,000","9,800,000","1,120,000","6,400,000","3,100,000"',
+    '"Ireland",2024,"41,500,000","5,600,000","700,000","2,900,000","1,400,000"',
+    '"New Zealand",2024,"8,400,000","740,000","190,000","2,100,000","900,000"',
+    '"Germany, Federal Republic of",2024,"52,000,000","(3,400,000)","0","11,500,000","19,000,000"',
+    '"Germany, Federal Republic of",2024,"6,000,000","1,100,000","330,000","1,500,000","2,000,000"',
+    '"United Kingdom",2025,"96,000,000","7,300,000","1,240,000","21,000,000","33,000,000"'
+  ].join("\n");
+
+  var TEMPLATE_CSV = [
+    REQUIRED_COLUMNS.map(function (c) { return '"' + c + '"'; }).join(","),
+    '"Australia",2024,185000000,14200000,3650000,28000000,46000000',
+    '"Singapore",2024,64000000,9800000,1120000,6400000,3100000'
+  ].join("\n") + "\n";
+
+  // ------------------------------------------------------------------- state
+
+  var state = {
+    results: null,        // null while the worked example is showing
+    fileName: "",
+    sample: null,
+    expanded: {}
+  };
+
+  // ------------------------------------------------------------------ render
+
+  function renderChips() {
+    var box = $("chips");
+    box.textContent = "";
+    REQUIRED_COLUMNS.forEach(function (c) {
+      box.appendChild(el("span", { "class": "chip", text: c }));
+    });
+  }
+
+  function renderRateTable() {
+    var body = $("rateRows");
+    body.textContent = "";
+    Object.keys(SBIE_RATES).sort().forEach(function (y) {
+      var etr = TRANSITION_RATES[y];
+      var tr = el("tr");
+      tr.appendChild(el("td", { text: y + (String(y) === "2027" ? " (OECD extension)" : "") }));
+      tr.appendChild(el("td", { "class": "num", text: (etr * 100).toFixed(0) + "%" }));
+      tr.appendChild(el("td", { "class": "num", text: (SBIE_RATES[y][0] * 100).toFixed(1) + "%" }));
+      tr.appendChild(el("td", { "class": "num", text: (SBIE_RATES[y][1] * 100).toFixed(1) + "%" }));
+      body.appendChild(tr);
+    });
+  }
+
+  function renderDropzone() {
+    var host = $("dropWrap");
+    host.textContent = "";
+
+    if (state.fileName) {
+      var loaded = el("div", { "class": "drop is-loaded" });
+      var note = el("div", { "class": "loaded-note" });
+      note.innerHTML = ICON_TICK + "<span>Loaded: <strong>" + escapeHtml(state.fileName) + "</strong></span>";
+      loaded.appendChild(note);
+      var reset = el("button", { "class": "btn", type: "button", text: "Use a different file" });
+      reset.addEventListener("click", resetAll);
+      loaded.appendChild(reset);
+      host.appendChild(loaded);
+      return;
+    }
+
+    var drop = el("div", { "class": "drop", id: "dropzone" });
+    drop.innerHTML =
+      '<svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M12 16V4m0 0L8 8m4-4 4 4"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>' +
+      '<p><button class="linkbtn" type="button" id="pickBtn">Choose a CSV file</button> or drop one here</p>' +
+      '<small>Comma separated values. Quoted fields, thousands separators and bracketed negatives are all handled.</small>' +
+      '<input id="fileInput" class="visually-hidden" type="file" accept=".csv,text/csv">';
+    host.appendChild(drop);
+
+    var input = $("fileInput");
+    $("pickBtn").addEventListener("click", function () { input.click(); });
+    input.addEventListener("change", function () {
+      if (input.files && input.files.length) { handleFile(input.files[0]); }
+    });
+
+    ["dragenter", "dragover"].forEach(function (evt) {
+      drop.addEventListener(evt, function (e) {
+        e.preventDefault();
+        drop.classList.add("is-drag");
+      });
+    });
+    ["dragleave", "drop"].forEach(function (evt) {
+      drop.addEventListener(evt, function (e) {
+        e.preventDefault();
+        drop.classList.remove("is-drag");
+      });
+    });
+    drop.addEventListener("drop", function (e) {
+      if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files.length) {
+        handleFile(e.dataTransfer.files[0]);
+      }
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function activeResults() {
+    return state.results !== null ? state.results : state.sample;
+  }
+
+  function renderTiles() {
+    var rows = activeResults();
+    var host = $("tiles");
+    host.textContent = "";
+
+    var passed = rows.filter(function (r) { return r.SafeHarbour === true; }).length;
+    var failed = rows.filter(function (r) { return r.SafeHarbour === false; }).length;
+    var flagged = rows.filter(function (r) { return r.OutsidePeriod || r.ExtensionOnly; }).length;
+
+    var tiles = [
+      { k: "Jurisdiction years tested", v: rows.length, cls: "", note: "Aggregated by jurisdiction and fiscal year" },
+      { k: "Qualify", v: passed, cls: "t-pass", note: "At least one test satisfied" },
+      { k: "Do not qualify", v: failed, cls: "t-fail", note: "Full GloBE calculation required" }
+    ];
+    if (flagged) {
+      tiles.push({ k: "Period flags", v: flagged, cls: "t-flag", note: "Fiscal year needs checking" });
+    }
+
+    tiles.forEach(function (t) {
+      var tile = el("div", { "class": "tile " + t.cls });
+      tile.appendChild(el("dt", { text: t.k }));
+      tile.appendChild(el("dd", { text: String(t.v) }));
+      tile.appendChild(el("p", { text: t.note }));
+      host.appendChild(tile);
+    });
+  }
+
+  function pill(status) {
+    var span = el("span", { "class": "pill " + (status === null ? "pill-na" : (status ? "pill-pass" : "pill-fail")) });
+    if (status === null) { span.textContent = "N/A"; }
+    else { span.innerHTML = (status ? ICON_TICK + "Pass" : ICON_CROSS + "Fail"); }
+    return span;
+  }
+
+  function detailRow(r) {
+    var box = el("div", { "class": "detailbox" });
+
+    if (r.OutsidePeriod) {
+      var o1 = el("div");
+      o1.appendChild(el("h5", { text: "Safe harbour not available" }));
+      o1.appendChild(el("p", { text: "Fiscal year " + r.Year + " sits outside the transitional period, so none of the three tests applies. No transition rate or transitional SBIE rate is prescribed for that year." }));
+      o1.appendChild(el("p", { "class": "verdict no", text: "A full GloBE computation is the starting point for this jurisdiction year." }));
+      box.appendChild(o1);
+
+      var o2 = el("div");
+      o2.appendChild(el("h5", { text: "Figures as filed" }));
+      o2.appendChild(el("p", { html: "Revenue <span class=\"val\">" + money(r.Revenue) + "</span>, PBT <span class=\"val\">" + money(r.PBT) + "</span>, tax accrued <span class=\"val\">" + money(r.TaxAccrued) + "</span>." }));
+      o2.appendChild(el("p", { html: "Employee costs <span class=\"val\">" + money(r.EmployeeCosts) + "</span>, PP&amp;E <span class=\"val\">" + money(r.PPE) + "</span>." }));
+      o2.appendChild(el("p", { text: r.Entities === 1 ? "One row in the file." : r.Entities + " rows aggregated for this jurisdiction and year." }));
+      box.appendChild(o2);
+
+      return box;
+    }
+
+    // De minimis
+    var d1 = el("div");
+    d1.appendChild(el("h5", { text: "De minimis test" }));
+    d1.appendChild(el("p", { html: "Revenue <span class=\"val\">" + money(r.Revenue) + "</span> against the &euro;10,000,000 threshold." }));
+    d1.appendChild(el("p", { html: "PBT <span class=\"val\">" + money(r.PBT) + "</span> against the &euro;1,000,000 threshold." }));
+    d1.appendChild(el("p", {
+      "class": "verdict " + (r.DeMinimisTest ? "ok" : "no"),
+      text: r.DeMinimisTest ? "Both limits met." : "Both limits must be met and at least one is exceeded."
+    }));
+    box.appendChild(d1);
+
+    // ETR
+    var d2 = el("div");
+    d2.appendChild(el("h5", { text: "Simplified ETR test" }));
+    if (r.TransitionRate === null) {
+      d2.appendChild(el("p", { text: "No transition rate is prescribed for fiscal year " + r.Year + "." }));
+      d2.appendChild(el("p", { "class": "verdict no", text: "Not applicable." }));
+    } else if (r.PBT <= 0) {
+      d2.appendChild(el("p", { html: "PBT is <span class=\"val\">" + money(r.PBT) + "</span>, so no meaningful rate arises." }));
+      d2.appendChild(el("p", { "class": "verdict no", text: "The test requires a positive profit. Consider the routine profits test." }));
+    } else {
+      d2.appendChild(el("p", { html: "Simplified ETR <span class=\"val\">" + pct(r.SimplETR) + "</span> against a transition rate of <span class=\"val\">" + pct(r.TransitionRate) + "</span>." }));
+      d2.appendChild(el("p", { html: "Tax accrued <span class=\"val\">" + money(r.TaxAccrued) + "</span> over PBT <span class=\"val\">" + money(r.PBT) + "</span>." }));
+      d2.appendChild(el("p", {
+        "class": "verdict " + (r.ETRTest ? "ok" : "no"),
+        text: r.ETRTest ? "At or above the transition rate." : "Short of the transition rate by " + pct(r.TransitionRate - r.SimplETR) + "."
+      }));
+    }
+    box.appendChild(d2);
+
+    // Routine profits
+    var d3 = el("div");
+    d3.appendChild(el("h5", { text: "Routine profits test" }));
+    if (r.SBIE === null) {
+      d3.appendChild(el("p", { text: "No transitional SBIE rates are prescribed for fiscal year " + r.Year + "." }));
+      d3.appendChild(el("p", { "class": "verdict no", text: "Not applicable." }));
+    } else {
+      d3.appendChild(el("p", {
+        html: "SBIE <span class=\"val\">" + money(r.SBIE) + "</span>, being employee costs <span class=\"val\">" + money(r.EmployeeCosts) +
+              "</span> at " + (r.PayrollRate * 100).toFixed(1) + "% plus PP&amp;E <span class=\"val\">" + money(r.PPE) +
+              "</span> at " + (r.TangibleRate * 100).toFixed(1) + "%."
+      }));
+      d3.appendChild(el("p", { html: "PBT <span class=\"val\">" + money(r.PBT) + "</span>." }));
+      d3.appendChild(el("p", {
+        "class": "verdict " + (r.RoutineProfitsTest ? "ok" : "no"),
+        text: r.RoutineProfitsTest
+          ? "PBT is at or below the substance-based income exclusion."
+          : "PBT exceeds the exclusion by " + money(r.PBT - r.SBIE) + "."
+      }));
+    }
+    box.appendChild(d3);
+
+    // Period and composition
+    var d4 = el("div");
+    d4.appendChild(el("h5", { text: "Scope notes" }));
+    d4.appendChild(el("p", { text: r.Entities === 1 ? "One row in the file." : r.Entities + " rows aggregated for this jurisdiction and year." }));
+    if (r.OutsidePeriod) {
+      d4.appendChild(el("p", { "class": "verdict no", text: "Fiscal year " + r.Year + " sits outside the transitional period. The safe harbour is not available and the figures above are shown for reference only." }));
+    } else if (r.ExtensionOnly) {
+      d4.appendChild(el("p", { "class": "verdict no", text: "Fiscal year 2027 is within the period only on the OECD extension of 5 January 2026. Australian guidance current to 30 June 2026 still ends the period at fiscal years beginning on or before 31 December 2026. Confirm before relying on this result." }));
+    } else {
+      d4.appendChild(el("p", { text: "Fiscal year " + r.Year + " is within the transitional period." }));
+    }
+    box.appendChild(d4);
+
+    return box;
+  }
+
+  function renderTable() {
+    var all = activeResults();
+    var isSample = state.results === null;
+    var showing = isSample ? all : all.slice(0, PREVIEW_ROWS);
+
+    var title = document.querySelector('[data-role="title"]');
+    var subtitle = document.querySelector('[data-role="subtitle"]');
+
+    if (isSample) {
+      title.textContent = "Worked example";
+      subtitle.textContent = "Illustrative figures run through the same calculation engine as your own file. A jurisdiction qualifies if it satisfies at least one of the three tests. Select any row to see the threshold against the actual figure.";
+    } else {
+      title.textContent = "Results: " + state.fileName;
+      subtitle.textContent = all.length > PREVIEW_ROWS
+        ? "Showing the first " + PREVIEW_ROWS + " of " + all.length + " jurisdiction years. Select any row to see the threshold against the actual figure."
+        : all.length + (all.length === 1 ? " jurisdiction year." : " jurisdiction years.") + " Select any row to see the threshold against the actual figure.";
+    }
+
+    var body = $("tbody");
+    body.textContent = "";
+
+    showing.forEach(function (r, i) {
+      var key = r.Country + "|" + r.Year;
+      var tr = el("tr", { "class": "row-main" + (r.SafeHarbour === false ? " row-fail" : ""), tabindex: "0", role: "button",
+                          "aria-expanded": state.expanded[key] ? "true" : "false" });
+
+      var juris = el("td", { "class": "juris", text: r.Country });
+      if (r.OutsidePeriod) { juris.appendChild(el("span", { "class": "flagdot", text: "OUTSIDE PERIOD" })); }
+      else if (r.ExtensionOnly) { juris.appendChild(el("span", { "class": "flagdot", text: "CHECK PERIOD" })); }
+      tr.appendChild(juris);
+
+      tr.appendChild(el("td", { "class": "mid num", text: String(r.Year) }));
+      tr.appendChild(el("td", { "class": "num", text: money(r.Revenue) }));
+      tr.appendChild(el("td", { "class": "num", text: money(r.PBT) }));
+      tr.appendChild(el("td", { "class": "num", text: money(r.TaxAccrued) }));
+      tr.appendChild(el("td", { "class": "num", text: r.SBIE === null ? "N/A" : money(r.SBIE) }));
+      tr.appendChild(el("td", { "class": "num", text: pct(r.SimplETR) }));
+
+      [r.DeMinimisTest,
+       r.TransitionRate === null ? null : r.ETRTest,
+       r.SBIE === null ? null : r.RoutineProfitsTest,
+       r.SafeHarbour].forEach(function (v) {
+        var td = el("td", { "class": "mid" });
+        td.appendChild(pill(v));
+        tr.appendChild(td);
+      });
+
+      function toggle() {
+        state.expanded[key] = !state.expanded[key];
+        renderTable();
+      }
+      tr.addEventListener("click", toggle);
+      tr.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+      });
+
+      body.appendChild(tr);
+
+      if (state.expanded[key]) {
+        var dr = el("tr", { "class": "detail" });
+        var td = el("td", { colspan: "11" });
+        td.appendChild(detailRow(r));
+        dr.appendChild(td);
+        body.appendChild(dr);
+      }
+    });
+
+    renderCta(isSample, all.length);
+  }
+
+  function renderCta(isSample, total) {
+    var slot = $("ctaSlot");
+    slot.textContent = "";
+    if (isSample || total <= PREVIEW_ROWS) { return; }
+
+    var remaining = total - PREVIEW_ROWS;
+    var box = el("div", { "class": "cta" });
+    box.appendChild(el("h4", { text: "The remaining " + remaining + (remaining === 1 ? " jurisdiction year" : " jurisdiction years") }));
+    box.appendChild(el("p", {
+      text: "Your file covers " + total + " jurisdiction years in total. For the complete jurisdiction by jurisdiction analysis, a review of the qualified financial statement and once out, always out positions, and advice on where a full GloBE computation is now required, get in touch."
+    }));
+    var a = el("a", { href: MAILTO });
+    a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Request the full report</span>';
+    box.appendChild(a);
+    slot.appendChild(box);
+  }
+
+  function renderMessages(error, rowErrors, periodNote) {
+    var host = $("messages");
+    host.textContent = "";
+
+    if (error) {
+      var e = el("div", { "class": "msg msg-error" });
+      e.appendChild(el("strong", { text: "The file could not be read" }));
+      e.appendChild(el("span", { text: error }));
+      host.appendChild(e);
+    }
+
+    if (rowErrors && rowErrors.length) {
+      var w = el("div", { "class": "msg msg-warn" });
+      w.appendChild(el("strong", { text: rowErrors.length + (rowErrors.length === 1 ? " row was skipped" : " rows were skipped") }));
+      var ul = el("ul");
+      rowErrors.slice(0, 8).forEach(function (m) { ul.appendChild(el("li", { text: m })); });
+      if (rowErrors.length > 8) {
+        ul.appendChild(el("li", { text: "and " + (rowErrors.length - 8) + " more." }));
+      }
+      w.appendChild(ul);
+      host.appendChild(w);
+    }
+
+    if (periodNote) {
+      var p = el("div", { "class": "msg msg-warn" });
+      p.appendChild(el("strong", { text: "Check the fiscal years" }));
+      p.appendChild(el("span", { text: periodNote }));
+      host.appendChild(p);
+    }
+  }
+
+  // ------------------------------------------------------------------ actions
+
+  function periodNoteFor(results) {
+    var outside = {}, ext = {};
+    results.forEach(function (r) {
+      if (r.OutsidePeriod) { outside[r.Year] = true; }
+      else if (r.ExtensionOnly) { ext[r.Year] = true; }
+    });
+    var parts = [];
+    var o = Object.keys(outside);
+    if (o.length) {
+      parts.push("Fiscal " + (o.length === 1 ? "year " : "years ") + o.join(", ") +
+        " " + (o.length === 1 ? "sits" : "sit") +
+        " outside the transitional period, which runs from fiscal years beginning in 2023 to those beginning on or before 31 December 2027. The safe harbour is not available for " +
+        (o.length === 1 ? "that year" : "those years") + " and the figures are shown for reference only.");
+    }
+    var x = Object.keys(ext);
+    if (x.length) {
+      parts.push("Fiscal year 2027 is inside the period only because of the OECD Side-by-Side Package of 5 January 2026. ATO guidance current to 30 June 2026 still ends the period at fiscal years beginning on or before 31 December 2026, so confirm the Australian position before relying on a 2027 result.");
+    }
+    return parts.length ? parts.join(" ") : null;
+  }
+
+  function applyResults(results, fileName, rowErrors) {
+    state.results = results;
+    state.fileName = fileName;
+    state.expanded = {};
+    renderDropzone();
+    renderMessages(null, rowErrors, periodNoteFor(results));
+    renderTiles();
+    renderTable();
+  }
+
+  function handleFile(file) {
+    if (!/\.csv$/i.test(file.name) && file.type !== "text/csv") {
+      state.results = null;
+      state.fileName = "";
+      renderDropzone();
+      renderMessages("Upload a CSV file. “" + file.name + "” is not one.", null, null);
+      renderTiles();
+      renderTable();
+      return;
+    }
+
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      var parsed;
+      try {
+        parsed = parseCSV(String(e.target.result));
+      } catch (err) {
+        state.results = null;
+        state.fileName = "";
+        renderDropzone();
+        renderMessages(err.message, null, null);
+        renderTiles();
+        renderTable();
+        return;
+      }
+
+      if (!parsed.rows.length) {
+        state.results = null;
+        state.fileName = "";
+        renderDropzone();
+        renderMessages("No usable rows were found in the file.", parsed.errors, null);
+        renderTiles();
+        renderTable();
+        return;
+      }
+
+      applyResults(runCalculations(parsed.rows), file.name, parsed.errors);
+    };
+    reader.onerror = function () {
+      renderMessages("The file could not be opened.", null, null);
+    };
+    reader.readAsText(file);
+  }
+
+  function resetAll() {
+    state.results = null;
+    state.fileName = "";
+    state.expanded = {};
+    renderDropzone();
+    renderMessages(null, null, null);
+    renderTiles();
+    renderTable();
+  }
+
+  function download(filename, text) {
+    try {
+      var blob = new Blob([text], { type: "text/csv;charset=utf-8" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function flash(btn, label) {
+    var original = btn.textContent;
+    btn.textContent = label;
+    setTimeout(function () { btn.textContent = original; }, 2200);
+  }
+
+  // -------------------------------------------------------------------- init
+
+  renderChips();
+  renderRateTable();
+  renderDropzone();
+
+  state.sample = runCalculations(parseCSV(SAMPLE_CSV).rows);
+  renderTiles();
+  renderTable();
+
+  $("btnSample").addEventListener("click", function () {
+    resetAll();
+    document.querySelector('[data-role="title"]').scrollIntoView({ block: "start" });
+  });
+
+  $("btnTemplate").addEventListener("click", function (e) {
+    if (!download("cbcr-safe-harbour-template.csv", TEMPLATE_CSV)) {
+      flash(e.currentTarget, "Download blocked, use copy");
+    }
+  });
+
+  $("btnCopy").addEventListener("click", function (e) {
+    var btn = e.currentTarget;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(TEMPLATE_CSV).then(
+        function () { flash(btn, "Copied"); },
+        function () { flash(btn, "Copy blocked"); }
+      );
+    } else {
+      flash(btn, "Copy unavailable");
+    }
+  });
+
+  document.querySelector("details.method").addEventListener("toggle", function (e) {
+    e.currentTarget.querySelector(".marker").textContent = e.currentTarget.open ? "−" : "+";
+  });
+
+  // Inside the homepage preview frame, drop our own masthead so the page
+  // does not appear to repeat the site header.
+  try {
+    if (window.self !== window.top) { $("app").classList.add("is-embedded"); }
+  } catch (err) {
+    $("app").classList.add("is-embedded");
+  }
+})();
+</script>
+</body>
+</html>
