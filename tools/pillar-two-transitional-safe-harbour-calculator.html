@@ -79,10 +79,25 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Embedded in the homepage preview frame the site header is already
-     above us, so the masthead would read as a duplicate. */
+  /* Embedded in the homepage preview frame we get roughly 540px of visible
+     height and no interaction, so the preview should lead with the output
+     rather than the introduction and an empty upload box. The site header is
+     already above us, so our masthead would read as a duplicate. */
   .p2.is-embedded .masthead,
-  .p2.is-embedded .backlink { display: none; }
+  .p2.is-embedded .backlink,
+  .p2.is-embedded .lead,
+  .p2.is-embedded .upload-panel,
+  .p2.is-embedded .method-panel,
+  .p2.is-embedded footer { display: none; }
+  .p2.is-embedded .intro { padding: 26px 0 0; }
+  .p2.is-embedded h1 { font-size: 30px; margin-bottom: 0; }
+  .p2.is-embedded .eyebrow { margin-bottom: 10px; }
+  .p2.is-embedded .stack { padding-top: 22px; gap: 18px; }
+  .p2.is-embedded main { padding-bottom: 0; }
+  .p2.is-embedded .tile dd { font-size: 34px; }
+  .p2.is-embedded .tile { padding: 16px 18px; }
+  .p2.is-embedded .tablehead { padding: 18px 26px 14px; }
+  .p2.is-embedded .tablehead .sub { display: none; }
 
   .p2 .wrap {
     max-width: 1220px;
@@ -744,7 +759,7 @@
       <div class="stack">
 
         <!-- Upload -->
-        <section class="panel panel-pad" aria-labelledby="h-upload">
+        <section class="panel panel-pad upload-panel" aria-labelledby="h-upload">
           <h2 id="h-upload">Your data</h2>
           <div id="dropWrap"></div>
 
@@ -798,7 +813,7 @@
         </section>
 
         <!-- Methodology -->
-        <section class="panel">
+        <section class="panel method-panel">
           <details class="method">
             <summary>
               <span>Methodology, rates and limitations</span>
