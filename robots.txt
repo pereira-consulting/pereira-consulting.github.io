@@ -1,3 +1,20 @@
 User-agent: *
 Allow: /
+
+# Deal Notes issues are unlisted rather than blocked. Each issue page carries a
+# noindex tag, and a crawler can only read that tag if it is allowed to fetch
+# the page, so /deal-notes/ is deliberately not disallowed for search engines.
+
+User-agent: GPTBot
+Disallow: /deal-notes/
+
+User-agent: CCBot
+Disallow: /deal-notes/
+
+User-agent: Google-Extended
+Disallow: /deal-notes/
+
+User-agent: anthropic-ai
+Disallow: /deal-notes/
+
 Sitemap: https://www.pereiraconsulting.com/sitemap.xml

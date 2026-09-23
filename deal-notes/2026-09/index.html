@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal Notes, Issue 01 | Pereira Consulting</title>
+<meta name="description" content="Tax on the way to a sale. Issue one: structure, and the restructure documents nobody reads until diligence.">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://www.pereiraconsulting.com/deal-notes/2026-09/">
+<link rel="icon" href="/assets/favicon.png">
+<meta name="theme-color" content="#1B2A4E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+  :root {
+    --paper: #FDFCFA; --paper-2: #F5F3EE; --ground: #EDEBE6;
+    --ink: #1A1D24; --ink-2: #33383F; --slate: #4A5568; --slate-soft: #8A8F99;
+    --navy: #1B2A4E; --navy-ink: #0F1A34; --teal: #0F766E; --teal-lift: #7FD3C7;
+    --rule: #D9DCE3; --rule-soft: #E7E4DE;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font-family: var(--serif); font-size: 17px; line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { color: #0B5A54; text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
+  .sheet { max-width: 760px; margin: 0 auto; background: var(--paper); border-left: 1px solid #E2DFD8; border-right: 1px solid #E2DFD8; }
+
+  /* masthead */
+  .band { background: var(--navy); padding: 34px 48px 30px; }
+  .band-meta { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; }
+  .band-meta .firm { color: var(--teal-lift); font-weight: 600; }
+  .band-meta .issue { color: #A7B4D0; font-weight: 500; letter-spacing: 0.14em; }
+  h1 { font-family: var(--serif); font-size: clamp(2.5rem, 8vw, 3.4rem); line-height: 1.02; font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF; margin: 14px 0 0; }
+  .band-sub { font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #A7B4D0; margin: 10px 0 0; }
+  .rule-teal { height: 3px; background: var(--teal); }
+
+  /* runway */
+  .runway { padding: 26px 48px 28px; border-bottom: 1px solid var(--rule-soft); }
+  .track { position: relative; }
+  .track-line, .track-fill { position: absolute; left: 0; top: 4px; height: 2px; }
+  .track-line { right: 0; background: var(--rule); }
+  .track-fill { background: var(--teal); transition: width 480ms cubic-bezier(0.65, 0, 0.35, 1); }
+  .stops { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .stop { position: relative; padding: 0 14px 0 0; background: none; border: 0; text-align: left; cursor: pointer; font: inherit; color: inherit; }
+  .dot { position: absolute; left: 0; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--rule); transition: background 240ms ease, transform 240ms cubic-bezier(0.2, 0.7, 0.3, 1); }
+  .stop:hover .dot, .stop:focus-visible .dot { transform: scale(1.45); }
+  .stop .name { display: block; font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #9AA0AA; margin-top: 22px; transition: color 200ms ease; }
+  .stop .when { display: block; font-family: var(--sans); font-size: 9.5px; color: var(--slate-soft); margin-top: 5px; }
+  .stop[aria-current="true"] .dot { background: var(--teal); }
+  .stop[aria-current="true"] .name { color: var(--navy-ink); font-weight: 700; }
+  .panel { margin-top: 26px; background: var(--paper-2); border-left: 3px solid var(--teal); padding: 20px 24px; }
+  .panel .kicker { font-family: var(--sans); font-size: 9.5px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); }
+  .panel .body { font-size: 16px; line-height: 1.55; color: var(--navy); margin: 8px 0 0; }
+  .panel .ask { font-family: var(--sans); font-size: 12.5px; line-height: 1.55; color: var(--slate); margin: 11px 0 0; }
+  .panel .ask b { color: var(--navy-ink); }
+  .panel-anim { animation: fade 340ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+
+  /* article */
+  .article { padding: 34px 48px 8px; }
+  .lede { font-size: 20px; line-height: 1.5; color: var(--navy); margin: 0; }
+  section { margin-top: 34px; }
+  .kicker { font-family: var(--sans); font-size: 9.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin: 0 0 9px; }
+  h2 { font-family: var(--serif); font-size: 1.4rem; line-height: 1.25; font-weight: 600; color: var(--navy-ink); margin: 0 0 11px; text-wrap: balance; }
+  p { margin: 0 0 14px; color: var(--ink-2); }
+  .quote { border-left: 2px solid var(--teal); padding: 4px 0 4px 20px; margin-top: 34px; }
+  .quote .q { font-size: 18px; line-height: 1.5; color: var(--navy); margin: 0; }
+  .quote .n { font-size: 15px; line-height: 1.55; color: var(--slate); margin: 10px 0 0; }
+
+  .cta { margin: 38px 48px 0; background: var(--navy); padding: 26px 28px; transition: transform 260ms cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 260ms ease; }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(27, 42, 78, 0.22); }
+  .cta p { color: #FFFFFF; font-size: 17px; line-height: 1.5; margin: 0; }
+  .cta .how { font-family: var(--sans); font-size: 12px; color: #AEBDDC; margin: 10px 0 0; }
+  .cta a { color: var(--teal-lift); }
+
+  footer { padding: 36px 48px 44px; }
+  .hr { height: 1px; background: var(--rule-soft); margin-bottom: 18px; }
+  .who { font-family: var(--sans); font-size: 14px; font-weight: 600; color: var(--navy-ink); margin: 0; }
+  .role { font-family: var(--sans); font-size: 12px; color: var(--slate); margin: 3px 0 0; }
+  .bio { font-size: 13.5px; line-height: 1.6; color: #6B7280; margin: 14px 0 0; }
+  .fine { font-size: 12.5px; line-height: 1.55; color: var(--slate-soft); margin: 14px 0 0; }
+  .fine.it { font-style: italic; }
+
+  .rise { animation: rise 640ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+  .d1 { animation-delay: 90ms; } .d2 { animation-delay: 200ms; } .d3 { animation-delay: 310ms; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  @media (max-width: 680px) {
+    body { font-size: 16.5px; }
+    .band, .runway, .article, footer { padding-left: 24px; padding-right: 24px; }
+    .cta { margin-left: 24px; margin-right: 24px; }
+    .stops { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 20px; }
+    .track-line, .track-fill { display: none; }
+    .stop { padding-left: 18px; padding-right: 8px; }
+    .stop .name { margin-top: 0; }
+    .dot { top: 3px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .rise, .panel-anim { animation: none; }
+    .dot, .track-fill, .cta, .stop .name { transition: none; }
+    .cta:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<main class="sheet">
+
+  <div class="band rise">
+    <div class="band-meta">
+      <span class="firm">Pereira Consulting</span>
+      <span class="issue">Issue 01 &middot; September 2026</span>
+    </div>
+    <h1>Deal Notes</h1>
+    <p class="band-sub">Tax on the way to a sale</p>
+  </div>
+  <div class="rule-teal"></div>
+
+  <div class="runway rise d1">
+    <div class="track">
+      <div class="track-line"></div>
+      <div class="track-fill" id="fill" style="width: 4px;"></div>
+      <div class="stops" id="stops"></div>
+    </div>
+    <div class="panel" id="panel" aria-live="polite"></div>
+  </div>
+
+  <div class="article">
+    <p class="lede rise d2">Most of the tax problems that surface in a sale process were created years earlier, usually in a restructure that nobody thought of as a tax event at the time.</p>
+
+    <section class="rise d3">
+      <p class="kicker">What changed</p>
+      <h2>Foreign shareholders, and a year of looking back</h2>
+      <p>From 1 October 2026 the principal asset test applies across the 365 days before a CGT event, rather than only at the moment of the event. If more than half the market value of a company&rsquo;s assets is attributable to Australian real property at any point in that year, a foreign resident holding a non-portfolio interest, broadly 10 per cent or more, may fall within the Australian capital gains net on a sale of those shares.</p>
+      <p>The amending Act is now law and applies to CGT events on or after 1 October. It also brings in a requirement for certain foreign resident vendors to notify the ATO when they declare that their shares are not indirect Australian real property interests, which is worth building into a sale timetable from the start.</p>
+      <p>The part worth raising with a client now is that a look back removes the ability to fix the answer by timing completion. If a property holding sat on the balance sheet nine months ago, moving the settlement date would no longer help.</p>
+    </section>
+
+    <section>
+      <p class="kicker">From the runway &middot; Structure</p>
+      <h2>When the step plan and the documents are not the same transaction</h2>
+      <p>Restructures where the plan and the executed documents describe different things come up more often than you would expect. The plan contemplates a scrip for scrip exchange. The documents paper an ordinary share transfer, or a step completes outside the window the rollover depended on. It tends not to be picked up at the time, because the people drafting the documents were not in the tax conversation and the people in the tax conversation never saw what was signed.</p>
+      <p>Rectification may be available, though it usually needs a court order and does not by itself settle the position with the Commissioner. Either way it is a good deal easier to look at two years out than during diligence, when the buyer&rsquo;s adviser has read the same documents you have.</p>
+    </section>
+
+    <div class="quote">
+      <p class="kicker">One question to ask your client</p>
+      <p class="q">&ldquo;Can I see the documents that papered your last restructure, rather than the advice that recommended it?&rdquo;</p>
+      <p class="n">If the step plan and the executed documents do not describe the same transaction, that is probably work to do now rather than in a process.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <p>Happy to spend thirty minutes on a target&rsquo;s structure before you commit to a process, at no charge for the first look.</p>
+    <p class="how">Email <a href="mailto:neil@pereiraconsulting.com">neil@pereiraconsulting.com</a>, or call 0414 354 586.</p>
+  </div>
+
+  <footer>
+    <div class="hr"></div>
+    <p class="who">Neil Pereira</p>
+    <p class="role">Managing Director, Pereira Consulting</p>
+    <p class="bio">Pereira Consulting is an independent tax advisory practice founded by Neil Pereira, advising multinational groups operating into and out of Australia on international tax, Pillar Two readiness, transfer pricing, anti-avoidance, ATO disputes and corporate income tax compliance. Neil is a Chartered Tax Adviser, Registered Tax Agent and Solicitor.</p>
+    <p class="fine">This is general commentary prepared for advisers, current as at the issue date. It is not advice, it does not take account of any particular circumstances, and no adviser and client relationship arises from it.</p>
+    <p class="fine it">Liability limited by a scheme approved under Professional Standards Legislation.</p>
+    <p class="fine"><a href="https://www.pereiraconsulting.com/" rel="noopener">www.pereiraconsulting.com</a></p>
+  </footer>
+
+</main>
+
+<script>
+(function () {
+  var STOPS = [
+    { id: 'structure', name: 'Structure', when: '24 months out',
+      note: 'Whether the group can do the deal the owners want, and whether the last restructure landed where the advice said it would.',
+      ask: 'Can I see the documents that papered your last restructure, rather than the advice that recommended it?' },
+    { id: 'documents', name: 'Documents', when: '18 months',
+      note: 'Shareholder loans, present entitlements, trust distributions and the deeds that sit behind them.',
+      ask: 'Show me the loan agreement. If it takes more than a day to produce, there is work to do.' },
+    { id: 'employees', name: 'Employees', when: '12 months',
+      note: 'Equity that was promised and never documented, superannuation, and contractors working across state lines.',
+      ask: 'Has anyone been promised shares or options in a conversation rather than in a plan document?' },
+    { id: 'positions', name: 'Positions', when: '6 months',
+      note: 'Research and development claims, transfer pricing files and provisions that a buyer will read closely.',
+      ask: 'Which positions in the last three returns would you not want to defend in front of a buyer?' },
+    { id: 'process', name: 'Process', when: 'In market',
+      note: 'Vendor due diligence, the tax warranties, the tax deed and what the buyer inherits at completion.',
+      ask: 'Who is going to own the tax warranties, and what has been disclosed against them?' }
+  ];
+
+  var stopsEl = document.getElementById('stops');
+  var panelEl = document.getElementById('panel');
+  var fillEl = document.getElementById('fill');
+  var active = 0;
+
+  STOPS.forEach(function (s, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'stop';
+    b.setAttribute('aria-current', i === 0 ? 'true' : 'false');
+    b.innerHTML = '<span class="dot"></span><span class="name">' + s.name + '</span><span class="when">' + s.when + '</span>';
+    b.addEventListener('click', function () { select(i); });
+    stopsEl.appendChild(b);
+  });
+
+  function select(i) {
+    active = i;
+    var kids = stopsEl.children;
+    for (var k = 0; k < kids.length; k++) {
+      kids[k].setAttribute('aria-current', k === i ? 'true' : 'false');
+      kids[k].querySelector('.dot').style.background = k <= i ? 'var(--teal)' : 'var(--rule)';
+    }
+    fillEl.style.width = 'calc(' + (i * 20) + '% + 5px)';
+    var s = STOPS[i];
+    panelEl.className = 'panel';
+    void panelEl.offsetWidth;
+    panelEl.className = 'panel panel-anim';
+    panelEl.innerHTML =
+      '<p class="kicker">' + s.name + ' &middot; ' + s.when + '</p>' +
+      '<p class="body">' + s.note + '</p>' +
+      '<p class="ask"><b>The question:</b> ' + s.ask + '</p>';
+    if (history.replaceState) { history.replaceState(null, '', '#' + s.id); }
+  }
+
+  var initial = 0;
+  if (window.location.hash) {
+    STOPS.forEach(function (s, i) { if ('#' + s.id === window.location.hash) { initial = i; } });
+  }
+  select(initial);
+})();
+</script>
+
+</body>
+</html>
