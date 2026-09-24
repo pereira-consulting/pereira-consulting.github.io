@@ -10,137 +10,235 @@
 <meta name="referrer" content="no-referrer">
 <link rel="canonical" href="https://www.pereiraconsulting.com/deal-notes/2026-09/">
 <link rel="icon" href="/assets/favicon.png">
-<meta name="theme-color" content="#1B2A4E">
+<meta name="theme-color" content="#231A19">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
 <style>
+  /* The four colours below are derived from this issue's photograph by
+     Kit/palette.py and are the only values that change between issues.
+     Contrast: white on accent 5.7:1, white on flag 5.1:1, black on badge 8.9:1,
+     badge-lift on accent 4.5:1. */
   :root {
-    --paper: #FDFCFA; --paper-2: #F5F3EE; --ground: #EDEBE6;
-    --ink: #1A1D24; --ink-2: #33383F; --slate: #4A5568; --slate-soft: #8A8F99;
-    --navy: #1B2A4E; --navy-ink: #0F1A34; --teal: #0F766E; --teal-lift: #7FD3C7;
-    --rule: #D9DCE3; --rule-soft: #E7E4DE;
-    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-    --sans: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --deep:   #231A19;
+    --accent: #8D5B36;
+    --badge:  #E7A81E;
+    --flag:   #C24127;
+    --badge-lift: #F7E3B7;   /* badge lightened until it clears 4.5:1 on accent */
+
+    --paper: #F6F2E9; --ink: #14120F; --ink-2: #2C2820; --muted: #6B6659;
+    --rule: #C9C2B3;
+    --display: Anton, Impact, "Arial Narrow Bold", sans-serif;
+    --title: "Playfair Display", Georgia, "Times New Roman", serif;
+    --cond: "Barlow Condensed", "Arial Narrow", Helvetica, sans-serif;
+    --body: Spectral, Georgia, "Times New Roman", serif;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0; background: var(--ground); color: var(--ink);
-    font-family: var(--serif); font-size: 17px; line-height: 1.62;
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--body); font-size: 17px; line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  a { color: var(--teal); text-decoration: none; }
-  a:hover { color: #0B5A54; text-decoration: underline; }
-  :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+  a { color: var(--flag); text-decoration: none; }
+  a:hover { color: var(--ink); text-decoration: underline; }
+  :focus-visible { outline: 3px solid var(--flag); outline-offset: 3px; }
+  .sheet { max-width: 900px; margin: 0 auto; background: var(--paper); }
 
-  .sheet { max-width: 760px; margin: 0 auto; background: var(--paper); border-left: 1px solid #E2DFD8; border-right: 1px solid #E2DFD8; }
+  /* hero: the photograph runs full bleed, the headline is reversed out of it.
+     The deep colour sits behind it so the page still reads if the image
+     never loads. */
+  .hero { position: relative; background: var(--deep);
+          min-height: 520px; display: flex; flex-direction: column; }
+  .hero-media { position: absolute; inset: 0; overflow: hidden; }
+  .hero-media img { width: 100%; height: 100%;
+                    object-fit: cover; object-position: center 42%; }
+  .scrim { position: absolute; inset: 0;
+           background: linear-gradient(to bottom,
+             rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.16) 24%,
+             rgba(0,0,0,0.34) 52%, rgba(0,0,0,0.80) 88%, rgba(0,0,0,0.90) 100%); }
+  .hero-in { position: relative; display: flex; flex-direction: column;
+             flex-grow: 1; padding: 22px 28px 30px; }
+  .masthead { display: flex; justify-content: space-between; align-items: center;
+              gap: 14px; flex-wrap: wrap;
+              font-family: var(--cond); font-size: 13px; font-weight: 700;
+              letter-spacing: 0.24em; text-transform: uppercase; color: #FFFFFF; }
+  .masthead .logo { font-family: var(--display); font-size: 30px;
+                    letter-spacing: 0.04em; font-weight: 400; }
+  .hero-foot { margin-top: auto; }
+  .tagbar { display: flex; flex-wrap: wrap; }
+  .tagbar .a { background: var(--flag); color: #FFFFFF; padding: 7px 14px 6px; }
+  .tagbar .b { background: rgba(255,255,255,0.16); color: #FFFFFF; padding: 7px 14px 6px; }
+  .tagbar span { font-family: var(--cond); font-size: 15px; font-weight: 700;
+                 letter-spacing: 0.18em; text-transform: uppercase; }
+  .kick { font-family: var(--title); font-style: italic; font-weight: 900;
+          font-size: clamp(1.7rem, 5.2vw, 2.9rem); line-height: 1;
+          color: var(--badge); margin: 14px 0 0; }
+  .hed { font-family: var(--display); font-weight: 400;
+         font-size: clamp(3.4rem, 13vw, 7.2rem); line-height: 0.84;
+         letter-spacing: -0.02em; text-transform: uppercase;
+         color: #FFFFFF; margin: 4px 0 0 -0.04em; }
+  .stat { position: absolute; z-index: 3; right: 28px; bottom: -44px;
+          width: 150px; height: 150px; border-radius: 50%;
+          background: var(--badge); color: var(--ink);
+          display: flex; flex-direction: column; align-items: center;
+          justify-content: center; text-align: center;
+          box-shadow: 0 0 0 7px var(--paper); }
+  .stat .n { font-family: var(--display); font-size: 50px; line-height: 0.9; }
+  .stat .l { font-family: var(--cond); font-size: 12px; font-weight: 700;
+             letter-spacing: 0.14em; text-transform: uppercase; margin-top: 3px; }
 
-  /* masthead */
-  .band { background: var(--navy); padding: 34px 48px 30px; }
-  .band-meta { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; }
-  .band-meta .firm { color: var(--teal-lift); font-weight: 600; }
-  .band-meta .issue { color: #A7B4D0; font-weight: 500; letter-spacing: 0.14em; }
-  h1 { font-family: var(--serif); font-size: clamp(2.5rem, 8vw, 3.4rem); line-height: 1.02; font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF; margin: 14px 0 0; }
-  .band-sub { font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #A7B4D0; margin: 10px 0 0; }
-  .rule-teal { height: 3px; background: var(--teal); }
-
-  /* runway */
-  .runway { padding: 26px 48px 28px; border-bottom: 1px solid var(--rule-soft); }
-  .track { position: relative; }
-  .track-line, .track-fill { position: absolute; left: 0; top: 4px; height: 2px; }
-  .track-line { right: 0; background: var(--rule); }
-  .track-fill { background: var(--teal); transition: width 480ms cubic-bezier(0.65, 0, 0.35, 1); }
-  .stops { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
-  .stop { position: relative; padding: 0 14px 0 0; background: none; border: 0; text-align: left; cursor: pointer; font: inherit; color: inherit; }
-  .dot { position: absolute; left: 0; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--rule); transition: background 240ms ease, transform 240ms cubic-bezier(0.2, 0.7, 0.3, 1); }
-  .stop:hover .dot, .stop:focus-visible .dot { transform: scale(1.45); }
-  .stop .name { display: block; font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #9AA0AA; margin-top: 22px; transition: color 200ms ease; }
-  .stop .when { display: block; font-family: var(--sans); font-size: 9.5px; color: var(--slate-soft); margin-top: 5px; }
-  .stop[aria-current="true"] .dot { background: var(--teal); }
-  .stop[aria-current="true"] .name { color: var(--navy-ink); font-weight: 700; }
-  .panel { margin-top: 26px; background: var(--paper-2); border-left: 3px solid var(--teal); padding: 20px 24px; }
-  .panel .kicker { font-family: var(--sans); font-size: 9.5px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); }
-  .panel .body { font-size: 16px; line-height: 1.55; color: var(--navy); margin: 8px 0 0; }
-  .panel .ask { font-family: var(--sans); font-size: 12.5px; line-height: 1.55; color: var(--slate); margin: 11px 0 0; }
-  .panel .ask b { color: var(--navy-ink); }
-  .panel-anim { animation: fade 340ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+  /* scoreboard */
+  .score { background: var(--accent); color: #FFFFFF;
+           display: flex; align-items: stretch;
+           padding: 12px 186px 12px 28px; }
+  .score span { font-family: var(--cond); font-size: 13.5px; font-weight: 700;
+                letter-spacing: 0.09em; text-transform: uppercase;
+                white-space: nowrap; padding: 0 13px; }
+  .score span:first-child { padding-left: 0; }
+  .score span + span { border-left: 1px solid rgba(255,255,255,0.38); }
 
   /* article */
-  .article { padding: 34px 48px 8px; }
-  .lede { font-size: 20px; line-height: 1.5; color: var(--navy); margin: 0; }
-  section { margin-top: 34px; }
-  .kicker { font-family: var(--sans); font-size: 9.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin: 0 0 9px; }
-  h2 { font-family: var(--serif); font-size: 1.4rem; line-height: 1.25; font-weight: 600; color: var(--navy-ink); margin: 0 0 11px; text-wrap: balance; }
+  .wrap { padding: 34px 28px 0; }
+  .lede { font-family: var(--cond); font-size: clamp(1.15rem, 3.2vw, 1.5rem);
+          font-weight: 600; line-height: 1.2; text-transform: uppercase;
+          color: var(--ink); margin: 0; max-width: 46ch; }
+  section { margin-top: 32px; }
+  .kicker { font-family: var(--cond); font-size: 13px; font-weight: 700;
+            letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--muted); margin: 0 0 6px; }
+  h2 { font-family: var(--title); font-size: 1.5rem; line-height: 1.2;
+       font-weight: 700; color: var(--flag); margin: 0 0 10px;
+       text-wrap: balance; }
   p { margin: 0 0 14px; color: var(--ink-2); }
-  .quote { border-left: 2px solid var(--teal); padding: 4px 0 4px 20px; margin-top: 34px; }
-  .quote .q { font-size: 18px; line-height: 1.5; color: var(--navy); margin: 0; }
-  .quote .n { font-size: 15px; line-height: 1.55; color: var(--slate); margin: 10px 0 0; }
 
-  .cta { margin: 38px 48px 0; background: var(--navy); padding: 26px 28px; transition: transform 260ms cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 260ms ease; }
-  .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(27, 42, 78, 0.22); }
-  .cta p { color: #FFFFFF; font-size: 17px; line-height: 1.5; margin: 0; }
-  .cta .how { font-family: var(--sans); font-size: 12px; color: #AEBDDC; margin: 10px 0 0; }
-  .cta a { color: var(--teal-lift); }
+  .quote { border-left: 5px solid var(--flag); padding: 2px 0 2px 20px;
+           margin-top: 34px; }
+  .quote .q { font-family: var(--title); font-style: italic; font-weight: 700;
+              font-size: 1.35rem; line-height: 1.35; color: var(--ink);
+              margin: 6px 0 0; }
+  .quote .n { font-size: 15.5px; line-height: 1.5; color: var(--ink-2);
+              margin: 10px 0 0; }
 
-  footer { padding: 36px 48px 44px; }
-  .hr { height: 1px; background: var(--rule-soft); margin-bottom: 18px; }
-  .who { font-family: var(--sans); font-size: 14px; font-weight: 600; color: var(--navy-ink); margin: 0; }
-  .role { font-family: var(--sans); font-size: 12px; color: var(--slate); margin: 3px 0 0; }
-  .bio { font-size: 13.5px; line-height: 1.6; color: #6B7280; margin: 14px 0 0; }
-  .fine { font-size: 12.5px; line-height: 1.55; color: var(--slate-soft); margin: 14px 0 0; }
+  /* the runway */
+  .runway { margin-top: 38px; border-top: 4px solid var(--ink);
+            padding-top: 16px; }
+  .runway-h { font-family: var(--cond); font-size: 14px; font-weight: 700;
+              letter-spacing: 0.2em; text-transform: uppercase;
+              color: var(--ink); margin: 0 0 16px; }
+  .stops { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+           gap: 10px; }
+  .stop { background: none; border: 0; border-top: 4px solid var(--rule);
+          padding: 9px 8px 0 0; text-align: left; cursor: pointer;
+          font: inherit; color: inherit; }
+  .stop .name { display: block; font-family: var(--cond); font-size: 15px;
+                font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+                color: var(--muted); }
+  .stop .when { display: block; font-family: var(--cond); font-size: 13px;
+                font-weight: 500; color: var(--muted); margin-top: 2px; }
+  .stop[aria-current="true"] { border-top-color: var(--accent); }
+  .stop[aria-current="true"] .name { color: var(--accent); }
+  .panel { margin-top: 18px; background: var(--accent); color: #FFFFFF;
+           padding: 20px 22px 22px; }
+  .panel .pk { font-family: var(--title); font-style: italic; font-weight: 700;
+               font-size: 1.5rem; line-height: 1; color: var(--badge-lift); margin: 0; }
+  .panel .pbar { height: 3px; background: var(--badge-lift); margin: 11px 0 13px; }
+  .panel .body { font-size: 16px; line-height: 1.5; margin: 0; color: #F3EEE4; }
+  .panel .ask { font-family: var(--cond); font-size: 16px; line-height: 1.4;
+                margin: 12px 0 0; color: #FFFFFF; }
+  .panel .ask b { font-weight: 700; letter-spacing: 0.1em;
+                  text-transform: uppercase; font-size: 14px; }
+
+  /* offer */
+  .cta { margin-top: 38px; display: flex; flex-wrap: wrap; }
+  .cta .l { flex: 1 1 340px; background: var(--ink); color: var(--paper);
+            padding: 22px 24px; }
+  .cta .l p { color: var(--paper); font-size: 17px; line-height: 1.45; margin: 0; }
+  .cta .r { flex: 0 1 260px; background: var(--flag); color: #FFFFFF;
+            padding: 20px 22px 22px; }
+  .cta .r .big { font-family: var(--display); font-size: 36px; line-height: 0.95; }
+  .cta .r p { color: #FFFFFF; font-size: 15px; line-height: 1.4; margin: 7px 0 0; }
+  .cta .r a { color: #FFFFFF; text-decoration: underline; }
+  .cta .r .contact { font-family: var(--cond); font-size: 15px; font-weight: 700;
+                     margin-top: 9px; line-height: 1.4; }
+
+  footer { padding: 34px 28px 46px; }
+  .hr { height: 1px; background: var(--rule); margin-bottom: 18px; }
+  .who { font-family: var(--cond); font-size: 18px; font-weight: 700;
+         letter-spacing: 0.06em; text-transform: uppercase;
+         color: var(--ink); margin: 0; }
+  .role { font-family: var(--cond); font-size: 15px; color: var(--muted); margin: 2px 0 0; }
+  .bio { font-size: 13.5px; line-height: 1.55; color: #6B6659; margin: 14px 0 0; }
+  .fine { font-size: 12.5px; line-height: 1.5; color: var(--muted); margin: 13px 0 0; }
   .fine.it { font-style: italic; }
+  .folio { display: flex; justify-content: space-between; align-items: baseline;
+           border-top: 1px solid var(--rule); margin-top: 22px; padding-top: 12px;
+           font-family: var(--cond); font-size: 13px; font-weight: 600;
+           letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+           gap: 12px; flex-wrap: wrap; }
 
-  .rise { animation: rise 640ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
-  .d1 { animation-delay: 90ms; } .d2 { animation-delay: 200ms; } .d3 { animation-delay: 310ms; }
-  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-
-  @media (max-width: 680px) {
+  @media (max-width: 700px) {
     body { font-size: 16.5px; }
-    .band, .runway, .article, footer { padding-left: 24px; padding-right: 24px; }
-    .cta { margin-left: 24px; margin-right: 24px; }
-    .stops { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 20px; }
-    .track-line, .track-fill { display: none; }
-    .stop { padding-left: 18px; padding-right: 8px; }
-    .stop .name { margin-top: 0; }
-    .dot { top: 3px; }
+    .hero { min-height: 430px; }
+    .hero-in, .score, .wrap, footer { padding-left: 16px; padding-right: 16px; }
+    .masthead { font-size: 11px; letter-spacing: 0.16em; }
+    .masthead .logo { font-size: 24px; }
+    .stat { width: 108px; height: 108px; right: 16px; bottom: -34px;
+            box-shadow: 0 0 0 5px var(--paper); }
+    .stat .n { font-size: 36px; }
+    .stat .l { font-size: 10px; }
+    .hed { max-width: 7ch; }
+    .score { flex-wrap: wrap; padding: 10px 16px 12px; }
+    .score span { font-size: 12.5px; letter-spacing: 0.08em;
+                  flex: 0 0 100%; padding: 3px 0; white-space: normal; }
+    .score span + span { border-left: 0; border-top: 1px solid rgba(255,255,255,0.28); }
+    .stops { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cta .l, .cta .r { flex: 1 1 100%; }
   }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .rise, .panel-anim { animation: none; }
-    .dot, .track-fill, .cta, .stop .name { transition: none; }
-    .cta:hover { transform: none; }
-  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
 
 <main class="sheet">
 
-  <div class="band rise">
-    <div class="band-meta">
-      <span class="firm">Pereira Consulting</span>
-      <span class="issue">Issue 01 &middot; September 2026</span>
+  <div class="hero">
+    <div class="hero-media">
+      <img src="tower.jpg" alt="An office tower at night with most of its floors still lit.">
+      <div class="scrim"></div>
     </div>
-    <h1>Deal Notes</h1>
-    <p class="band-sub">Tax on the way to a sale</p>
-  </div>
-  <div class="rule-teal"></div>
-
-  <div class="runway rise d1">
-    <div class="track">
-      <div class="track-line"></div>
-      <div class="track-fill" id="fill" style="width: 4px;"></div>
-      <div class="stops" id="stops"></div>
+    <div class="hero-in">
+      <div class="masthead">
+        <span>Pereira Consulting</span>
+        <span class="logo">Deal Notes</span>
+        <span>Issue 01 &nbsp;&middot;&nbsp; September 2026</span>
+      </div>
+      <div class="hero-foot">
+        <div class="tagbar">
+          <span class="a">Stop 01 &nbsp;Structure</span>
+          <span class="b">24 months out</span>
+        </div>
+        <p class="kick">The year that</p>
+        <p class="hed">Looks back</p>
+      </div>
     </div>
-    <div class="panel" id="panel" aria-live="polite"></div>
+    <div class="stat">
+      <span class="n">365</span>
+      <span class="l">days of<br>look back</span>
+    </div>
   </div>
 
-  <div class="article">
-    <p class="lede rise d2">Most of the tax problems that surface in a sale process were created years earlier, usually in a restructure that nobody thought of as a tax event at the time.</p>
+  <div class="score">
+    <span>365 days tested</span>
+    <span>More than 50% in Australian real property</span>
+    <span>10% non&#8209;portfolio</span>
+    <span>In force 1 Oct</span>
+  </div>
 
-    <section class="rise d3">
+  <div class="wrap">
+    <p class="lede">Most of the tax problems that surface in a sale process were created years earlier, usually in a restructure that nobody thought of as a tax event at the time.</p>
+
+    <section>
       <p class="kicker">What changed</p>
       <h2>Foreign shareholders, and a year of looking back</h2>
       <p>From 1 October 2026 the principal asset test applies across the 365 days before a CGT event, rather than only at the moment of the event. If more than half the market value of a company&rsquo;s assets is attributable to Australian real property at any point in that year, a foreign resident holding a non-portfolio interest, broadly 10 per cent or more, may fall within the Australian capital gains net on a sale of those shares.</p>
@@ -160,11 +258,23 @@
       <p class="q">&ldquo;Can I see the documents that papered your last restructure, rather than the advice that recommended it?&rdquo;</p>
       <p class="n">If the step plan and the executed documents do not describe the same transaction, that is probably work to do now rather than in a process.</p>
     </div>
-  </div>
 
-  <div class="cta">
-    <p>Happy to spend thirty minutes on a target&rsquo;s structure before you commit to a process, at no charge for the first look.</p>
-    <p class="how">Email <a href="mailto:neil@pereiraconsulting.com">neil@pereiraconsulting.com</a>, or call 0414 354 586.</p>
+    <div class="runway">
+      <p class="runway-h">The runway &middot; five stops</p>
+      <div class="stops" id="stops"></div>
+      <div class="panel" id="panel" aria-live="polite"></div>
+    </div>
+
+    <div class="cta">
+      <div class="l">
+        <p>Happy to spend thirty minutes on a target&rsquo;s structure before you commit to a process, at no charge for the first look.</p>
+      </div>
+      <div class="r">
+        <div class="big">30 min</div>
+        <p>No charge for the first look.</p>
+        <p class="contact"><a href="mailto:neil@pereiraconsulting.com">neil@pereiraconsulting.com</a><br>0414 354 586</p>
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -175,6 +285,10 @@
     <p class="fine">This is general commentary prepared for advisers, current as at the issue date. It is not advice, it does not take account of any particular circumstances, and no adviser and client relationship arises from it.</p>
     <p class="fine it">Liability limited by a scheme approved under Professional Standards Legislation.</p>
     <p class="fine"><a href="https://www.pereiraconsulting.com/" rel="noopener">www.pereiraconsulting.com</a></p>
+    <div class="folio">
+      <span>Pereira Consulting &nbsp;&middot;&nbsp; Deal Notes &nbsp;N&deg;01</span>
+      <span>Next: 27 October, Documents</span>
+    </div>
   </footer>
 
 </main>
@@ -201,33 +315,26 @@
 
   var stopsEl = document.getElementById('stops');
   var panelEl = document.getElementById('panel');
-  var fillEl = document.getElementById('fill');
-  var active = 0;
 
   STOPS.forEach(function (s, i) {
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'stop';
     b.setAttribute('aria-current', i === 0 ? 'true' : 'false');
-    b.innerHTML = '<span class="dot"></span><span class="name">' + s.name + '</span><span class="when">' + s.when + '</span>';
+    b.innerHTML = '<span class="name">' + s.name + '</span><span class="when">' + s.when + '</span>';
     b.addEventListener('click', function () { select(i); });
     stopsEl.appendChild(b);
   });
 
   function select(i) {
-    active = i;
     var kids = stopsEl.children;
     for (var k = 0; k < kids.length; k++) {
       kids[k].setAttribute('aria-current', k === i ? 'true' : 'false');
-      kids[k].querySelector('.dot').style.background = k <= i ? 'var(--teal)' : 'var(--rule)';
     }
-    fillEl.style.width = 'calc(' + (i * 20) + '% + 5px)';
     var s = STOPS[i];
-    panelEl.className = 'panel';
-    void panelEl.offsetWidth;
-    panelEl.className = 'panel panel-anim';
     panelEl.innerHTML =
-      '<p class="kicker">' + s.name + ' &middot; ' + s.when + '</p>' +
+      '<p class="pk">' + s.name + '</p>' +
+      '<div class="pbar"></div>' +
       '<p class="body">' + s.note + '</p>' +
       '<p class="ask"><b>The question:</b> ' + s.ask + '</p>';
     if (history.replaceState) { history.replaceState(null, '', '#' + s.id); }
