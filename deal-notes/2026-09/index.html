@@ -10,277 +10,252 @@
 <meta name="referrer" content="no-referrer">
 <link rel="canonical" href="https://www.pereiraconsulting.com/deal-notes/2026-09/">
 <link rel="icon" href="/assets/favicon.png">
-<meta name="theme-color" content="#231A19">
+<meta name="theme-color" content="#CE2D10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
 <style>
-  /* The four colours below are derived from this issue's photograph by
-     Kit/palette.py and are the only values that change between issues.
-     Contrast: white on accent 5.7:1, white on flag 5.1:1, black on badge 8.9:1,
-     badge-lift on accent 4.5:1. */
+  /* Deal Notes signature: vermilion #CE2D10, fixed, never derived from the
+     image and never changed between issues. Everything else is the firm
+     palette. White on vermilion is 5.24:1. */
   :root {
-    --deep:   #231A19;
-    --accent: #8D5B36;
-    --badge:  #E7A81E;
-    --flag:   #C24127;
-    --badge-lift: #F7E3B7;   /* badge lightened until it clears 4.5:1 on accent */
-
-    --paper: #F6F2E9; --ink: #14120F; --ink-2: #2C2820; --muted: #6B6659;
-    --rule: #C9C2B3;
-    --display: Anton, Impact, "Arial Narrow Bold", sans-serif;
-    --title: "Playfair Display", Georgia, "Times New Roman", serif;
-    --cond: "Barlow Condensed", "Arial Narrow", Helvetica, sans-serif;
-    --body: Spectral, Georgia, "Times New Roman", serif;
+    --signal: #CE2D10;
+    --paper: #FDFCFA;
+    --ink: #111418;
+    --ink-2: #33383F;
+    --deep: #0B0D10;
+    --slate: #4A5568;
+    --slate-soft: #6B7280;
+    --rule: #D9DCE3;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: Inter, "Segoe UI", Helvetica, Arial, sans-serif;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body {
-    margin: 0; background: var(--paper); color: var(--ink);
-    font-family: var(--body); font-size: 17px; line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--flag); text-decoration: none; }
-  a:hover { color: var(--ink); text-decoration: underline; }
-  :focus-visible { outline: 3px solid var(--flag); outline-offset: 3px; }
-  .sheet { max-width: 900px; margin: 0 auto; background: var(--paper); }
+  body { margin: 0; background: #E8E6E1; font-family: var(--serif);
+         color: var(--ink); font-size: 17px; line-height: 1.6;
+         -webkit-font-smoothing: antialiased; }
+  .sheet { max-width: 1000px; margin: 0 auto; background: var(--paper); }
+  a { color: var(--signal); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; }
 
-  /* hero: the photograph runs full bleed, the headline is reversed out of it.
-     The deep colour sits behind it so the page still reads if the image
-     never loads. */
-  .hero { position: relative; background: var(--deep);
-          min-height: 520px; display: flex; flex-direction: column; }
-  .hero-media { position: absolute; inset: 0; overflow: hidden; }
-  .hero-media img { width: 100%; height: 100%;
-                    object-fit: cover; object-position: center 42%; }
-  .scrim { position: absolute; inset: 0;
-           background: linear-gradient(to bottom,
-             rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.16) 24%,
-             rgba(0,0,0,0.34) 52%, rgba(0,0,0,0.80) 88%, rgba(0,0,0,0.90) 100%); }
-  .hero-in { position: relative; display: flex; flex-direction: column;
-             flex-grow: 1; padding: 22px 28px 30px; }
-  .masthead { display: flex; justify-content: space-between; align-items: center;
-              gap: 14px; flex-wrap: wrap;
-              font-family: var(--cond); font-size: 13px; font-weight: 700;
-              letter-spacing: 0.24em; text-transform: uppercase; color: #FFFFFF; }
-  .masthead .logo { font-family: var(--display); font-size: 30px;
-                    letter-spacing: 0.04em; font-weight: 400; }
-  .hero-foot { margin-top: auto; }
-  .tagbar { display: flex; flex-wrap: wrap; }
-  .tagbar .a { background: var(--flag); color: #FFFFFF; padding: 7px 14px 6px; }
-  .tagbar .b { background: rgba(255,255,255,0.16); color: #FFFFFF; padding: 7px 14px 6px; }
-  .tagbar span { font-family: var(--cond); font-size: 15px; font-weight: 700;
-                 letter-spacing: 0.18em; text-transform: uppercase; }
-  .kick { font-family: var(--title); font-style: italic; font-weight: 900;
-          font-size: clamp(1.7rem, 5.2vw, 2.9rem); line-height: 1;
-          color: var(--badge); margin: 14px 0 0; }
-  .hed { font-family: var(--display); font-weight: 400;
-         font-size: clamp(3.4rem, 13vw, 7.2rem); line-height: 0.84;
-         letter-spacing: -0.02em; text-transform: uppercase;
-         color: #FFFFFF; margin: 4px 0 0 -0.04em; }
-  .stat { position: absolute; z-index: 3; right: 28px; bottom: -44px;
-          width: 150px; height: 150px; border-radius: 50%;
-          background: var(--badge); color: var(--ink);
-          display: flex; flex-direction: column; align-items: center;
-          justify-content: center; text-align: center;
-          box-shadow: 0 0 0 7px var(--paper); }
-  .stat .n { font-family: var(--display); font-size: 50px; line-height: 0.9; }
-  .stat .l { font-family: var(--cond); font-size: 12px; font-weight: 700;
-             letter-spacing: 0.14em; text-transform: uppercase; margin-top: 3px; }
+  .top { border-top: 3px solid var(--ink); }
+  .mast { display: flex; flex-wrap: wrap; justify-content: space-between;
+          align-items: baseline; gap: 16px; padding: 14px 40px 12px;
+          border-bottom: 1px solid var(--rule); }
+  .mast .firm, .mast .meta { font-family: var(--sans); font-size: 10px;
+          font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
+          color: var(--slate-soft); flex: 1; }
+  .mast .meta { text-align: right; }
+  .mast .logo { font-family: var(--serif); font-weight: 600; font-size: 30px;
+          letter-spacing: 0.02em; color: var(--deep); white-space: nowrap; }
 
-  /* scoreboard */
-  .score { background: var(--accent); color: #FFFFFF;
-           display: flex; align-items: stretch;
-           padding: 12px 186px 12px 28px; }
-  .score span { font-family: var(--cond); font-size: 13.5px; font-weight: 700;
-                letter-spacing: 0.09em; text-transform: uppercase;
-                white-space: nowrap; padding: 0 13px; }
-  .score span:first-child { padding-left: 0; }
-  .score span + span { border-left: 1px solid rgba(255,255,255,0.38); }
+  .hero { position: relative; }
+  .hero-media { position: relative; overflow: hidden; background: var(--deep); }
+  .hero img { display: block; width: 100%; height: 470px; object-fit: cover;
+              object-position: center 44%; }
+  .veil { position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(11,13,16,0.88) 0%,
+                  rgba(11,13,16,0.54) 44%, rgba(11,13,16,0.10) 74%); }
+  .words { position: absolute; left: 40px; right: 40px; bottom: 30px; }
+  .eyebrow { font-family: var(--sans); font-size: 10px; font-weight: 700;
+             letter-spacing: 0.3em; text-transform: uppercase; color: #FFFFFF;
+             margin: 0 0 18px; display: flex; align-items: center; gap: 14px; }
+  .eyebrow i { display: block; width: 34px; height: 2px; flex: 0 0 34px;
+               background: var(--signal); }
+  .hed { font-family: var(--serif); font-weight: 600; font-size: 78px;
+         line-height: 0.98; letter-spacing: -0.02em; color: #FFFFFF;
+         margin: 0; max-width: 16ch; }
+  .standfirst { font-size: 19px; line-height: 1.45; color: #E4E1DC;
+         margin: 14px 0 0; max-width: 62ch; }
 
-  /* article */
-  .wrap { padding: 34px 28px 0; }
-  .lede { font-family: var(--cond); font-size: clamp(1.15rem, 3.2vw, 1.5rem);
-          font-weight: 600; line-height: 1.2; text-transform: uppercase;
-          color: var(--ink); margin: 0; max-width: 46ch; }
-  section { margin-top: 32px; }
-  .kicker { font-family: var(--cond); font-size: 13px; font-weight: 700;
-            letter-spacing: 0.2em; text-transform: uppercase;
-            color: var(--muted); margin: 0 0 6px; }
-  h2 { font-family: var(--title); font-size: 1.5rem; line-height: 1.2;
-       font-weight: 700; color: var(--flag); margin: 0 0 10px;
-       text-wrap: balance; }
-  p { margin: 0 0 14px; color: var(--ink-2); }
+  /* the single flat colour field on the page */
+  .figs { display: grid; grid-template-columns: repeat(4, 1fr);
+          background: var(--signal); }
+  .fig { padding: 22px 22px 20px 40px;
+         border-left: 1px solid rgba(255,255,255,0.28); }
+  .fig:first-child { border-left: 0; }
+  .fig .n { font-family: var(--serif); font-weight: 600; font-size: 36px;
+            line-height: 1; color: #FFFFFF; letter-spacing: -0.02em; }
+  .fig .l { font-family: var(--sans); font-size: 9.5px; font-weight: 600;
+            letter-spacing: 0.16em; text-transform: uppercase;
+            color: rgba(255,255,255,0.86); margin-top: 7px; line-height: 1.5; }
 
-  .quote { border-left: 5px solid var(--flag); padding: 2px 0 2px 20px;
-           margin-top: 34px; }
-  .quote .q { font-family: var(--title); font-style: italic; font-weight: 700;
-              font-size: 1.35rem; line-height: 1.35; color: var(--ink);
-              margin: 6px 0 0; }
-  .quote .n { font-size: 15.5px; line-height: 1.5; color: var(--ink-2);
-              margin: 10px 0 0; }
+  .body { display: grid; grid-template-columns: 1fr 292px; gap: 46px;
+          padding: 34px 40px 0; }
+  .lede { font-size: 22px; line-height: 1.42; color: var(--deep); margin: 0 0 26px; }
+  .kicker { font-family: var(--sans); font-size: 9.5px; font-weight: 700;
+            letter-spacing: 0.24em; text-transform: uppercase;
+            color: var(--signal); margin: 0 0 8px; }
+  h2 { font-family: var(--serif); font-size: 25px; line-height: 1.2;
+       font-weight: 600; color: var(--deep); margin: 0 0 10px; text-wrap: balance; }
+  section { margin-top: 26px; }
+  p { margin: 0 0 13px; color: var(--ink-2); }
 
-  /* the runway */
-  .runway { margin-top: 38px; border-top: 4px solid var(--ink);
-            padding-top: 16px; }
-  .runway-h { font-family: var(--cond); font-size: 14px; font-weight: 700;
-              letter-spacing: 0.2em; text-transform: uppercase;
-              color: var(--ink); margin: 0 0 16px; }
-  .stops { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
-           gap: 10px; }
-  .stop { background: none; border: 0; border-top: 4px solid var(--rule);
-          padding: 9px 8px 0 0; text-align: left; cursor: pointer;
-          font: inherit; color: inherit; }
-  .stop .name { display: block; font-family: var(--cond); font-size: 15px;
-                font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-                color: var(--muted); }
-  .stop .when { display: block; font-family: var(--cond); font-size: 13px;
-                font-weight: 500; color: var(--muted); margin-top: 2px; }
-  .stop[aria-current="true"] { border-top-color: var(--accent); }
-  .stop[aria-current="true"] .name { color: var(--accent); }
-  .panel { margin-top: 18px; background: var(--accent); color: #FFFFFF;
-           padding: 20px 22px 22px; }
-  .panel .pk { font-family: var(--title); font-style: italic; font-weight: 700;
-               font-size: 1.5rem; line-height: 1; color: var(--badge-lift); margin: 0; }
-  .panel .pbar { height: 3px; background: var(--badge-lift); margin: 11px 0 13px; }
-  .panel .body { font-size: 16px; line-height: 1.5; margin: 0; color: #F3EEE4; }
-  .panel .ask { font-family: var(--cond); font-size: 16px; line-height: 1.4;
-                margin: 12px 0 0; color: #FFFFFF; }
-  .panel .ask b { font-weight: 700; letter-spacing: 0.1em;
-                  text-transform: uppercase; font-size: 14px; }
+  aside { border-top: 2px solid var(--ink); padding-top: 14px; }
+  aside h3 { font-family: var(--sans); font-size: 9.5px; font-weight: 700;
+             letter-spacing: 0.24em; text-transform: uppercase;
+             color: var(--deep); margin: 0 0 14px; }
+  .ask { border-top: 1px solid var(--rule); padding: 11px 0 0; margin-top: 11px; }
+  .ask:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+  .ask .t { font-family: var(--sans); font-size: 10px; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--signal); margin: 0 0 3px; }
+  .ask .d { font-size: 14.5px; line-height: 1.45; color: var(--ink-2); margin: 0; }
 
-  /* offer */
-  .cta { margin-top: 38px; display: flex; flex-wrap: wrap; }
-  .cta .l { flex: 1 1 340px; background: var(--ink); color: var(--paper);
-            padding: 22px 24px; }
-  .cta .l p { color: var(--paper); font-size: 17px; line-height: 1.45; margin: 0; }
-  .cta .r { flex: 0 1 260px; background: var(--flag); color: #FFFFFF;
-            padding: 20px 22px 22px; }
-  .cta .r .big { font-family: var(--display); font-size: 36px; line-height: 0.95; }
-  .cta .r p { color: #FFFFFF; font-size: 15px; line-height: 1.4; margin: 7px 0 0; }
-  .cta .r a { color: #FFFFFF; text-decoration: underline; }
-  .cta .r .contact { font-family: var(--cond); font-size: 15px; font-weight: 700;
-                     margin-top: 9px; line-height: 1.4; }
+  .pull { border-top: 2px solid var(--ink); padding: 14px 0 0; margin-top: 30px; }
+  .pull .q { font-family: var(--serif); font-style: italic; font-size: 19px;
+             line-height: 1.32; color: var(--deep); margin: 6px 0 0; }
+  .pull .n { font-size: 13.5px; line-height: 1.5; color: var(--slate); margin: 10px 0 0; }
 
-  footer { padding: 34px 28px 46px; }
-  .hr { height: 1px; background: var(--rule); margin-bottom: 18px; }
-  .who { font-family: var(--cond); font-size: 18px; font-weight: 700;
-         letter-spacing: 0.06em; text-transform: uppercase;
-         color: var(--ink); margin: 0; }
-  .role { font-family: var(--cond); font-size: 15px; color: var(--muted); margin: 2px 0 0; }
-  .bio { font-size: 13.5px; line-height: 1.55; color: #6B6659; margin: 14px 0 0; }
-  .fine { font-size: 12.5px; line-height: 1.5; color: var(--muted); margin: 13px 0 0; }
+  .runway { margin: 34px 40px 0; border-top: 2px solid var(--ink); padding-top: 13px; }
+  .runway h3 { font-family: var(--sans); font-size: 9.5px; font-weight: 700;
+               letter-spacing: 0.24em; text-transform: uppercase;
+               color: var(--deep); margin: 0 0 14px; }
+  .stops { display: grid; grid-template-columns: repeat(5, 1fr); }
+  .stop { background: none; border: 0; border-left: 1px solid var(--rule);
+          padding: 0 16px; text-align: left; cursor: pointer; font: inherit;
+          color: inherit; }
+  .stop:first-child { border-left: 0; padding-left: 0; }
+  .stop .n { display: block; font-family: var(--sans); font-size: 9.5px;
+             font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+             color: var(--slate-soft); }
+  .stop .w { display: block; font-family: var(--serif); font-size: 15px;
+             color: var(--deep); margin-top: 3px; }
+  .stop .d { display: block; font-size: 13.5px; line-height: 1.4;
+             color: var(--slate); margin-top: 4px; }
+  .stop[aria-current="true"] .n { color: var(--signal); }
+  .panel { margin-top: 18px; border-top: 1px solid var(--rule);
+           border-bottom: 1px solid var(--rule); padding: 16px 0 18px; }
+  .panel .pk { font-family: var(--sans); font-size: 9.5px; font-weight: 700;
+               letter-spacing: 0.24em; text-transform: uppercase;
+               color: var(--signal); margin: 0; }
+  .panel .body-t { font-size: 17px; line-height: 1.5; margin: 8px 0 0;
+                   color: var(--deep); max-width: 76ch; }
+  .panel .ask-t { font-size: 15px; line-height: 1.5; margin: 9px 0 0;
+                  color: var(--slate); max-width: 76ch; }
+  .panel .ask-t b { color: var(--deep); font-family: var(--sans); font-size: 10px;
+                    font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+
+  .offer { margin: 34px 40px 0; border-top: 3px solid var(--signal);
+           border-bottom: 1px solid var(--rule); padding: 18px 0 20px;
+           display: flex; gap: 40px; align-items: baseline; flex-wrap: wrap; }
+  .offer .l { flex: 1 1 380px; font-size: 18px; line-height: 1.45; color: var(--deep); }
+  .offer .r { font-family: var(--sans); font-size: 13px; line-height: 1.6;
+              color: var(--slate); }
+  .offer .r b { color: var(--deep); display: block; font-size: 10px;
+                font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+                margin-bottom: 4px; }
+
+  footer { padding: 26px 40px 34px; }
+  .bio { font-size: 13px; line-height: 1.6; color: var(--slate-soft);
+         border-top: 1px solid var(--rule); padding-top: 16px; margin: 0; }
+  .fine { font-size: 12.5px; line-height: 1.55; color: var(--slate-soft); margin: 12px 0 0; }
   .fine.it { font-style: italic; }
-  .folio { display: flex; justify-content: space-between; align-items: baseline;
-           border-top: 1px solid var(--rule); margin-top: 22px; padding-top: 12px;
-           font-family: var(--cond); font-size: 13px; font-weight: 600;
-           letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
-           gap: 12px; flex-wrap: wrap; }
+  .folio { display: flex; justify-content: space-between; gap: 14px;
+           flex-wrap: wrap; margin-top: 20px; padding-top: 11px;
+           border-top: 1px solid var(--rule); font-family: var(--sans);
+           font-size: 9.5px; font-weight: 600; letter-spacing: 0.2em;
+           text-transform: uppercase; color: var(--slate-soft); }
 
-  @media (max-width: 700px) {
-    body { font-size: 16.5px; }
-    .hero { min-height: 430px; }
-    .hero-in, .score, .wrap, footer { padding-left: 16px; padding-right: 16px; }
-    .masthead { font-size: 11px; letter-spacing: 0.16em; }
-    .masthead .logo { font-size: 24px; }
-    .stat { width: 108px; height: 108px; right: 16px; bottom: -34px;
-            box-shadow: 0 0 0 5px var(--paper); }
-    .stat .n { font-size: 36px; }
-    .stat .l { font-size: 10px; }
-    .hed { max-width: 7ch; }
-    .score { flex-wrap: wrap; padding: 10px 16px 12px; }
-    .score span { font-size: 12.5px; letter-spacing: 0.08em;
-                  flex: 0 0 100%; padding: 3px 0; white-space: normal; }
-    .score span + span { border-left: 0; border-top: 1px solid rgba(255,255,255,0.28); }
-    .stops { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .cta .l, .cta .r { flex: 1 1 100%; }
+  @media (max-width: 760px) {
+    .mast { padding-left: 18px; padding-right: 18px; gap: 4px; }
+    .mast .firm, .mast .meta { flex: 0 0 100%; text-align: left;
+                               font-size: 9px; letter-spacing: 0.2em; }
+    .mast .logo { flex: 0 0 100%; font-size: 27px; order: -1; }
+    .hero img { height: 360px; }
+    .words { left: 18px; right: 18px; bottom: 22px; }
+    .hed { font-size: 42px; }
+    .standfirst { font-size: 17px; }
+    .figs { grid-template-columns: repeat(2, 1fr); }
+    .fig { padding: 16px 16px 15px 18px; border-top: 1px solid rgba(255,255,255,0.28); }
+    .fig:nth-child(-n+2) { border-top: 0; }
+    .fig:nth-child(odd) { border-left: 0; }
+    .body { grid-template-columns: 1fr; gap: 30px; padding: 26px 18px 0; }
+    .runway, .offer { margin-left: 18px; margin-right: 18px; }
+    .stops { grid-template-columns: repeat(2, 1fr); row-gap: 14px; }
+    .stop:nth-child(odd) { border-left: 0; padding-left: 0; }
+    footer { padding: 22px 18px 30px; }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
-
 <main class="sheet">
+  <div class="top"></div>
+  <div class="mast">
+    <span class="firm">Pereira Consulting</span>
+    <span class="logo">Deal Notes</span>
+    <span class="meta">Issue 01 &nbsp;&middot;&nbsp; September 2026</span>
+  </div>
 
   <div class="hero">
     <div class="hero-media">
       <img src="tower.jpg" alt="An office tower at night with most of its floors still lit.">
-      <div class="scrim"></div>
+      <div class="veil"></div>
     </div>
-    <div class="hero-in">
-      <div class="masthead">
-        <span>Pereira Consulting</span>
-        <span class="logo">Deal Notes</span>
-        <span>Issue 01 &nbsp;&middot;&nbsp; September 2026</span>
-      </div>
-      <div class="hero-foot">
-        <div class="tagbar">
-          <span class="a">Stop 01 &nbsp;Structure</span>
-          <span class="b">24 months out</span>
-        </div>
-        <p class="kick">The year that</p>
-        <p class="hed">Looks back</p>
-      </div>
-    </div>
-    <div class="stat">
-      <span class="n">365</span>
-      <span class="l">days of<br>look back</span>
+    <div class="words">
+      <p class="eyebrow"><i></i>Structure &nbsp;&middot;&nbsp; twenty four months out</p>
+      <h1 class="hed">The year that looks back</h1>
+      <p class="standfirst">From 1 October the principal asset test reaches across a full year before completion. Moving the settlement date stops being an answer.</p>
     </div>
   </div>
 
-  <div class="score">
-    <span>365 days tested</span>
-    <span>More than 50% in Australian real property</span>
-    <span>10% non&#8209;portfolio</span>
-    <span>In force 1 Oct</span>
+  <div class="figs">
+    <div class="fig"><div class="n">365</div><div class="l">Days now tested</div></div>
+    <div class="fig"><div class="n">50%</div><div class="l">Of market value in<br>Australian real property</div></div>
+    <div class="fig"><div class="n">10%</div><div class="l">Non&#8209;portfolio<br>interest</div></div>
+    <div class="fig"><div class="n">1 Oct</div><div class="l">In force from</div></div>
   </div>
 
-  <div class="wrap">
-    <p class="lede">Most of the tax problems that surface in a sale process were created years earlier, usually in a restructure that nobody thought of as a tax event at the time.</p>
+  <div class="body">
+    <div>
+      <p class="lede">Most of the tax problems that surface in a sale process were created years earlier, usually in a restructure that nobody thought of as a tax event at the time.</p>
 
-    <section>
-      <p class="kicker">What changed</p>
-      <h2>Foreign shareholders, and a year of looking back</h2>
-      <p>From 1 October 2026 the principal asset test applies across the 365 days before a CGT event, rather than only at the moment of the event. If more than half the market value of a company&rsquo;s assets is attributable to Australian real property at any point in that year, a foreign resident holding a non-portfolio interest, broadly 10 per cent or more, may fall within the Australian capital gains net on a sale of those shares.</p>
-      <p>The amending Act is now law and applies to CGT events on or after 1 October. It also brings in a requirement for certain foreign resident vendors to notify the ATO when they declare that their shares are not indirect Australian real property interests, which is worth building into a sale timetable from the start.</p>
-      <p>The part worth raising with a client now is that a look back removes the ability to fix the answer by timing completion. If a property holding sat on the balance sheet nine months ago, moving the settlement date would no longer help.</p>
-    </section>
+      <section>
+        <p class="kicker">What changed</p>
+        <h2>Foreign shareholders, and a year of looking back</h2>
+        <p>From 1 October 2026 the principal asset test applies across the 365 days before a CGT event, rather than only at the moment of the event. If more than half the market value of a company&rsquo;s assets is attributable to Australian real property at any point in that year, a foreign resident holding a non-portfolio interest, broadly 10 per cent or more, may fall within the Australian capital gains net on a sale of those shares.</p>
+        <p>The amending Act is now law and applies to CGT events on or after 1 October. It also brings in a requirement for certain foreign resident vendors to notify the ATO when they declare that their shares are not indirect Australian real property interests, which is worth building into a sale timetable from the start.</p>
+        <p>The part worth raising with a client now is that a look back removes the ability to fix the answer by timing completion. If a property holding sat on the balance sheet nine months ago, moving the settlement date would no longer help.</p>
+      </section>
 
-    <section>
-      <p class="kicker">From the runway &middot; Structure</p>
-      <h2>When the step plan and the documents are not the same transaction</h2>
-      <p>Restructures where the plan and the executed documents describe different things come up more often than you would expect. The plan contemplates a scrip for scrip exchange. The documents paper an ordinary share transfer, or a step completes outside the window the rollover depended on. It tends not to be picked up at the time, because the people drafting the documents were not in the tax conversation and the people in the tax conversation never saw what was signed.</p>
-      <p>Rectification may be available, though it usually needs a court order and does not by itself settle the position with the Commissioner. Either way it is a good deal easier to look at two years out than during diligence, when the buyer&rsquo;s adviser has read the same documents you have.</p>
-    </section>
-
-    <div class="quote">
-      <p class="kicker">One question to ask your client</p>
-      <p class="q">&ldquo;Can I see the documents that papered your last restructure, rather than the advice that recommended it?&rdquo;</p>
-      <p class="n">If the step plan and the executed documents do not describe the same transaction, that is probably work to do now rather than in a process.</p>
+      <section>
+        <p class="kicker">From the runway &middot; Structure</p>
+        <h2>When the step plan and the documents are not the same transaction</h2>
+        <p>Restructures where the plan and the executed documents describe different things come up more often than you would expect. The plan contemplates a scrip for scrip exchange. The documents paper an ordinary share transfer, or a step completes outside the window the rollover depended on. It tends not to be picked up at the time, because the people drafting the documents were not in the tax conversation and the people in the tax conversation never saw what was signed.</p>
+        <p>Rectification may be available, though it usually needs a court order and does not by itself settle the position with the Commissioner. Either way it is a good deal easier to look at two years out than during diligence, when the buyer&rsquo;s adviser has read the same documents you have.</p>
+      </section>
     </div>
 
-    <div class="runway">
-      <p class="runway-h">The runway &middot; five stops</p>
-      <div class="stops" id="stops"></div>
-      <div class="panel" id="panel" aria-live="polite"></div>
-    </div>
+    <aside>
+      <h3>Ask your client</h3>
+      <div class="ask"><p class="t">The documents</p><p class="d">Can I see what papered the last restructure, not the advice that recommended it.</p></div>
+      <div class="ask"><p class="t">The property</p><p class="d">What has been on the balance sheet in the last twelve months, not just today.</p></div>
+      <div class="ask"><p class="t">The register</p><p class="d">Who holds ten per cent or more, and where do they file.</p></div>
+      <div class="ask"><p class="t">The timetable</p><p class="d">Where the vendor declaration and the notification sit in the process.</p></div>
 
-    <div class="cta">
-      <div class="l">
-        <p>Happy to spend thirty minutes on a target&rsquo;s structure before you commit to a process, at no charge for the first look.</p>
+      <div class="pull">
+        <p class="kicker">One question to ask</p>
+        <p class="q">&ldquo;Can I see the documents that papered your last restructure, rather than the advice that recommended it?&rdquo;</p>
+        <p class="n">If the step plan and the executed documents do not describe the same transaction, that is probably work to do now rather than in a process.</p>
       </div>
-      <div class="r">
-        <div class="big">30 min</div>
-        <p>No charge for the first look.</p>
-        <p class="contact"><a href="mailto:neil@pereiraconsulting.com">neil@pereiraconsulting.com</a><br>0414 354 586</p>
-      </div>
-    </div>
+    </aside>
+  </div>
+
+  <div class="runway">
+    <h3>The runway &middot; five stops</h3>
+    <div class="stops" id="stops"></div>
+    <div class="panel" id="panel" aria-live="polite"></div>
+  </div>
+
+  <div class="offer">
+    <div class="l">Happy to spend thirty minutes on a target&rsquo;s structure before you commit to a process, at no charge for the first look.</div>
+    <div class="r"><b>Neil Pereira</b><a href="mailto:neil@pereiraconsulting.com">neil@pereiraconsulting.com</a><br>0414 354 586</div>
   </div>
 
   <footer>
-    <div class="hr"></div>
-    <p class="who">Neil Pereira</p>
-    <p class="role">Managing Director, Pereira Consulting</p>
     <p class="bio">Pereira Consulting is an independent tax advisory practice founded by Neil Pereira, advising multinational groups operating into and out of Australia on international tax, Pillar Two readiness, transfer pricing, anti-avoidance, ATO disputes and corporate income tax compliance. Neil is a Chartered Tax Adviser, Registered Tax Agent and Solicitor.</p>
     <p class="fine">This is general commentary prepared for advisers, current as at the issue date. It is not advice, it does not take account of any particular circumstances, and no adviser and client relationship arises from it.</p>
     <p class="fine it">Liability limited by a scheme approved under Professional Standards Legislation.</p>
@@ -290,7 +265,6 @@
       <span>Next: 27 October, Documents</span>
     </div>
   </footer>
-
 </main>
 
 <script>
@@ -312,7 +286,6 @@
       note: 'Vendor due diligence, the tax warranties, the tax deed and what the buyer inherits at completion.',
       ask: 'Who is going to own the tax warranties, and what has been disclosed against them?' }
   ];
-
   var stopsEl = document.getElementById('stops');
   var panelEl = document.getElementById('panel');
 
@@ -321,7 +294,8 @@
     b.type = 'button';
     b.className = 'stop';
     b.setAttribute('aria-current', i === 0 ? 'true' : 'false');
-    b.innerHTML = '<span class="name">' + s.name + '</span><span class="when">' + s.when + '</span>';
+    b.innerHTML = '<span class="n">0' + (i + 1) + '</span><span class="w">' + s.name +
+                  '</span><span class="d">' + s.when + '</span>';
     b.addEventListener('click', function () { select(i); });
     stopsEl.appendChild(b);
   });
@@ -333,10 +307,9 @@
     }
     var s = STOPS[i];
     panelEl.innerHTML =
-      '<p class="pk">' + s.name + '</p>' +
-      '<div class="pbar"></div>' +
-      '<p class="body">' + s.note + '</p>' +
-      '<p class="ask"><b>The question:</b> ' + s.ask + '</p>';
+      '<p class="pk">' + s.name + ' &middot; ' + s.when + '</p>' +
+      '<p class="body-t">' + s.note + '</p>' +
+      '<p class="ask-t"><b>The question:</b> ' + s.ask + '</p>';
     if (history.replaceState) { history.replaceState(null, '', '#' + s.id); }
   }
 
@@ -347,6 +320,5 @@
   select(initial);
 })();
 </script>
-
 </body>
 </html>
