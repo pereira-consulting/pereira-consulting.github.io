@@ -557,6 +557,53 @@ footer{padding:80px 0 40px;background:var(--paper)}
   .fc2{width:225px;right:-4px}
   .fc3{width:210px}
 }
+/* ============================================================
+   DECISION-LED LAYER (Oct 2026): hero line, When clients call us,
+   Call us when lines, How we work, shorter Brief summaries.
+   ============================================================ */
+.hero-line{font-size:16.5px;line-height:1.55;color:var(--ink);max-width:50ch;margin-top:18px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.82);border:1px solid rgba(10,102,214,.18);backdrop-filter:blur(8px)}
+#when{padding-bottom:70px}
+.when-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.wcard{
+  border-radius:var(--r-md);border:1px solid var(--line-soft);background:#fff;padding:28px;
+  display:flex;flex-direction:column;gap:12px;text-decoration:none;
+  box-shadow:0 6px 24px rgba(10,29,63,.05);
+  transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s,box-shadow .35s;
+}
+.wcard:hover{transform:translateY(-6px);border-color:rgba(0,180,216,.45);box-shadow:0 26px 56px rgba(10,29,63,.12)}
+.wcard .wtop{display:flex;justify-content:space-between;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#5E6F92}
+.wcard .wnum{color:var(--blue);font-size:12px;letter-spacing:.06em}
+.wcard h3{font-size:22px;font-weight:600;line-height:1.2;color:var(--ink)}
+.wcard p{font-size:15px;line-height:1.6;color:var(--body-c);flex:1}
+.wcard .alink{font-size:14px}
+.when-life{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding:22px 28px;border-radius:var(--r-md);background:var(--sand)}
+.when-life p{color:var(--ink);font-size:15.5px}
+.cell .cwhen{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.5;color:var(--ink)}
+.cwhen b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--blue);margin-bottom:5px}
+.c-gv .cwhen b{color:#B4432C}
+.cell.c-p2 .cwhen{margin-top:22px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff}
+.c-p2 .cwhen b{color:var(--gold)}
+#how{background:var(--sand)}
+.how-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.how-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin:0;padding:0}
+.how-list li{display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:start;padding:22px 24px;border-radius:var(--r-md);background:#fff;border:1px solid var(--line-soft)}
+.how-list .hi{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.how-list h3{font-size:20px;font-weight:600;color:var(--ink)}
+.how-list p{font-size:15px;line-height:1.55;color:var(--body-c);margin-top:4px}
+.ins-grid .ibody p{display:-webkit-box;-webkit-line-clamp:4;line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:1060px){
+  .stack{width:100%}
+  .when-grid{grid-template-columns:1fr 1fr}
+  .how-grid{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:640px){
+  .tool-row{grid-template-columns:minmax(0,1fr)}
+  .tcard{min-width:0}
+  .when-grid{grid-template-columns:1fr}
+  .wcard{padding:22px}
+  .how-list li{padding:18px;gap:14px}
+}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
@@ -574,7 +621,9 @@ footer{padding:80px 0 40px;background:var(--paper)}
       <img src="assets/pereira-logo.png" alt="Pereira Consulting · International Tax">
     </a>
     <div class="nav-l" id="navlinks">
+      <a href="#when">When to call</a>
       <a href="#services">Services</a>
+      <a href="#how">How we work</a>
       <a href="#tools">Tools</a>
       <a href="/Lifecycle/">Lifecycle</a>
       <a href="#insights">Insights</a>
@@ -597,14 +646,15 @@ footer{padding:80px 0 40px;background:var(--paper)}
       <span class="kicker st st1"><span class="dot"></span>Independent tax counsel · Sydney · Melbourne · Singapore · USA · UK</span>
       <h1 class="st st2">Specialist tax advisory for <span class="serif gtext">multinationals.</span></h1>
       <p class="hero-sub st st3">Pillar Two, transfer pricing and complex international structures, advised at partner level on every engagement, from day one.</p>
+      <p class="hero-line st st3">We help multinationals make the tax decisions that matter: entering Australia, answering the ATO, restructuring, and the first years of Pillar Two.</p>
       <div class="hero-act st st4">
-        <a class="btn btn-p" href="#contact">Discuss your position</a>
-        <a class="btn btn-c" href="#tools">Try the free tools</a>
+        <a class="btn btn-p" href="#when">Find your situation</a>
+        <a class="btn btn-c" href="#contact">Discuss your position</a>
       </div>
       <div class="hero-proof st st5">
-        <div class="hp"><div class="v" data-count="25" data-suffix="+">0+</div><div class="k">Years' experience</div></div>
+        <div class="hp"><div class="v" data-count="25" data-suffix="+">25+</div><div class="k">Years' experience</div></div>
         <div class="hp"><div class="v">Big Four</div><div class="k">Background</div></div>
-        <div class="hp"><div class="v" data-count="100" data-suffix="%">0%</div><div class="k">Independent</div></div>
+        <div class="hp"><div class="v" data-count="100" data-suffix="%">100%</div><div class="k">Independent</div></div>
       </div>
     </div>
     <div class="stack st st4" aria-hidden="true">
@@ -651,17 +701,68 @@ footer{padding:80px 0 40px;background:var(--paper)}
 
 <main id="main">
 
+<!-- WHEN CLIENTS CALL US -->
+<section id="when" aria-label="When clients call us">
+  <div class="wrap">
+    <span class="kicker rv"><span class="dot"></span>When clients call us</span>
+    <h2 class="rv" style="margin-top:22px">Most clients come to us at <span class="serif gtext">one of these moments.</span></h2>
+    <p class="lead rv">If one of these describes where you are, a 30-minute call will tell you what the decision is and what it is worth getting right.</p>
+    <div class="when-grid">
+      <a class="wcard rv" href="#services">
+        <span class="wtop"><span class="wnum">01</span><span>International · TP</span></span>
+        <h3>Entering Australia</h3>
+        <p>Before your first intercompany invoice in Australia, we set the pricing model and the documentation so it holds up at review.</p>
+        <span class="alink">See International Tax and Transfer Pricing &rarr;</span>
+      </a>
+      <a class="wcard rv" href="#services">
+        <span class="wtop"><span class="wnum">02</span><span>Disputes</span></span>
+        <h3>An ATO letter has arrived</h3>
+        <p>When an ATO letter arrives, we decide with you what to give, what to defend and in what order.</p>
+        <span class="alink">See Governance and Disputes &rarr;</span>
+      </a>
+      <a class="wcard rv" href="#services">
+        <span class="wtop"><span class="wnum">03</span><span>Pillar Two</span></span>
+        <h3>Your first Pillar Two year</h3>
+        <p>In your first Pillar Two year, we map who files what, where, and which safe harbours you can rely on.</p>
+        <span class="alink">See Pillar Two &rarr;</span>
+      </a>
+      <a class="wcard rv" href="#services">
+        <span class="wtop"><span class="wnum">04</span><span>R&amp;D · TP</span></span>
+        <h3>R&amp;D for a foreign parent</h3>
+        <p>When a foreign parent wants R&amp;D done in Australia, we structure it so the claim and the intercompany charge both stand up.</p>
+        <span class="alink">See Transfer Pricing &rarr;</span>
+      </a>
+      <a class="wcard rv" href="#services">
+        <span class="wtop"><span class="wnum">05</span><span>Corporate · TP</span></span>
+        <h3>Moving IP or restructuring</h3>
+        <p>Before you move IP or restructure, we show what each step triggers in Australia.</p>
+        <span class="alink">See Corporate Tax &rarr;</span>
+      </a>
+      <a class="wcard rv" href="#services">
+        <span class="wtop"><span class="wnum">06</span><span>Governance</span></span>
+        <h3>Your Top 1000 review is coming</h3>
+        <p>Before your Top 1000 review, we test whether your tax governance will reach the Stage 2 rating the ATO requires for high assurance.</p>
+        <span class="alink">See Governance and Disputes &rarr;</span>
+      </a>
+    </div>
+    <div class="when-life rv">
+      <p>Raising capital, scaling or heading to IPO? Twice a year, we tell your board which tax triggers are coming next.</p>
+      <a class="alink" href="/Lifecycle/#diagnostic">See the Lifecycle Diagnostic &rarr;</a>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES BENTO -->
 <section id="services" aria-label="Services">
   <div class="wrap">
     <span class="kicker rv"><span class="dot"></span>What we do</span>
     <h2 class="rv" style="margin-top:22px">Big Four depth.<br><span class="serif gtext">Boutique attention.</span></h2>
-    <p class="lead rv">Direct access to senior expertise. No layers, no juniors: every engagement is led personally by Neil, fixed-fee, from day one.</p>
+    <p class="lead rv">Direct access to senior expertise. Every engagement is led by Neil, on a fixed fee, from day one.</p>
     <div class="bento">
       <div class="cell c-p2 rv">
         <div>
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <span class="bignum" data-count="15" data-suffix="%">0%</span>
+            <span class="bignum" data-count="15" data-suffix="%">15%</span>
             <span class="badge warm">Featured</span>
           </div>
           <h3>Pillar Two: from model to mandate</h3>
@@ -670,8 +771,9 @@ footer{padding:80px 0 40px;background:var(--paper)}
         <div>
           <div class="p2row">
             <div class="p2i"><div class="v">&euro;750m</div><div class="k">In-scope revenue threshold</div></div>
-            <div class="p2i"><div class="v" data-count="40" data-suffix="+">0+</div><div class="k">Jurisdictions implementing</div></div>
+            <div class="p2i"><div class="v" data-count="40" data-suffix="+">40+</div><div class="k">Jurisdictions implementing</div></div>
           </div>
+          <p class="cwhen"><b>Call us when</b>your first filing year is coming up, or a jurisdiction in your group brings in a top-up tax.</p>
           <a class="alink" href="#contact">Discuss your Pillar Two position &rarr;</a>
         </div>
       </div>
@@ -679,22 +781,26 @@ footer{padding:80px 0 40px;background:var(--paper)}
         <div class="ic">&#127963;</div>
         <h3>Corporate Tax</h3>
         <p>Optimise your global position, manage effective tax rates and keep compliance and governance defensible across jurisdictions.</p>
+        <p class="cwhen"><b>Call us when</b>you are restructuring, acquiring, or changing how the group is funded.</p>
       </div>
       <div class="cell c-tp rv">
         <div class="ic">&#8644;</div>
         <h3>Transfer Pricing</h3>
         <p>Defensible policies aligned with OECD guidelines. Benchmarking and Subdivision 815-B compliant global documentation.</p>
+        <p class="cwhen"><b>Call us when</b>you are setting up a new intercompany arrangement, or the business has changed since your last Local File.</p>
         <div class="bars"><i style="height:38%"></i><i style="height:62%"></i><i style="height:88%"></i><i style="height:46%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:54%"></i></div>
       </div>
       <div class="cell c-it rv">
         <div class="ic">&#127758;</div>
         <h3>International Tax</h3>
         <p>BEPS, anti-hybrids, thin capitalisation and cross-border structuring with confidence and clarity.</p>
+        <p class="cwhen"><b>Call us when</b>you are entering Australia, paying royalties or interest offshore, or moving people across borders.</p>
       </div>
       <div class="cell c-gv rv">
         <div class="ic">&#9878;</div>
         <h3>Governance &amp; Disputes</h3>
         <p>Justified Trust readiness, controls testing, and steady hands through ATO reviews, audits and objections.</p>
+        <p class="cwhen"><b>Call us when</b>an ATO letter arrives, or your Top 1000 combined assurance review is coming up.</p>
       </div>
       <div class="cell c-al rv">
         <h3 style="margin-top:0">Also on the bench</h3>
@@ -703,6 +809,39 @@ footer{padding:80px 0 40px;background:var(--paper)}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="how" aria-label="How we work">
+  <div class="wrap how-grid">
+    <div>
+      <span class="kicker rv"><span class="dot"></span>How we work</span>
+      <h2 class="rv" style="margin-top:22px">What you can <span class="serif gtext">hold us to.</span></h2>
+      <p class="lead rv">Five commitments that apply to every engagement, whatever its size.</p>
+    </div>
+    <ol class="how-list">
+      <li class="rv">
+        <span class="hi" aria-hidden="true" style="background:#EFF5FE"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A66D6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <div><h3>Fixed fees, set by what is at stake</h3><p>We cost the work properly. The fee reflects the decision you face, not the hours.</p></div>
+      </li>
+      <li class="rv">
+        <span class="hi" aria-hidden="true" style="background:#E8F8FB"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A7D96" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>
+        <div><h3>Partner-led</h3><p>Neil leads every engagement and reviews all work before it reaches you.</p></div>
+      </li>
+      <li class="rv">
+        <span class="hi" aria-hidden="true" style="background:#FEF4E6"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B86A0C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+        <div><h3>Clear commitments</h3><p>Scope, timetable and fee are agreed in writing. If our work falls short of the agreed scope, we finish it at no extra cost.</p></div>
+      </li>
+      <li class="rv">
+        <span class="hi" aria-hidden="true" style="background:#FDF0EC"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B4432C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4v5c0 5-4 8-9 9-5-1-9-4-9-9V7z"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></span>
+        <div><h3>No promised outcomes</h3><p>No adviser controls what the ATO decides. We tell you where your position is strong, where it is weak, and what would change it.</p></div>
+      </li>
+      <li class="rv">
+        <span class="hi" aria-hidden="true" style="background:#EEF0FA"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B4FB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <div><h3>We talk it through</h3><p>We walk you through every proposal before you sign.</p></div>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -903,7 +1042,7 @@ footer{padding:80px 0 40px;background:var(--paper)}
     <div class="cta-shell rv">
       <span class="kicker"><span class="dot"></span>Contact</span>
       <h2>Discuss your position with <span class="serif">Neil directly.</span></h2>
-      <p class="csub">A 30-minute scoping call costs nothing and tells you exactly where you stand.</p>
+      <p class="csub">A 30-minute scoping call costs nothing. You will leave knowing what the decision is and what it is worth getting right.</p>
       <div class="cta-act">
         <a class="btn btn-p" href="mailto:neil@pereiraconsulting.com?subject=Scoping%20call%20request">Book a scoping call</a>
         <a class="btn btn-g" href="https://www.linkedin.com/in/pereiraneil">Connect on LinkedIn</a>
