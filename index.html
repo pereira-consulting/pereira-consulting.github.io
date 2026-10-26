@@ -591,17 +591,57 @@ footer{padding:80px 0 40px;background:var(--paper)}
 .how-list h3{font-size:20px;font-weight:600;color:var(--ink)}
 .how-list p{font-size:15px;line-height:1.55;color:var(--body-c);margin-top:4px}
 .ins-grid .ibody p{display:-webkit-box;-webkit-line-clamp:4;line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+/* ---- Round two (Oct 2026): boutique positioning and service cards ---- */
+.stack{height:480px}
+.stack .photo{inset:0}
+.proof-band{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,.8fr) minmax(0,1.6fr);gap:18px;margin-top:64px}
+.pb-card{background:#fff;border:1px solid var(--line-soft);border-radius:var(--r-lg);padding:28px 32px;box-shadow:0 6px 24px rgba(10,29,63,.05);display:flex;flex-direction:column;justify-content:center;gap:8px}
+.pb-v{font-family:var(--disp);font-weight:600;font-size:clamp(52px,6vw,76px);line-height:1;letter-spacing:-.02em;color:var(--blue)}
+.pb-v.pb-gold{color:#B86A0C}
+.pb-k{font-size:15px;line-height:1.4;color:var(--ink);max-width:24ch}
+.pb-venn{flex-direction:row;align-items:center;gap:28px}
+.pb-venn svg{flex:none}
+.pb-eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#5E6F92}
+.pb-venn h3{font-size:24px;font-weight:600;line-height:1.15;color:var(--ink);margin:8px 0 6px}
+.pb-venn p{font-size:15px;line-height:1.5;color:var(--body-c)}
+.pb-cities{margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5E6F92;line-height:1.9}
+.c-p2{grid-column:span 4;grid-row:span 2}
+.c-ct,.c-tp,.c-it,.c-gv{grid-column:span 4;background:#fff;border:1px solid rgba(10,29,63,.09);display:flex;flex-direction:column;padding:30px}
+.c-ct>p:not(.cwhen),.c-tp>p:not(.cwhen),.c-it>p:not(.cwhen),.c-gv>p:not(.cwhen){margin-bottom:18px}
+.c-ct .cwhen,.c-tp .cwhen,.c-it .cwhen,.c-gv .cwhen{margin-top:auto;border-top:0;padding:14px 16px;border-radius:14px}
+.c-ct .ic{background:#EFF5FE;color:var(--blue)}
+.c-ct .cwhen{background:#EFF5FE}
+.c-tp .ic{background:#E8F8FB;color:#0A7D96}
+.c-tp .cwhen{background:#E8F8FB}
+.c-tp .cwhen b{color:#0A7D96}
+.c-it .ic{background:#EEF0FA;color:#3B4FB8}
+.c-it .cwhen{background:#EEF0FA}
+.c-it .cwhen b{color:#3B4FB8}
+.c-gv .ic{background:#FDF0EC;color:#B4432C}
+.c-gv .cwhen{background:#FDF0EC}
+.c-al{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 40px;padding:26px 32px;background:var(--sand)}
+.c-al .chips{margin-top:0}
+.c-al .chip{font-size:13px;padding:7px 14px}
 @media (max-width:1060px){
-  .stack{width:100%}
+  .stack{width:100%;height:400px}
   .when-grid{grid-template-columns:1fr 1fr}
   .how-grid{grid-template-columns:1fr;gap:40px}
+  .proof-band{grid-template-columns:1fr 1fr}
+  .pb-venn{grid-column:1/-1}
+  .c-p2,.c-al{grid-column:1/-1;grid-row:auto}
+  .c-ct,.c-tp,.c-it,.c-gv{grid-column:span 1}
 }
 @media (max-width:640px){
+  .stack{height:300px}
   .tool-row{grid-template-columns:minmax(0,1fr)}
   .tcard{min-width:0}
   .when-grid{grid-template-columns:1fr}
   .wcard{padding:22px}
   .how-list li{padding:18px;gap:14px}
+  .proof-band{grid-template-columns:1fr}
+  .pb-card{padding:22px}
+  .pb-venn{flex-direction:column;align-items:flex-start}
+  .c-ct,.c-tp,.c-it,.c-gv{grid-column:1/-1}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -643,7 +683,7 @@ footer{padding:80px 0 40px;background:var(--paper)}
   <div class="hgrid" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div>
-      <span class="kicker st st1"><span class="dot"></span>Independent tax counsel · Sydney · Melbourne · Singapore · USA · UK</span>
+      <span class="kicker st st1"><span class="dot"></span>Global reach · Specialist personal service</span>
       <h1 class="st st2">Specialist tax advisory for <span class="serif gtext">multinationals.</span></h1>
       <p class="hero-sub st st3">Pillar Two, transfer pricing and complex international structures, advised at partner level on every engagement, from day one.</p>
       <p class="hero-line st st3">We help multinationals make the tax decisions that matter: entering Australia, answering the ATO, restructuring, and the first years of Pillar Two.</p>
@@ -651,45 +691,33 @@ footer{padding:80px 0 40px;background:var(--paper)}
         <a class="btn btn-p" href="#when">Find your situation</a>
         <a class="btn btn-c" href="#contact">Discuss your position</a>
       </div>
-      <div class="hero-proof st st5">
-        <div class="hp"><div class="v" data-count="25" data-suffix="+">25+</div><div class="k">Years' experience</div></div>
-        <div class="hp"><div class="v">Big Four</div><div class="k">Background</div></div>
-        <div class="hp"><div class="v" data-count="100" data-suffix="%">100%</div><div class="k">Independent</div></div>
-      </div>
     </div>
     <div class="stack st st4" aria-hidden="true">
       <div class="photo"><img src="assets/harbour.jpg" alt=""></div>
-      <div class="fcard fc1">
-        <div class="fc-h"><span class="fc-t">TSH Calculator</span><span class="badge live">Live</span></div>
-        <div class="big">3 of 5</div>
-        <div class="sub">jurisdictions qualify for safe harbour</div>
-        <div class="rowz">
-          <div class="rz"><span>Australia</span><b class="ok">DE MINIMIS &check;</b></div>
-          <div class="rz"><span>Singapore</span><b class="ok">ETR TEST &check;</b></div>
-          <div class="rz"><span>Ireland</span><b class="no">FULL GLOBE</b></div>
-        </div>
-      </div>
-      <div class="fcard fc2">
-        <div class="fc-h"><span class="fc-t">TP Risk Heatmap</span><span class="badge navy">CbCR</span></div>
-        <div class="hm">
-          <i class="g"></i><i class="g"></i><i></i><i class="y"></i><i class="g"></i><i></i>
-          <i></i><i class="g"></i><i class="y"></i><i></i><i class="r"></i><i class="g"></i>
-          <i class="y"></i><i></i><i class="g"></i><i class="g"></i><i></i><i class="y"></i>
-        </div>
-        <div class="leg">
-          <span><i style="background:rgba(0,180,216,.65)"></i>Low</span>
-          <span><i style="background:rgba(242,163,60,.7)"></i>Review</span>
-          <span><i style="background:rgba(240,115,90,.75)"></i>High</span>
-        </div>
-      </div>
-      <div class="fcard fc3">
-        <div class="fc-h"><span class="fc-t">Global minimum tax</span></div>
-        <div class="big gtext">15%</div>
-        <div class="bar"><i></i></div>
-        <div class="sub">40+ jurisdictions implementing</div>
+    </div>
+  </div>
+  <div class="wrap proof-band st st5">
+    <div class="pb-card"><span class="pb-v" data-count="30">30</span><span class="pb-k">Years in Big Four corporate and international tax</span></div>
+    <div class="pb-card"><span class="pb-v pb-gold" data-count="100" data-suffix="%">100%</span><span class="pb-k">Independent: no audit or product conflicts</span></div>
+    <div class="pb-card pb-venn">
+      <svg width="210" height="190" viewBox="0 0 210 190" role="img" aria-label="Three overlapping circles: Tax, Transfer pricing and Legal, meeting in the middle">
+        <circle cx="78" cy="70" r="58" fill="#0A66D6" fill-opacity="0.18" stroke="#0A66D6" stroke-width="1.5"/>
+        <circle cx="132" cy="70" r="58" fill="#00B4D8" fill-opacity="0.18" stroke="#00A3C4" stroke-width="1.5"/>
+        <circle cx="105" cy="118" r="58" fill="#F2A33C" fill-opacity="0.22" stroke="#D88A20" stroke-width="1.5"/>
+        <text x="56" y="56" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="13" font-weight="600" fill="#0A1D3F">Tax</text>
+        <text x="165" y="50" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="13" font-weight="600" fill="#0A1D3F">Transfer</text>
+        <text x="165" y="65" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="13" font-weight="600" fill="#0A1D3F">pricing</text>
+        <text x="105" y="160" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="13" font-weight="600" fill="#0A1D3F">Legal</text>
+        <circle cx="105" cy="88" r="6" fill="#0A1D3F"/>
+      </svg>
+      <div>
+        <span class="pb-eyebrow">Where we work</span>
+        <h3>Tax, transfer pricing and legal, joined up.</h3>
+        <p>Most cross-border problems sit where the three meet. You get one joined-up view, not three advisers to reconcile.</p>
       </div>
     </div>
   </div>
+  <p class="wrap pb-cities st st5">Advising groups in Sydney · Melbourne · Singapore · Hong Kong · Dubai · Los Angeles · New York · London · Paris</p>
 </header>
 
 <div class="marq" aria-hidden="true">
@@ -778,26 +806,25 @@ footer{padding:80px 0 40px;background:var(--paper)}
         </div>
       </div>
       <div class="cell c-ct rv">
-        <div class="ic">&#127963;</div>
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg></div>
         <h3>Corporate Tax</h3>
         <p>Optimise your global position, manage effective tax rates and keep compliance and governance defensible across jurisdictions.</p>
         <p class="cwhen"><b>Call us when</b>you are restructuring, acquiring, or changing how the group is funded.</p>
       </div>
       <div class="cell c-tp rv">
-        <div class="ic">&#8644;</div>
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h13l-4-4"/><path d="M17 17H4l4 4"/></svg></div>
         <h3>Transfer Pricing</h3>
         <p>Defensible policies aligned with OECD guidelines. Benchmarking and Subdivision 815-B compliant global documentation.</p>
         <p class="cwhen"><b>Call us when</b>you are setting up a new intercompany arrangement, or the business has changed since your last Local File.</p>
-        <div class="bars"><i style="height:38%"></i><i style="height:62%"></i><i style="height:88%"></i><i style="height:46%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:54%"></i></div>
       </div>
       <div class="cell c-it rv">
-        <div class="ic">&#127758;</div>
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></div>
         <h3>International Tax</h3>
         <p>BEPS, anti-hybrids, thin capitalisation and cross-border structuring with confidence and clarity.</p>
         <p class="cwhen"><b>Call us when</b>you are entering Australia, paying royalties or interest offshore, or moving people across borders.</p>
       </div>
       <div class="cell c-gv rv">
-        <div class="ic">&#9878;</div>
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0z"/><path d="M19 7l-3 7a3.5 3.5 0 0 0 6 0z"/><path d="M8 21h8"/></svg></div>
         <h3>Governance &amp; Disputes</h3>
         <p>Justified Trust readiness, controls testing, and steady hands through ATO reviews, audits and objections.</p>
         <p class="cwhen"><b>Call us when</b>an ATO letter arrives, or your Top 1000 combined assurance review is coming up.</p>
@@ -805,7 +832,7 @@ footer{padding:80px 0 40px;background:var(--paper)}
       <div class="cell c-al rv">
         <h3 style="margin-top:0">Also on the bench</h3>
         <div class="chips">
-          <span class="chip">Compliance</span><span class="chip">Employment taxes</span><span class="chip">State taxes</span><span class="chip">GST</span><span class="chip">M&amp;A / ACA</span><span class="chip">Tax losses</span>
+          <span class="chip">Compliance</span><span class="chip">Employment taxes</span><span class="chip">State taxes</span><span class="chip">GST</span><span class="chip">Customs duty</span><span class="chip">M&amp;A / ACA</span><span class="chip">Tax losses</span>
         </div>
       </div>
     </div>
@@ -1030,7 +1057,7 @@ footer{padding:80px 0 40px;background:var(--paper)}
         <span class="cred"><i></i>Chartered Tax Adviser</span>
         <span class="cred"><i></i>Registered Tax Agent</span>
         <span class="cred"><i></i>Lawyer</span>
-        <span class="cred"><i></i>25+ years</span>
+        <span class="cred"><i></i>30 years</span>
       </div>
     </div>
   </div>
