@@ -27,7 +27,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Serif:ital@1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Serif:ital@1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    PEREIRA CONSULTING · HOMEPAGE V5 · "COASTLINE VIVID"
@@ -645,6 +645,64 @@ footer{padding:80px 0 40px;background:var(--paper)}
   .c-ct,.c-tp,.c-it,.c-gv{grid-column:1/-1}
 }
 
+/* ---- Hero motion graphic (Oct 2026): Outbound, Inbound, Global ---- */
+.stack{height:auto}
+.mg{position:relative;border-radius:28px;overflow:hidden;color:#fff;font-family:'Inter',sans-serif;padding:16px 0 22px;
+  background:radial-gradient(520px 420px at 82% 90%,rgba(15,118,110,.22) 0%,rgba(15,118,110,0) 60%),radial-gradient(700px 560px at 25% 15%,#22325A 0%,#1B2A4E 48%,#0F1A34 100%);
+  box-shadow:0 40px 90px rgba(10,29,63,.3)}
+.mg-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:0 20px}
+.mg-tab{appearance:none;border:0;background:transparent;cursor:pointer;min-height:36px;padding:0 14px;border-radius:999px;font:600 11px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.mg-tab:hover{color:#fff}
+.mg-tab:focus-visible{outline:2px solid #19E3FF;outline-offset:2px}
+.mg-tab.on{background:rgba(207,229,225,.14);color:#CFE5E1}
+.mg-bar{margin:6px 20px 0;height:2px;background:rgba(255,255,255,.08);border-radius:2px}
+.mg-bar i{display:block;height:100%;width:0;background:#19E3FF;box-shadow:0 0 8px rgba(25,227,255,.8);border-radius:2px;transition:width .1s linear}
+.mg-stagewrap{position:relative;width:100%;height:400px;overflow:hidden}
+.mg-stage{position:absolute;left:0;top:0;width:600px;height:400px;transform-origin:0 0}
+.mg-layer{position:absolute;left:0;top:-60px;width:600px;height:560px}
+.mg-dots{position:absolute;inset:60px 0 120px 0;background-image:radial-gradient(rgba(255,255,255,.07) 1.2px,transparent 1.3px);background-size:18px 18px}
+.mg-city{position:absolute;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:rgba(207,229,225,.35)}
+.mg-node{position:absolute;transform:translate(-50%,-50%);padding:7px 11px;border-radius:10px;background:#FDFCFA;color:#0F1A34;font:600 12.5px/1.25 'Inter',sans-serif;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.28);animation:mg-pop .6s cubic-bezier(.16,1,.3,1) both;z-index:3}
+.mg-node .mg-j{display:block;font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;margin-bottom:2px}
+.mg-node.mg-au{background:#0F766E;color:#fff}
+.mg-node.mg-au .mg-j{color:#CFE5E1}
+.mg-node.mg-dash{animation:mg-pop .6s cubic-bezier(.16,1,.3,1) both,mg-fade .5s ease 3.1s forwards;background:transparent;color:#FDFCFA;border:1.5px dashed rgba(253,252,250,.6);box-shadow:none}
+.mg-node.mg-dash .mg-j{color:rgba(253,252,250,.6)}
+.mg-node.mg-sm{padding:5px 9px;font-size:11px;border-radius:8px}
+.mg-grow{animation:mg-pop .6s cubic-bezier(.16,1,.3,1) both,mg-grow 1.2s ease-in-out 1.1s both}
+.mg-tag{position:absolute;transform:translate(-50%,-50%);padding:5px 11px;border-radius:999px;background:#CFE5E1;color:#0A4F49;font:600 11px/1.3 'Inter',sans-serif;white-space:nowrap;animation:mg-rise .6s cubic-bezier(.16,1,.3,1) both;z-index:4}
+.mg-tag.mg-solid{background:#0F766E;color:#fff;box-shadow:0 0 0 4px rgba(15,118,110,.25)}
+.mg-tag.mg-gold{background:#FF7A1A;color:#2A1200;box-shadow:0 0 12px rgba(255,122,26,.6)}
+svg.mg-lines{position:absolute;inset:0;z-index:2;overflow:visible}
+.mg-ln{fill:none;stroke:#19E3FF;stroke-width:1.8;stroke-dasharray:1;stroke-dashoffset:0;animation:mg-draw 1s ease both;filter:drop-shadow(0 0 3px rgba(25,227,255,.9)) drop-shadow(0 0 9px rgba(25,227,255,.45))}
+.mg-ln.mg-loan,.mg-ln.mg-hot{stroke:#FF7A1A;filter:drop-shadow(0 0 3px rgba(255,122,26,.95)) drop-shadow(0 0 10px rgba(255,122,26,.5))}
+.mg-dot{opacity:0;filter:drop-shadow(0 0 4px currentColor) drop-shadow(0 0 10px currentColor)}
+.mg-strip{position:absolute;left:20px;right:20px;top:408px;display:flex;justify-content:center;gap:10px;z-index:4}
+.mg-chk{padding:6px 12px;border-radius:999px;border:1px solid rgba(207,229,225,.35);color:#CFE5E1;font:600 11.5px/1.3 'Inter',sans-serif;letter-spacing:.04em;animation:mg-riseb .6s cubic-bezier(.16,1,.3,1) both}
+.mg-cap{padding:4px 28px 0;min-height:98px}
+.mg-cap .mg-eb{font:600 11px/1.3 'Inter',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#5FB3AA;animation:mg-riseb .6s cubic-bezier(.16,1,.3,1) both}
+.mg-cap .mg-st{margin-top:8px;font-family:'Source Serif 4',Georgia,serif;font-size:25px;font-weight:600;line-height:1.2;color:#FDFCFA;animation:mg-riseb .7s cubic-bezier(.16,1,.3,1) .15s both}
+.mg-cap a{color:#CFE5E1;font-size:13px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;min-height:36px;margin-top:2px;animation:mg-riseb .7s cubic-bezier(.16,1,.3,1) .3s both}
+.mg-cap a:hover{color:#fff}
+.mg-paused *{animation-play-state:paused!important}
+@keyframes mg-pop{from{opacity:0;transform:translate(-50%,-50%) scale(.6)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes mg-grow{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.16)}}
+@keyframes mg-rise{from{opacity:0;transform:translate(-50%,-20%)}to{opacity:1;transform:translate(-50%,-50%)}}
+@keyframes mg-riseb{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes mg-fade{to{opacity:0}}
+@keyframes mg-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media (max-width:640px){
+  .mg-node{font-size:17px;padding:8px 12px}
+  .mg-node .mg-j{display:none}
+  .mg-node.mg-sm{font-size:14px}
+  .mg-tag{font-size:14px;padding:5px 11px}
+  .mg-chk{font-size:16px}
+  .mg-cap{padding:4px 20px 0}
+  .mg-cap .mg-st{font-size:21px}
+  .mg-tab{padding:0 11px;letter-spacing:.14em}
+}
+@media (prefers-reduced-motion:reduce){.mg *{animation:none!important}.mg-dot{display:none}.mg-bar{display:none}}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
@@ -694,8 +752,101 @@ footer{padding:80px 0 40px;background:var(--paper)}
         <a class="btn btn-c" href="#contact">Discuss your position</a>
       </div>
     </div>
-    <div class="stack st st4" aria-hidden="true">
-      <div class="photo"><img src="assets/harbour.jpg" alt=""></div>
+    <div class="stack st st4">
+      <div class="mg" id="mg" role="region" aria-label="How we help: three client situations">
+        <div class="mg-tabs" aria-label="Client situations">
+          <button type="button" class="mg-tab on" aria-pressed="true" data-s="0">Outbound</button>
+          <button type="button" class="mg-tab" aria-pressed="false" data-s="1">Inbound</button>
+          <button type="button" class="mg-tab" aria-pressed="false" data-s="2">Global</button>
+        </div>
+        <div class="mg-bar" aria-hidden="true"><i id="mgBar"></i></div>
+        <div class="mg-stagewrap" id="mgWrap" aria-hidden="true">
+          <div class="mg-stage" id="mgStage">
+            <div class="mg-layer">
+              <div class="mg-dots"></div>
+              <span class="mg-city" style="left: 70px; top: 190px"></span>
+              <span class="mg-city" style="left: 150px; top: 140px"></span>
+              <span class="mg-city" style="left: 268px; top: 112px"></span>
+              <span class="mg-city" style="left: 300px; top: 150px"></span>
+              <span class="mg-city" style="left: 372px; top: 214px"></span>
+              <span class="mg-city" style="left: 440px; top: 272px"></span>
+              <span class="mg-city" style="left: 482px; top: 200px"></span>
+              <span class="mg-city" style="left: 522px; top: 352px"></span>
+              <span class="mg-city" style="left: 478px; top: 382px"></span>
+              <div id="mgScene"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mg-cap" id="mgCap" aria-live="polite"></div>
+        <template id="mgT0">
+<svg class="mg-lines" width="600" height="560" viewBox="0 0 600 560">
+<path class="mg-ln" pathLength="1" style="animation-delay: 2.2s" d="M500 350 Q470 290 420 255"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 2.5s" d="M500 350 Q390 170 268 118"/>
+<path class="mg-ln mg-hot" pathLength="1" style="animation-delay: 2.8s" d="M500 350 Q270 310 84 186"/>
+<circle class="mg-dot" r="3.5" fill="#FF7A1A" color="#FF7A1A"><set attributeName="opacity" to="1" begin="3.6s"/><animateMotion dur="2.2s" begin="3.6s" repeatCount="indefinite" path="M500 350 Q470 290 420 255"/></circle>
+<circle class="mg-dot" r="3.5" fill="#19E3FF" color="#19E3FF"><set attributeName="opacity" to="1" begin="4s"/><animateMotion dur="2.6s" begin="4s" repeatCount="indefinite" path="M268 118 Q390 170 500 350"/></circle>
+<circle class="mg-dot" r="3.5" fill="#FF7A1A" color="#FF7A1A"><set attributeName="opacity" to="1" begin="4.3s"/><animateMotion dur="3s" begin="4.3s" repeatCount="indefinite" path="M500 350 Q270 310 84 186"/></circle>
+</svg>
+<div class="mg-node mg-au mg-grow" style="left: 500px; top: 350px; animation-delay: .2s, 1.1s"><span class="mg-j">Australia</span>Aus Co Pty Ltd</div>
+<div class="mg-tag" style="left: 500px; top: 398px; animation-delay: .6s">Incorporate</div>
+<div class="mg-node" style="left: 420px; top: 255px; animation-delay: 2.9s"><span class="mg-j">Singapore</span>SG Pte Ltd</div>
+<div class="mg-node" style="left: 268px; top: 118px; animation-delay: 3.2s"><span class="mg-j">London</span>UK Ltd</div>
+<div class="mg-node" style="left: 84px; top: 186px; animation-delay: 3.5s"><span class="mg-j">Los Angeles</span>US Inc</div>
+<div class="mg-tag mg-gold" style="left: 330px; top: 228px; animation-delay: 4.1s">IP licence</div>
+<div class="mg-tag mg-gold" style="left: 300px; top: 300px; animation-delay: 4.5s">Services fee</div>
+<div class="mg-tag mg-solid" style="left: 170px; top: 300px; animation-delay: 5.2s">Transfer pricing set</div>
+        </template>
+        <template id="mgT1">
+<svg class="mg-lines" width="600" height="560" viewBox="0 0 600 560">
+<path class="mg-ln" pathLength="1" style="animation-delay: 1.5s" d="M150 140 Q330 140 470 320"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 4.2s" d="M470 320 Q445 360 402 392"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 4.4s" d="M470 320 Q520 350 548 392"/>
+<path class="mg-ln mg-loan" pathLength="1" style="animation-delay: 5s" d="M150 140 Q260 250 470 320"/>
+<circle class="mg-dot" r="3.5" fill="#FF7A1A" color="#FF7A1A"><set attributeName="opacity" to="1" begin="5.6s"/><animateMotion dur="2.4s" begin="5.6s" repeatCount="indefinite" path="M470 320 Q330 140 150 140"/></circle>
+</svg>
+<div class="mg-node" style="left: 150px; top: 140px; animation-delay: .2s"><span class="mg-j">New York</span>US Parent Inc</div>
+<div class="mg-node mg-dash" style="left: 470px; top: 320px; animation-delay: .8s, 3.1s"><span class="mg-j">Sydney</span>Target Pty Ltd</div>
+<div class="mg-tag" style="left: 330px; top: 168px; animation-delay: 2s">Acquisition</div>
+<div class="mg-node mg-au" style="left: 470px; top: 320px; animation-delay: 3s"><span class="mg-j">Australia</span>AU Group</div>
+<div class="mg-tag mg-solid" style="left: 470px; top: 270px; animation-delay: 3.4s">Entry and consolidation</div>
+<div class="mg-node mg-sm" style="left: 402px; top: 392px; animation-delay: 4.6s">Melbourne Pty Ltd</div>
+<div class="mg-node mg-sm" style="left: 548px; top: 392px; animation-delay: 4.8s">Sydney Ops</div>
+<div class="mg-tag mg-gold" style="left: 250px; top: 250px; animation-delay: 5.3s">Funding and thin cap</div>
+<div class="mg-tag mg-gold" style="left: 300px; top: 96px; animation-delay: 5.9s">Withholding tax</div>
+        </template>
+        <template id="mgT2">
+<svg class="mg-lines" width="600" height="560" viewBox="0 0 600 560">
+<path class="mg-ln" pathLength="1" style="animation-delay: 1.3s" d="M522 352 Q480 300 440 272"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 1.4s" d="M522 352 Q520 260 482 200"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 1.5s" d="M440 272 Q400 230 372 214"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 1.6s" d="M372 214 Q320 150 268 112"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 1.7s" d="M268 112 Q210 110 150 140"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 1.8s" d="M150 140 Q100 150 70 190"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 1.9s" d="M268 112 Q290 125 300 150"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 2s" d="M482 200 Q470 240 440 272"/>
+<path class="mg-ln" pathLength="1" style="animation-delay: 2.1s" d="M478 382 Q500 370 522 352"/>
+<path class="mg-ln mg-hot" pathLength="1" style="animation-delay: 2.2s" d="M70 190 Q260 420 478 382"/>
+<circle class="mg-dot" r="3.2" fill="#FF7A1A" color="#FF7A1A"><set attributeName="opacity" to="1" begin="2.6s"/><animateMotion dur="1.8s" begin="2.6s" repeatCount="indefinite" path="M522 352 Q480 300 440 272"/></circle>
+<circle class="mg-dot" r="3.2" fill="#19E3FF" color="#19E3FF"><set attributeName="opacity" to="1" begin="2.8s"/><animateMotion dur="2.2s" begin="2.8s" repeatCount="indefinite" path="M372 214 Q320 150 268 112"/></circle>
+<circle class="mg-dot" r="3.2" fill="#FF7A1A" color="#FF7A1A"><set attributeName="opacity" to="1" begin="3s"/><animateMotion dur="2s" begin="3s" repeatCount="indefinite" path="M268 112 Q210 110 150 140"/></circle>
+<circle class="mg-dot" r="3.2" fill="#FF7A1A" color="#FF7A1A"><set attributeName="opacity" to="1" begin="3.2s"/><animateMotion dur="3.4s" begin="3.2s" repeatCount="indefinite" path="M70 190 Q260 420 478 382"/></circle>
+<circle class="mg-dot" r="3.2" fill="#FF7A1A" color="#FF7A1A"><set attributeName="opacity" to="1" begin="3.4s"/><animateMotion dur="1.6s" begin="3.4s" repeatCount="indefinite" path="M482 200 Q470 240 440 272"/></circle>
+</svg>
+<div class="mg-node mg-sm mg-au" style="left: 522px; top: 352px; animation-delay: .1s">Sydney</div>
+<div class="mg-node mg-sm mg-au" style="left: 478px; top: 382px; animation-delay: .2s">Melbourne</div>
+<div class="mg-node mg-sm" style="left: 440px; top: 272px; animation-delay: .3s">Singapore</div>
+<div class="mg-node mg-sm" style="left: 482px; top: 200px; animation-delay: .4s">Hong Kong</div>
+<div class="mg-node mg-sm" style="left: 372px; top: 214px; animation-delay: .5s">Dubai</div>
+<div class="mg-node mg-sm" style="left: 268px; top: 112px; animation-delay: .6s">London</div>
+<div class="mg-node mg-sm" style="left: 300px; top: 150px; animation-delay: .7s">Paris</div>
+<div class="mg-node mg-sm" style="left: 150px; top: 140px; animation-delay: .8s">New York</div>
+<div class="mg-node mg-sm" style="left: 70px; top: 190px; animation-delay: .9s">Los Angeles</div>
+<div class="mg-strip">
+<span class="mg-chk" style="animation-delay: 4s">Transfer pricing ✓</span>
+<span class="mg-chk" style="animation-delay: 4.8s">Pillar Two ✓</span>
+</div>
+        </template>
+      </div>
     </div>
   </div>
   <div class="wrap proof-band st st5">
@@ -1139,6 +1290,39 @@ const cio = new IntersectionObserver((es)=>{es.forEach(e=>{
 })},{threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 document.querySelectorAll('.nav-l a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navwrap').classList.remove('open')));
+// hero motion graphic
+(function(){
+  const mg=document.getElementById('mg'); if(!mg) return;
+  const stage=document.getElementById('mgStage'), wrap=document.getElementById('mgWrap'), scene=document.getElementById('mgScene'), cap=document.getElementById('mgCap'), bar=document.getElementById('mgBar');
+  const tabs=[...mg.querySelectorAll('.mg-tab')];
+  const caps=[['Outbound','From incorporation to your first offshore subsidiary.','Offshore expansion, moving IP or restructuring'],
+              ['Inbound','Acquiring and growing in Australia.','Entering Australia'],
+              ['Global','Transfer pricing and Pillar Two across the group.','Your first Pillar Two year, or your Top 1000 review']];
+  const DUR=8000, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let cur=0, el=0, hover=false, onScreen=true;
+  const fit=()=>{const s=wrap.clientWidth/600; stage.style.transform='scale('+s+')'; wrap.style.height=(400*s)+'px';};
+  const svgs=(fn)=>scene.querySelectorAll('svg').forEach(v=>{try{fn(v)}catch(e){}});
+  function show(i){
+    cur=i; el=0; scene.innerHTML='';
+    scene.appendChild(document.getElementById('mgT'+i).content.cloneNode(true));
+    if(reduce||hover) svgs(v=>v.pauseAnimations());
+    const c=caps[i];
+    cap.innerHTML='<div class="mg-eb">'+c[0]+'</div><div class="mg-st">'+c[1]+'</div><a href="#when">'+c[2]+' &rarr;</a>';
+    tabs.forEach((t,j)=>{t.classList.toggle('on',j===i);t.setAttribute('aria-pressed',j===i?'true':'false');});
+    bar.style.width='0%';
+  }
+  tabs.forEach(t=>t.addEventListener('click',()=>show(+t.dataset.s)));
+  mg.addEventListener('mouseenter',()=>{hover=true;mg.classList.add('mg-paused');svgs(v=>v.pauseAnimations());});
+  mg.addEventListener('mouseleave',()=>{hover=false;mg.classList.remove('mg-paused');if(!reduce)svgs(v=>v.unpauseAnimations());});
+  if('IntersectionObserver' in window) new IntersectionObserver(es=>{onScreen=es[0].isIntersecting;}).observe(mg);
+  setInterval(()=>{
+    if(reduce||hover||!onScreen||document.hidden) return;
+    el+=100;
+    if(el>=DUR){show((cur+1)%3);return;}
+    bar.style.width=(el/DUR*100)+'%';
+  },100);
+  addEventListener('resize',fit); fit(); show(0);
+})();
 // scroll progress
 const prog=document.getElementById('prog');
 addEventListener('scroll',()=>{
